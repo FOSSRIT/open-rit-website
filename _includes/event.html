@@ -27,9 +27,12 @@ Arguments:
 
 <div class="event-card">
 	<img src="{{site.base_url}}{{image.href}}" alt="{{image.alt}}" />
-	<span class="event-date">{{date}}</span>
+	<span class="metadata">
+		<span class="event-date">{{date}}</span>
+		•
+		<span class="author">{{subtitle}}</span>
+	</span>
 	<h3>{{title}}</h3>
-	<span class="subtitle">{{subtitle}}</span>
 	<div class="description">
 		{{ content | markdownify }}
 	</div>

@@ -11,6 +11,9 @@
     <meta name="theme-color" content="#000000">
     <meta name="description" content="open@RIT website">
 	<title> {{ title }} </title>
+	{% for script in page.load_scripts %}
+		<script src="{{script | relative_url}}"></script>
+	{% endfor %}
 </head>
 <body>
 	<header>

@@ -2,6 +2,8 @@
 layout: base
 title: Open@RIT
 banner: /assets/images/banners/landing.webp
+load_scripts:
+- /events.js
 links:
 - name: LibreCorps
   href: /librecorp
@@ -59,7 +61,7 @@ events:
     alt: A placeholder image, for now
 ---
 
-Open@RIT is is part of the Office of the Vice President of Research and a Key Research Center of the University and serves as the Open Programs Office for the University.
+Open@RIT is part of the Office of the Vice President of Research and a Key Research Center of the University and serves as the Open Programs Office for the University.
 
 {% capture staff %}
 
@@ -99,21 +101,10 @@ Our recommended best practices surrounding contributing and disseminating Open W
 	card3_url = "/best-practices"
 %}
 
-{% comment %}
+<!--
 ## Latest News
 
-{% capture news %}
-
-	{% for event in page.news %}
-
-		{% include event.html data=event %}
-
-	{% endfor %}
-
-{% endcapture %}
-{% include horizontal-row.html content=news element_count=2 %}
-
-## Upcoming Events
+<div class="news-error"></div>
 
 {% capture news %}
 
@@ -125,4 +116,4 @@ Our recommended best practices surrounding contributing and disseminating Open W
 
 {% endcapture %}
 {% include horizontal-row.html content=news element_count=2 %}
-{% endcomment %}
+-->

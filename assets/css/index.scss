@@ -366,7 +366,7 @@ main {
 }
 
 /* Footer */
-footer:last-child {
+footer:last-of-type {
 	background-color: black;
 	color: white;
 	display: grid;
@@ -766,13 +766,15 @@ a.black-link-bar {
 /* Event Card */
 .event-card {
 	margin-top: 12px;
+	display: grid;
+	grid-template-rows: 0fr 0fr 0fr 1fr;
 
 	img {
 		height: 151px;
 		width: 100%;
 		object-fit: cover;
 	}
-	.event-date {
+	.metadata {
 		font-size: 0.75rem;
 		color: #727578;
 		margin-top: 18px;
@@ -782,18 +784,41 @@ a.black-link-bar {
 		margin-top: 0px;
 		margin-bottom: -4px;
 	}
-	.subtitle {
-		font-weight: 400;
-	}
 	.description {
 		font-weight: 300;
-		p {
+		&, p {
 			margin: 13px 0;
 			line-height: 20px;
 
 			&:first-child {
 				margin-top: 4px;
 			}
+		}
+	}
+}
+/* Event loading errors */
+.news-error:not(:empty) {
+	background-color: #DA291C;
+	color: white;
+	padding: 20px;
+	white-space: pre;
+
+	&::first-line {
+		font-size: 1.3rem;
+		font-weight: bold;
+	}
+
+	&:not(:hover) {
+		font-size: 0;
+		line-height: 0;
+		&::first-line {
+			font-size: 0;
+		}
+
+		&:before {
+			font-size: 1.3rem;
+			line-height: 120%;
+			content: "Oops!  We had a problem loading the news feed!"
 		}
 	}
 }

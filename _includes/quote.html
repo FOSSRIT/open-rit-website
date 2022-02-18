@@ -1,0 +1,20 @@
+{% comment %}
+An elegant and fancy block quote with attribution.
+
+Heads off the /about/start-your-own/our-roots page
+
+Arguments:
+  text:  The text of the quote
+  author:  Who to attribute the quote to
+{% endcomment %}
+
+<div class='quote'>
+	<svg stroke="black" viewBox="0 0 24 24" height="60px" width="60px"><circle r="3" stroke-width="2" cx="7" cy="14.5"></circle><line stroke-width="2" x1="7" y1="6.5" x2="4.21893" y2="13.375" stroke-linecap="round"></line><circle r="3" stroke-width="2" cx="17" cy="14.5"></circle><line stroke-width="2" x1="17" y1="6.5" x2="14.21893" y2="13.375" stroke-linecap="round"></line></svg>
+	<p class='quote-text'>
+		{{ include.text }}
+	</p>
+
+	<span class='author'>
+		<b> - {{ include.author }}</b>
+	</span>
+</div>

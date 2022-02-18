@@ -1,0 +1,17 @@
+{% comment %}
+Use a two column layout for the content.  Automatically collapses into a one-column layout
+when the screen size is reduced.
+
+Arguments:
+  column_1:  Markdown text to go in the first column
+  column_2:  Markdown text to go in the second column
+{% endcomment %}
+
+<div class="two-column">
+	<div>
+		{{ include.column_1 | markdownify }}
+	</div>
+	<div>
+		{{ include.column_2 | markdownify }}
+	</div>
+</div>

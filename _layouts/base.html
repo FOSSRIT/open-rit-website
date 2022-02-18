@@ -1,0 +1,162 @@
+<!Doctype HTML>
+<html lang="en">
+
+{% assign title = page.title | default: page.breadcrumbs[0].name %}
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="https://www.rit.edu/sites/all/themes/uwbase/rit_bootstrap_2019/favicon/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="{{'/assets/css/index.css' | relative_url }}">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="open@RIT website">
+	<title> {{ title }} </title>
+</head>
+<body>
+	<header>
+
+		<!-- Graphics -->
+		<div id="orange-bar"></div>
+		<div id="logos">
+			{% include rit-logo.html logo_color="var(--color-rit-orange)" scale=0.8 %}
+			<a id="open-at-rit-logo" href="{{ '/' | relative_url }}">
+				<p>Open@RIT</p>
+				<span>RIT's Open Programs Office</span>
+			</a>
+		</div>
+
+		<!-- Navigation -->
+		<nav>
+			{% for section in site.data.navigation %}
+				{% if section.name == page.breadcrumbs[0].name %}
+					{% assign extra_classes = 'active' %}
+				{% else %}
+					{% assign extra_classes = '' %}
+				{% endif %}
+				{% if section.subroutes %}
+					<div class="nav-section expandable {{extra_classes}}">
+						<span class="section-title"> {{ section.name }} </span>
+						<div class="nav-expanded">
+							{% for subroute in section.subroutes %}
+								<a href="{{ subroute.path | relative_url }}">
+									{{ subroute.name }}
+								</a>
+							{% endfor %}
+						</div>
+					</div>
+				{% else %}
+					<div class="nav-section {{extra_classes}}">
+						<a
+							class="section-title"
+							href="{{ section.path | relative_url }}" >
+							{{ section.name }}
+						</a>
+					</div>
+				{% endif %}
+			{% endfor %}
+		</nav>
+	</header>
+
+	<!-- Banner & Title -->
+	<div
+		id="banner"
+		style="background-image: url({{ page.banner | relative_url }})" >
+		{% assign newline = "%0A" | url_decode %}
+		<h1> {{ title | replace: newline, "<br/>" }} </h1>
+	</div>
+
+	<!-- Sidenav -->
+	<div id="sidenav">
+		{% if page.breadcrumbs %}
+			<div id="breadcrumbs">
+				<a href="{{ '/' | relative_url }}"> <b>Open@RIT</b> </a>
+				{% for crumb in page.breadcrumbs %}
+					/ <a href="{{ crumb.path | relative_url }}"> {{crumb.name}} </a>
+				{% endfor %}
+			</div>
+		{% endif %}
+		{% if page.subnav %}
+			<div id="toc">
+				{% for header in page.subnav %}
+					{% assign header_link = header.link | default: "#" | relative_url %}
+					<a
+							href="{{ header_link }}"
+							{% if header.active %}class="active"{% endif %}>
+						{{ header.name }}
+					</a>
+					{% for section in header.sections %}
+						{% assign anchor = section | downcase
+							| replace: " ", "-"
+							| replace: "&", "" %}
+						<a href="{{ header_link }}#{{ anchor }}" class="subsection">
+							{{ section }}
+						</a>
+					{% endfor %}
+				{% endfor %}
+			</div>
+		{% endif %}
+
+		<div id="contact">
+			{% capture contact %}
+				<h2> Contact Us </h2>
+				<div class="contacts">
+					<p class="contact">
+						<span><b> Director: </b> Stephen Jacobs</span> <br/>
+						<a href="mailto:sj@magic.rit.edu">sj@magic.rit.edu</a>
+						<a href="https://calendly.com/ritsj">Book a Meeting</a>
+					</p>
+					<p class="contact">
+						<span><b> Assistant Director: </b> Michael Nolan</span> <br/>
+						<a href="mailto:sj@magic.rit.edu">mpnopen@rit.edu</a>
+						<a href="https://calendly.com/mpnopen">Book a Meeting</a>
+					</p>
+				</div>
+				<p> <a href="https://groups.google.com/g/openrit"> Mailing List </a></p>
+				<p> <a href="https://calendly.com/open-rit-org/"> Open@RIT Office Hours </a></p>
+				<p> <a href="https://openrit.slack.com/"> Join our Slack Workspace </a></p>
+				<p> <a href="https://www.rit.edu/ritnews/news-story-rss.php?additional=24e3193a-7040-4346-aa6e-0fd00143ada0"> RSS </a></p>
+			{% endcapture %}
+			{{ contact }}
+		</div>
+	</div>
+
+	<!-- The Actual Content -->
+	<main>
+		{{ content }}
+	</main>
+
+	<!-- And Finally, The Footer -->
+	<footer id="footer-contact">
+		{{ contact }}
+	</footer>
+	<footer>
+		{% include rit-logo.html logo_color="white" text_color="white" %}
+		<p>
+			 One Lomb Memorial Drive<br/>
+			 Rochester, NY 14623<br/>
+			 585-475-2411
+		</p>
+		<div id="socials">
+			{% for social in site.data.socials %}
+				<a href="{{social.url}}">
+					{% assign icon_name=social.name | downcase %}
+					{% assign icon_alt="Open@RIT's " | append: social.name %}
+					{% include icon.html name=icon_name size=24 alt=icon_alt %}
+				</a>
+			{% endfor %}
+		</div>
+		<a href="mailto:sj@magic.rit.edu">
+			<button class="big">Contact</button>
+		</a>
+		<div class="links">
+			{% for section in site.data.navigation %}
+				<a
+					href="{{ section.path | relative_url }}" >
+					{{ section.name }}
+				</a>
+			{% endfor %}
+		</div>
+	</footer>
+
+</body>
+</html>

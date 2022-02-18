@@ -1,0 +1,19 @@
+{% comment %}
+A grid of headshots of people along with their name and position.
+
+Arguments:
+  members: A list of members, each with the properties
+    name: The member's name
+	role: The member's position, used as a subtitle
+	headshot: The path to the member's headshot photo (alt-text: <name>'s headshot)
+{% endcomment %}
+
+<div class="member-grid">
+	{% for member in include.members %}
+		<div class="member">
+			<img src="{{member.headshot | relative_url}}" alt="{{member.name}}'s headshot" />
+			<b class="name"> {{member.name}} </b> <br/>
+			<span class="role"> {{member.role}} </span>
+		</div>
+	{% endfor %}
+</div>

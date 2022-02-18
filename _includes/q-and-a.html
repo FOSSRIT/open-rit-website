@@ -1,0 +1,38 @@
+{% comment %}
+A Q & A style FAQ element.  Each question is initially collapsed so that only the question
+and not the answer is visible.  With user interaction, the element expands to reveal the
+answer.
+
+Each Q & A element contains several questions, prefixed by a title for the section, a
+short description of a couple sentances, and a little icon off to the side for decoration.
+
+This element is the highlight of the /about/fellowship/playbook page, which features three
+of these includes.
+
+Arguments:
+  title:  The main title of the q & a section
+  image:  Information about the decorative image.  An object with the following properties:
+    url:  The image URL
+	alt:  Alt text for the image
+  deets:  Details for the Q & A element's header, displayed right under the title
+  questions:  A series of objects, each representing one question.
+    question:  The text of the question
+	answer:  Markdown content to be displayed when the question is expanded.
+{% endcomment %}
+
+{% if include.q_and_a %}
+	{% assign data = include.q_and_a %}
+{% else %}
+	{% assign data = include %}
+{% endif %}
+<section class='q-and-a'>
+	<h2> {{data.title}} </h2>
+	<img src="{{data.image.url | relative_url}}" alt="{{data.image.alt}}" />
+	{{data.deets | markdownify}}
+	{% for question in data.questions %}
+		<details>
+			<summary> {{question.question}} </summary>
+			{{question.answer | markdownify}}
+		</details>
+	{% endfor %}
+</section>

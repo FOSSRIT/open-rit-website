@@ -1,0 +1,28 @@
+{% comment %}
+Places an image to the left of some content.  Typically used when talking about something
+related to the image, or the image adds to what is described by the content.  Note that
+this is not just a left-floating image, but all text used will be on the right of the
+image, not below.
+
+You can see this element in action in the /research page.
+
+Arguments:
+  text: The markdown content to be placed right of the image
+  img: The image URL to be displayed
+  alt: Alt text for the image
+  scale: (optional) A value between 0 and 1 representing the portion of the page width
+         ocupied by the image as opposed to the text.
+{% endcomment %}
+
+{% if include.scale %}
+	{% assign image_size = include.scale | times: 100 %}
+	{% assign styles = "style='grid-template-columns: " | append: image_size | append: "% 1fr'" %}
+{% else %}
+	{% assign styles = "" %}
+{% endif %}
+<div class="left-image" {{styles}}>
+	<img src="{{include.img | relative_url}}" alt="{{include.alt}}" />
+	<div>
+		{{ include.content | markdownify }}
+	</div>
+</div>

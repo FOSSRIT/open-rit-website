@@ -1,0 +1,20 @@
+{% comment %}
+An short (1-2 paragraph) blurb, on the right of a small, square stock photo, with a catchy
+title
+
+This is used on the Faculty/Open-Work page, in the "Act" and "Understand" blurbs
+
+Arguments:
+  name: The catchy title of the blurb
+  image_url: The path to the image
+  image_alt: Alt text for the image
+  content: The content for the blurb, as markdown
+{% endcomment %}
+
+<div class="splash-blurb" id="{{include.name | downcase | replace: " ", "-"}}">
+	<img src="{{ include.image_url | relative_url }}" alt="{{include.image_alt}}"/>
+	<div>
+		<h4>{{include.name}}</h4>
+		{{ include.content | markdownify }}
+	</div>
+</div>

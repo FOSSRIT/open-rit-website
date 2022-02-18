@@ -1,0 +1,13 @@
+{% comment %}
+The aside element creates a small floating element that sits on the right of the page in a
+little orange box.  It sits apart from the main content of the page, as not to disrupt
+the reading experience.  This is used, for example, to create a small list of quick links
+on the page.
+
+Arguments:
+  content: The markdown content to be placed in the aside
+{% endcomment %}
+
+<div class="aside">
+	{{ include.content | markdownify }}
+</div>

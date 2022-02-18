@@ -1,0 +1,25 @@
+{% comment %}
+Displays an inline icon from an svg.  The icon must be an asset in the :/assets/images/icon/ directory of the project.  The icon should be viewboxed to be 24x24px, and will be inserted into the page and take on the color of the text/element it occupies.  Keep track of the icon's filename in the repository.  This value should be present in two places.
+
+1. The icon's name should also be an id applied to the main SVG element of the icon.
+2. The icon's name should be passed using the name argument of the include.
+
+Neither of these values should include the .svg extension.
+
+Alt text support is included.
+
+Arguments:
+  size:  The width and height the icon should have on the page
+  alt:  Alt text to make available to screenreaders
+  name:  See above.
+{% endcomment %}
+
+<svg
+	height="{{include.size}}"
+	width="{{include.size}}"
+	viewBox="0 0 24 24"
+	aria-labelledby="{{include.alt}}">
+
+	<title id="{{include.alt}}">{{include.alt}}</title>
+	<use xlink:href={{include.name | prepend: "/assets/images/icon/" | relative_url | append: ".svg#"| append: include.name}} />
+</svg>

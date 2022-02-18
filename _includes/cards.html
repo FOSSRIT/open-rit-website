@@ -1,0 +1,32 @@
+{% comment %}
+A series of cards about people or projects that flip through several pages, such that only
+three cards are visible at a time.  This can be used to display a list of people, such as
+employees or fellows, while still allowing each person reasonable emphasis and not
+reducing them to a small space on a cluttered page.
+
+This is used on the home page to display a list of fellows.
+
+Arguments:
+  cards:  A list of cards to be displayed.  Each card has the following properties:
+    url:  A link that the user should be sent to upon interacting with the card
+	image:  An image URL to be used with the card
+	primary:  The main title of the card, probably a person's name
+	secondary:  A list of subtitles to apply to the card
+	description:  A short description for the card (~1 sentance)
+{% endcomment %}
+
+<div class="cards size-{{include.cards | size | divided_by: 3.0 | ceil}}">
+	{% for card in include.cards %}
+		<div class="card">
+			{% assign alt = "A photo of " | append: card.primary %}
+			<a href="{{ card.url }}" class="image-header">
+				<img src="{{ card.image | relative_url }}" alt="{{ alt }}"/>
+			</a>
+			<a class="primary" href="{{ card.url }}"> {{ card.primary }} </a> <br/>
+			{% for secondary in card.secondary %}
+				<span class="secondary"> {{ secondary }} </span> <br/>
+			{% endfor %}
+			<p class="description"> {{ card.description }} </p>
+		</div>
+	{% endfor %}
+</div>

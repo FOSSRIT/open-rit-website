@@ -1,0 +1,14 @@
+{% comment %}
+The black link bar is a black rectange that acts as an extra emphasized link to certain
+content.  This element is treated as a thin block element, and so should be used where you
+seek the explicitly interupt the page flow with the option to navigate away.
+
+This is used on the About page, with the text "Looking to start an OSPO at your own
+university?" and a link to a relevant page.
+
+Arguments:
+  link: The link to be used as the href for the element
+  text: The text that should be associated with the link
+{% endcomment %}
+
+<a href="{{include.link | relative_url}}" class="black-link-bar">{{ include.text }}</a>

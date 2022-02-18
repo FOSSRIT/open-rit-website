@@ -1,0 +1,17 @@
+- name: About Us
+  path: /about
+
+- name: Best Practices
+  path: /best-practices
+
+- name: Faculty & Staff
+  path: /faculty
+
+- name: Students
+  path: /students
+
+- name: Our Open Work
+  path: /our-work
+
+- name: Contribute
+  path: /contribute

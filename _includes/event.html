@@ -1,0 +1,36 @@
+{% comment %}
+An event card, featuring an image, date, title, subtitle, and some short content
+
+Arguments:
+  image:
+    href: The path to the image file
+	alt: Alt text for the image
+  date: A date (represented by an arbitary string) for the event
+  title: The event title
+  subtitle: The event subtitle
+  content: The markdown content to be used as the event description
+{% endcomment %}
+
+{% if include.data %}
+	{% assign image    = include.data.image %}
+	{% assign date     = include.data.date %}
+	{% assign title    = include.data.title %}
+	{% assign subtitle = include.data.subtitle %}
+	{% assign content  = include.data.content %}
+{% else %}
+	{% assign image    = include.image %}
+	{% assign date     = include.date %}
+	{% assign title    = include.title %}
+	{% assign subtitle = include.subtitle %}
+	{% assign content  = include.content %}
+{% endif %}
+
+<div class="event-card">
+	<img src="{{site.base_url}}{{image.href}}" alt="{{image.alt}}" />
+	<span class="event-date">{{date}}</span>
+	<h3>{{title}}</h3>
+	<span class="subtitle">{{subtitle}}</span>
+	<div class="description">
+		{{ content | markdownify }}
+	</div>
+</div>

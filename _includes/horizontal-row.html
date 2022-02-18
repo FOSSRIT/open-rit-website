@@ -1,0 +1,18 @@
+{% comment %}
+Arange elements side-by-side and left-to-right instead of top-to-bottom.  This is
+currently only used to display a few images in a horizontal row on the /research page.
+
+Arguments:
+  content: Markdown content.  Each paragraph of markdown is one element in the row
+  element_count: (optional)  The number of elements in the row.  Defaults to the number of
+    <p> tags
+{% endcomment %}
+
+{% if include.element_count %}
+	{% assign size = include.element_count %}
+{% else %}
+	{% assign size = include.content | markdownify | split: '<p>' | size | minus: 1 %}
+{% endif %}
+<div class="horizontal-row" style="--element-count: {{size}}">
+	{{ include.content | markdownify }}
+</div>

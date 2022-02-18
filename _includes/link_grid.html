@@ -1,0 +1,50 @@
+{% comment %}
+A grid of images, each used to link to a new page.  The images have fancy hover
+animations and contrasting accessible text to make sure this is a flashy way of linking to
+other pages.
+
+By default, this is a 1 by X grid, but if the optional "columns" argument is passed, it
+becomes an X by <columns> grid.
+
+You can see this element in action on the /about page.
+
+Arguments:
+  links: An array of links, each of which should have the following properties
+    href:  The URL the card should link to
+	image:  The image to use in the background of the link
+	text:  The text to display in the card
+  columns: (optional) The number of columns to use.  Defaults to MAX
+  big: (optional) (bool) Whether or not to use h2-styled text for the links
+  row_height: (optional) The height of each row.  Defaults to "250px"
+{% endcomment %}
+
+{% if include.columns %}
+	{% assign columns = include.columns %}
+{% else %}
+	{% assign columns = include.links | size %}
+{% endif %}
+{% capture styles %}
+	style="--n-columns: {{columns}}"
+{% endcapture %}
+
+
+{% if include.row_height %}
+	{% assign height = "height: " | append: {{include.row_height}} | append: ";" %}
+{% endif %}
+
+
+{% if include.big %}
+	{% assign big = "big" %}
+{% endif %}
+
+<div class="link-grid {{big}}" {{styles}}>
+	{% for link in include.links %}
+		<div>
+		<a
+			style = "background: var(--bg-overlay), top/cover url('{{link.image | relative_url}}'); {{height}}"
+			href = "{{link.href | relative_url}}" >
+			<span>{{ link.name }}</span>
+		</a>
+		</div>
+	{% endfor %}
+</div>

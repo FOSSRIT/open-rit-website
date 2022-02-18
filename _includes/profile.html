@@ -1,0 +1,22 @@
+{% comment %}
+A headshot of a person, along with their name, title, and email.  Designed for use in the
+About/People page, where two bios are lined up side by side.  Each profile is meant to
+have a paragraph below it describing the person, but this is not included in this widget.
+
+Arguments:
+  name: The name of the person
+  title: The person's title, like "Director"
+  position: The person's position, such as "Professor\nSchool of Interactive Games and
+    Media", or "Staff\nOpen@RIT".  Multiple lines can be denoted using a newline (\n)
+  email: The person's email.  No mailto: required
+  headshot: The path to a headshot of this person.  The alt text will read "<name>'s
+    headshot"
+  link: The link for the person's name
+{% endcomment %}
+<div class="profile">
+	<h3>{{include.title}}</h3>
+	<img src="{{include.headshot | relative_url}}" alt="{{include.name}}'s headshot" />
+	<b><a href="{{include.link | default: #}}">{{include.name}}</a></b>
+	{{include.position | markdownify | replace: "\n", "<br/>"}}
+	<a href="mailto::{{include.email}}">{{include.email}}</a>
+</div>

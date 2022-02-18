@@ -1,0 +1,31 @@
+{% comment %}
+Renders the RIT logo as a low-bandwith-cost SVG.
+
+Arguments:
+  short:  (default: off) A boolean, toggles the full version vs the short version of the logo
+  logo_color:  (optional) The color to use for the logo itself
+  text_color:  (optional) The color to use for the logo text, ignored if !short
+  scale:  (optional) Scale the logo up or down by a certain factor
+{% endcomment %}
+
+{% if include.short %}
+	{% assign element_id="rit-short-text" %}
+	{% assign height=49.000 %}
+	{% assign width=128.680 %}
+{% else %}
+	{% assign element_id="rit-logo-full" %}
+	{% assign height=52.675 %}
+	{% assign width=379.820 %}
+{% endif %}
+{% if include.scale %}
+	{% assign height=height | times: include.scale %}
+	{% assign width=width   | times: include.scale %}
+{% endif %}
+<svg
+	aria-labelled-by="rit-header-title"
+	height={{height}}
+	width={{width}}
+	style="{% if include.text_color %} --text-color: {{include.text_color}}; {% endif %}{% if include.logo_color %} --logo-color: {{include.logo_color}} {% endif %}">
+	<title id="rit-header-title">Rochester Institute of Technology</title>
+	<use xlink:href="{{"/assets/images/branding/rit.svg" | relative_url}}#{{include.logo_id | default: "rit-logo-full" }}" />
+</svg>

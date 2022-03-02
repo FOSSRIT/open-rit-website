@@ -61,7 +61,7 @@ events:
     alt: A placeholder image, for now
 ---
 
-Open@RIT is part of the Office of the Vice President of Research and a Key Research Center of the University and serves as the Open Programs Office.
+Open@RIT is part of the Office of the Vice President of Research and serves as the Open Programs Office.
 
 {% capture staff %}
 

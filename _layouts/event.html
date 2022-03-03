@@ -1,0 +1,82 @@
+<!Doctype HTML>
+<html lang="en">
+
+{% assign title = page.title | default: page.breadcrumbs[0].name %}
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="https://www.rit.edu/sites/all/themes/uwbase/rit_bootstrap_2019/favicon/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="{{'/assets/css/index.css' | relative_url }}">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="open@RIT website">
+	<title> {{ title }} </title>
+	{% for script in page.load_scripts %}
+		<script src="{{script | relative_url}}"></script>
+	{% endfor %}
+</head>
+<body style="overflow-x: hidden; padding:0; margin:0; background-color: black;">
+	<div
+		
+		style="background-image: url({{ page.banner | relative_url }})"
+		class="event-banner"
+		>
+		{% assign newline = "%0A" | url_decode %}
+		<div>
+			<h1> {{ page.what | replace: "\n", "<br/>" }} </h1>
+			<h2> {{ page.when | replace: "\n", "<br/>" }} </h2>
+			<h3> {{ page.where | replace: "\n", "<br/>" }} </h3>
+		</div>
+		<a class="event-save" href="{{ page.event_link }}" target="_blank">
+			<button class="event-save-button">
+				Save the date
+			</button>
+		</a>
+	</div>
+
+	<!-- The Actual Content -->
+	<main class="event-content" style="color:white">
+		{{ content | replace: "\n", "<br/>" }}
+		<h2>Interested in Learning More?</h2>
+		<a class="event-save" href="https://groups.google.com/g/openrit" target="_blank">
+			<button class="event-save-button">
+				Join the mailing list
+			</button>
+		</a>
+	</main>
+
+	<!-- And Finally, The Footer -->
+	<footer id="footer-contact">
+		{{ contact }}
+	</footer>
+	<footer>
+		{% include rit-logo.html logo_color="white" text_color="white" %}
+		<p>
+			 One Lomb Memorial Drive<br/>
+			 Rochester, NY 14623<br/>
+			 585-475-2411
+		</p>
+		<div id="socials">
+			{% for social in site.data.socials %}
+				<a href="{{social.url}}">
+					{% assign icon_name=social.name | downcase %}
+					{% assign icon_alt="Open@RIT's " | append: social.name %}
+					{% include icon.html name=icon_name size=24 alt=icon_alt %}
+				</a>
+			{% endfor %}
+		</div>
+		<a href="mailto:sj@magic.rit.edu">
+			<button class="big">Contact</button>
+		</a>
+		<div class="links">
+			{% for section in site.data.navigation %}
+				<a
+					href="{{ section.path | relative_url }}" >
+					{{ section.name }}
+				</a>
+			{% endfor %}
+		</div>
+	</footer>
+
+</body>
+</html>

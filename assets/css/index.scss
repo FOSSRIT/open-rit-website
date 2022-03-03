@@ -314,7 +314,7 @@ main {
 
 	h1 {
 		color: white;
-		background-color: red;
+		//background-color: red;
 	}
 
 	.big-text {
@@ -1030,5 +1030,92 @@ a.black-link-bar {
 
 	@media (min-width: 1350px) {
 		--n-columns: 5;
+	}
+}
+
+.event-banner{
+	padding: 0 130px;
+	padding-top: 220px;
+	padding-bottom: 30px;
+	border-top:1px solid transparent;
+	width:100%;
+	background-color: black;
+	display: inline-flex;
+	.event-save{
+		display: flex;
+		justify-content: end;
+		align-items: flex-end;
+		padding-bottom: 30px;
+	}
+	h1{
+		color:white;
+		background-color: transparent !important;
+		font-size: 96px;
+		line-height: 98px;
+		padding:0 !important;
+		margin:0 !important ;
+	}
+	h2{
+		color: var(--color-text-orange);
+		background-color: transparent !important;
+		font-size: 60px;
+		line-height: 62px;
+		margin:0;
+		padding:0;
+	}
+	h3{
+		color: white;
+		font-size: 36px;
+		background-color: transparent !important;
+		margin:0;
+		padding:0;
+	}
+}
+
+.event-content{
+	padding:0 130px;
+	margin:0;
+	width:100%;
+	h2{
+		font-size:48px;
+	}
+	p{
+		font-style: italic;
+		font-family: roboto;
+		font-size: 18px;
+	}
+	ul{
+		list-style: none;
+		padding: 0px;
+		max-width: 860px;
+	}
+	li{
+		background-image: url({{'/assets/images/ui/event-vector.svg' | relative_url}});
+		background-size: contain;
+		background-repeat: no-repeat;
+    	height: 36px;
+		padding-left: 36px;
+		content:"";
+		margin-bottom: 25px;
+		p {
+			font-style: normal;
+			font-family: Roboto;
+		    font-weight: 10;
+			strong{
+				font-weight: 700;
+			}
+		}
+	}
+}
+.event-save-button{
+	min-width:250px;
+	padding: 10px 10px;
+	background-color: var(--color-rit-orange);
+	border:none;
+	font-size: 36px;
+	color:white;
+	border-radius:10px;
+	&:hover{
+		background-color: var(--color-text-orange);
 	}
 }

@@ -40,6 +40,9 @@ present_members:
 - name: Peter Hogya
   role: Product Manager
   headshot: /assets/images/pages/about/people/peter-hogya.webp
+- name: Suhas CV
+  role: Full Stack Developer
+  headshot: /assets/images/pages/about/people/suhas-cv.webp
 past_members:
 - name: Urvashi Kokate
   role: UI/UX Designer
@@ -56,9 +59,6 @@ past_members:
 - name: Shanée Gordon
   role: Writer
   headshot: /assets/images/pages/about/people/shanee-gordon.webp
-- name: Suhas CV
-  role: Full Stack Developer
-  headshot: /assets/images/pages/about/people/suhas-cv.webp
 advisory_board:
 - name: Matthew Bernius
   role: Principle User Researcher
@@ -114,12 +114,12 @@ advisory_board:
   degree: BS Medical Illustration, RIT 2014
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/kotler.jpg
 - name: Tom Callaway
-  role: Principal Open Source 
+  role: Principal Open Source
   org: Evangelist, Amazon Web Services
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/tom.jpg
 - name: Ruth Suehle
   role: Director, Software Engineering
-  org: Global, RedHat 
+  org: Global, RedHat
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/ruth.jpeg
 - name: Chris Aniszczyk
   role: Chief Technology Officer, Cloud Native Computing Foundation Vice President, Developer Relations
@@ -129,7 +129,7 @@ advisory_board:
   role: Docs Advocacy Program Manager
   org: Google Open Source Programs Office
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/erin-mckean-200_0.jpg
-- name: April Kyle Nassi 
+- name: April Kyle Nassi
   role: Google for Games Open Source Strategist
   org: Google
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/apriladvisoryboard_0.jpg

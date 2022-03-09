@@ -91,8 +91,8 @@ advisory_board:
 - name: Justin W. Flory
   role: FOSS Technical Advisor
   org: UNICEF Innovation
-  degree: B.S. Networking & Systems Administration, Minor, Free & Open Source Software & Free Culture, RIT 202
-  headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/justin-flory.jpg
+  degree: B.S. Networking & Systems Administration, Minor, Free & Open Source Software & Free Culture, RIT 2020
+  headshot: https://jwf.io/img/logo.jpg
 - name: Justin Sherrill
   role: Developer
   org: DragonFly BSD

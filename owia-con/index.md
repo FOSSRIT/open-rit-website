@@ -1,12 +1,12 @@
 ---
 layout: event
 root: owia-con
-banner: /assets/images/banners/owia-con.svg
+banner: /assets/images/banners/open-truchet.png
 title: Open Work in Academia
-what: Open Work \n in Academia
+what: Open Work \n in Academia \nSummit
 when: September 7-9, 2022
 where: Hyatt Regency Rochester \n 125 East Main Street,\n Rochester, NY, 14604, US
-event_link: https://calendar.google.com/event?action=TEMPLATE&tmeid=XzYwcTMwYzFnNjBvMzBlMWk2MG80YWMxZzYwcmo4Z3BsODhyajJjMWg4NHMzNGg5ZzYwczMwYzFnNjBvMzBjMWc4NHJqMGdwazZsMzM4ZGhuNjBzazhlMWc2NG8zMGMxZzYwbzMwYzFnNjBvMzBjMWc2MG8zMmMxZzYwbzMwYzFnNmdwM2VoMWw2OTIzNGhhNDZwMWtjZ3BrOGtza2FkcGo2b3FrMmU5bTY0cGowZzlpOG9xMF8yMDIyMDMxOFQxNjAwMDBaIHNjNDgxN0BnLnJpdC5lZHU&tmsrc=sc4817%40g.rit.edu
+event_link: https://calendar.google.com/event?action=TEMPLATE&tmeid=XzYwcTMwYzFnNjBvMzBlMWk2MG80YWMxZzYwcmo4Z3BsODhyajJjMWg4NHMzNGg5ZzYwczMwYzFnNjBvMzBjMWc4NHJqMGdwazZsMzM4ZGhuNjBzazhlMWc2NG8zMGMxZzYwbzMwYzFnNjBvMzBjMWc2MG8zMmMxZzYwbzMwYzFnNmdwM2VoMWw2OTIzNGhhNDZwMWtjZ3BrOGtza2FkcGo2b3FrMmU5bTY0cGowZzlpOG9xMF8yMDIyMDMxOFQxNjAwMDBaIHNjNDgxN0BnLnJpdC5lZHU&tm
 ---
 ## Why Now?
 
@@ -31,4 +31,15 @@ Open@RIT invites professionals from the Academic, Research and Open Source\n com
 - Building, sustaining and promoting Open Communities and Ecosystems
 - Managing information overload and ferment in the field
 - Existing practices and resources  provided by academia to support Open Scholarship and industry
+
+## Interested in Learning More?
+<a class="event-save" href="https://groups.google.com/g/openrit" target="_blank">
+	<button class="event-save-button">
+		Join the mailing list
+	</button>
+</a>
+
+<br/>
+The Open Work in Academia Summit is an event created by [Open@RIT](https://openr.it),  a Key Research Center of the University and serves as its Open Programs Office. 
+The Summit is sponsored, in part, by a generous grant from the Alfred P. Sloan Foundation.
 

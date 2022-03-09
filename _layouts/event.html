@@ -15,34 +15,37 @@
 		<script src="{{script | relative_url}}"></script>
 	{% endfor %}
 </head>
-<body style="overflow-x: hidden; padding:0; margin:0; background-color: black;">
-	<div
-		
-		style="background-image: url({{ page.banner | relative_url }})"
-		class="event-banner"
-		>
-		{% assign newline = "%0A" | url_decode %}
-		<div>
-			<h1> {{ page.what | replace: "\n", "<br/>" }} </h1>
-			<h2> {{ page.when | replace: "\n", "<br/>" }} </h2>
-			<h3> {{ page.where | replace: "\n", "<br/>" }} </h3>
+<body style="overflow-x: hidden; padding:0; margin:0; background-color: black; 
+			background-image: url({{ page.banner | relative_url }});
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: top;
+			">
+	<div class="event-head">
+		<div class="event-container">
+			<div class="event-banner">
+				{% assign newline = "%0A" | url_decode %}
+				<div>
+					<h1> {{ page.what | replace: "\n", "<br/>" }} </h1>
+					<h2> {{ page.when | replace: "\n", "<br/>" }} </h2>
+					<h3> {{ page.where | replace: "\n", "<br/>" }} </h3>
+				</div>
+				<div class="event-c2">
+					<img class="event-truchet" src="{{'/assets/images/ui/event-vector.svg' | relative_url }}"/>
+					<a class="event-save" href="{{ page.event_link }}" target="_blank">
+						<button class="event-save-button">
+							Save the date
+						</button>
+					</a>
+				</div>
+			</div>
 		</div>
-		<a class="event-save" href="{{ page.event_link }}" target="_blank">
-			<button class="event-save-button">
-				Save the date
-			</button>
-		</a>
 	</div>
-
 	<!-- The Actual Content -->
 	<main class="event-content" style="color:white">
+		<div class="event-container">
 		{{ content | replace: "\n", "<br/>" }}
-		<h2>Interested in Learning More?</h2>
-		<a class="event-save" href="https://groups.google.com/g/openrit" target="_blank">
-			<button class="event-save-button">
-				Join the mailing list
-			</button>
-		</a>
+		</div>
 	</main>
 
 	<!-- And Finally, The Footer -->

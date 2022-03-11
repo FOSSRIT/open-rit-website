@@ -1047,7 +1047,7 @@ a.black-link-bar {
 	width:100%;
 	display: inline-flex;
 	justify-content: flex-start;
-	align-items: flex-end;
+	align-items: center;
 
 	.event-c2{
 		display: flex;
@@ -1184,7 +1184,7 @@ a.black-link-bar {
 		ul{
 			li{
 				margin-bottom: 150px;
-				
+
 			}
 		}
 		h2{
@@ -1192,7 +1192,7 @@ a.black-link-bar {
 			margin-top:0 !important;
 			padding-top: 0 !important;
 		}
-		
+
 	}
 	.event-save-button{
 		width:auto;
@@ -1207,4 +1207,9 @@ a.black-link-bar {
 			background-color: var(--color-text-orange);
 		}
 	}
+}
+
+#mc_embed_signup {
+    margin: 50px auto;
+    color: black;
 }

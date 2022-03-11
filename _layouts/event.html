@@ -35,11 +35,18 @@
 				</div>
 				<div class="event-c2">
 					<img class="event-truchet" src="{{'/assets/images/ui/event-vector.svg' | relative_url }}"/>
-					<a class="event-save" href="{{ page.event_link }}" target="_blank">
-						<button class="event-save-button">
-							Save the date
-						</button>
-					</a>
+					<button class="event-save-button" style="cursor:initial !important">
+						Save the date
+					</button>
+					
+					<span style="display:inline-flex;margin-top:12px !important;">
+						<a class="event-save">
+							<img src="https://img.icons8.com/bubbles/48/000000/ical.png"/>
+						</a>
+						<a class="event-save" href="{{ page.event_link }}">
+							<img src="https://img.icons8.com/color/48/000000/google-calendar--v2.png"/>
+						</a>
+					</span>
 				</div>
 			</div>
 		</div>

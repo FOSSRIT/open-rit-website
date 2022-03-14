@@ -6,7 +6,7 @@ title: open work in academia
 what: <h2>A summit regarding</h2><h1>open work \n in academia</h1>
 when: september 7-9, 2022
 where: hyatt regency rochester \n 125 east main street,\n rochester, ny, 14604, us
-event_link: https://calendar.google.com/event?action=template&tmeid=xzywctmwyzfnnjbvmzblmwk2mg80ywmxzzywcmo4z3bsodhyajjjmwg4nhmzngg5zzywczmwyzfnnjbvmzbjmwc4nhjqmgdwazzsmzm4zghunjbzazhlmwc2ng8zmgmxzzywbzmwyzfnnjbvmzbjmwc2mg8zmmmxzzywbzmwyzfnnmdwm2vomww2otiznghhndzwmwtjz3brogtza2fkcgo2b3frmmu5bty0cgowzzlpog9xmf8ymdiymdmxofqxnjawmdbaihnjndgxn0bnlnjpdc5lzhu&tm
+event_link: https://calendar.google.com/event?action=TEMPLATE&tmeid=MzMwNHByamY4c3RhaGVsbzVsZnBucTQxc2kgY19iZmRqN2UyYXVhcGY3cWplZTFwcjk1cmllNEBn&tmsrc=c_bfdj7e2auapf7qjee1pr95rie4%40group.calendar.google.com
 ---
 ## Why Now?
 

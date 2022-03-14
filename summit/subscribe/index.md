@@ -1,6 +1,10 @@
 ---
 layout: subscribe
-root: summit
+breadcrumbs:
+- name: Best Practices
+  path: /best-practices
+- name: Disseminating Your Open Work
+  path: /best-practices/disseminating
 ---
 
 <!-- Begin Mailchimp Signup Form -->

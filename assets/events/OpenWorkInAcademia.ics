@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Open@RIT
+X-WR-TIMEZONE:Europe/London
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20220907
+DTEND;VALUE=DATE:20220910
+DTSTAMP:20220314T132041Z
+UID:3304prjf8stahelo5lfpnq41si@google.com
+CREATED:20220314T132030Z
+DESCRIPTION:<span><br><br><p><a href="https://www.google.com/url?q=https://
+ openr.it&amp\;sa=D&amp\;source=calendar&amp\;ust=1647695910453476&amp\;usg=
+ AOvVaw27-G791pEz-mLULc4jvfe9" target="_blank">Open@RIT</a> invites professi
+ onals from the Academic\, Research and Open Source communities for a two an
+ d a half day gathering to explore topics such as:</p><ul><li>Measures of va
+ lue\, impact and translation of Open Work</li><li>Policies around support a
+ nd promotion for success in that work</li><li>Building\, sustaining and pro
+ moting Open Communities and Ecosystems</li><li>Managing information overloa
+ d and ferment in the field</li><li>Existing practices and resources provide
+ d by academia to support Open Scholarship and industry</li></ul><p><br></p>
+ </span>
+LAST-MODIFIED:20220314T132030Z
+LOCATION:Hyatt Regency Rochester\, 125 E Main St\, Rochester\, NY 14604\, U
+ SA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Open Work in Academia Summit
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

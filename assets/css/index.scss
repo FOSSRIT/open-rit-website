@@ -1103,9 +1103,8 @@ a.black-link-bar {
 		font-style: italic;
 		font-size: 20px;
 		a{
-			text-decoration: underline;
+			text-decoration: underline !important;
 		}
-
 	}
 	ul{
 		list-style: none;

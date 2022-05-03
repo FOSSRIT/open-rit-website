@@ -34,7 +34,6 @@ Open@RIT received a grant from the Alfred P. Sloan Foundation to [support the Op
 | [Dr. Whitney Sperrazza][]      | College of Liberal Arts   | **Resistance Mapping:** Redlining & Related Issues in Rochester History
 | [Dr. Manuella Campanella][]    | College of Science        | **Compact Binaries:** Computational Astrophysics
 | [Dr. Bob Teese][]              | College of Science        | **The Mint Project:** Interactive Video-Enhanced Tutorials
-| [Dr. Anthony Vodacek][]        | College of Science        | **Acoustic Data Repositories from the Madagascar Rainforest**
 | [Dr. Paul Shipman][]           | College of Science        | **Summer Science Education for Tribal Communities**
 | [Dr. Michael Osier][]          | College of Science        | **Vitis Pathways Genomics Software**
 | [Dr. Shanchieh Yang][]         | Kate Gleason College of Engineering | **ASSERT:** Attack Strategy Synthesis for Enhanced Threat Recognition
@@ -42,12 +41,14 @@ Open@RIT received a grant from the Alfred P. Sloan Foundation to [support the Op
 | [Dr. Andy Meneely][]           | GCCIS                     | **The Vulnerability History Project**
 | [Dr. David I. Schwartz][]      | GCCIS                     | **ATLAS:** An Open-Source Repository for Game Development Education
 | [Dr. Mohamed Wiem Mkaouer][]   | GCCIS                     | **Test Smells:** Improving the usability of detecting bad testing practices
-| [Dr. Hanif Rahbari][]          | GCCIS                     | **Vehicle-to-Vehicle Security**
 | [Professor Michelle Harris][]  | GCCIS                     | **Contributions of Tutorials and Exercises to P5.js**
 | [Dr. Scott Hawker][]           | GCCIS                     | **Conservation 360:** An Open Data Project with the Seneca Park Zoo
+| [Dr. Xumin Liu][]              | GCCIS                     | **OpenDS4All:** An Open Data Science Curriculum
+| [Dr. Nidhi Rastogi][]          | GCCIS                     | **Explainable Security:** Generating open dataset in autonomous systems for explainable security
 | Professor Stephen Yi           | GCCIS                     | **Csound:** A Sound and Music Computing System
 | [Dr. Todd Pagano][]            | NTID                      | **The Journal of Science Education for Students With Disabilities**
 | [Dr. Chris Kurz][]             | NTID                      | **World Around You:** A Deaf Education Literacy Platform
+| [Professor Kierstin Muroski][] | NTID                      | **ASL Interpereting History:** Cataloging the history of ASL interpereting
 
 [Dr. J A Stephen Viggiano]: https://www.rit.edu/directory/jasvppr-j-a-stephen-viggiano
 [Dr. Kaitlin Stack Whitney]: https://www.rit.edu/directory/kxwsbi-kaitlin-stack-whitney
@@ -67,5 +68,8 @@ Open@RIT received a grant from the Alfred P. Sloan Foundation to [support the Op
 [Dr. Hanif Rahbari]: https://www.rit.edu/directory/hxrics-hanif-rahbari
 [Professor Michelle Harris]: https://www.rit.edu/directory/wmhics-w-michelle-harris
 [Dr. Scott Hawker]: https://www.rit.edu/directory/jshvse-j-scott-hawker
+[Dr. Xumin Liu]: https://www.rit.edu/directory/xmlics-xumin-liu
+[Dr. Nidhi Rastogi]: https://www.rit.edu/directory/nxrvse-nidhi-rastogi
 [Dr. Todd Pagano]: https://www.rit.edu/directory/tepnts-todd-pagano
 [Dr. Chris Kurz]: https://www.rit.edu/directory/caknsp-christopher-kurz
+[Professor Kierstin Muroski]: https://www.rit.edu/directory/ksmnss-kierstin-muroski

@@ -1,6 +1,9 @@
 <!Doctype HTML>
 <html lang="en">
 
+{% comment %}
+TODO: don't duplicate this in default.html and base.html
+{% endcomment %}
 {% assign title = page.title | default: page.breadcrumbs[0].name %}
 
 <head>
@@ -17,10 +20,13 @@
 	<meta name="description" content="open@RIT website">
 	<title> {{ title }} </title>
 	{% for script in page.load_scripts %}
-	<script src="{{script | relative_url}}"></script>
+		<script src="{{script | relative_url}}"></script>
 	{% endfor %}
 </head>
 
-{{ content }}
+<body {% if layout.body-style %} style="{{ layout.body-style | flatify}}" {% endif %}>
+	{{ content }}
+	{% include footer.html %}
+</body>
 
 </html>

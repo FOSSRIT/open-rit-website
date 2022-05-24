@@ -1,27 +1,17 @@
----
-layout: default
-body-style: |
-  overflow-x: hidden;
-  padding: 0; margin: 0;
-  background-color: black;
----
-<!-- The Actual Content -->
-<main class="event-content" style="color:white">
-	<div class="event-container">
-	{{ content | replace: "\n", "<br/>" }}
-	</div>
-</main>
+{% comment %}
+The footer present at the bottom of each page. Contains contact information and navigation
+links.
+{% endcomment %}
 
-<!-- And Finally, The Footer -->
 <footer id="footer-contact">
-	{{ contact }}
+	{% include contact.html %}
 </footer>
 <footer>
 	{% include rit-logo.html logo_color="white" text_color="white" %}
 	<p>
-		 One Lomb Memorial Drive<br/>
-		 Rochester, NY 14623<br/>
-		 585-475-2411
+		One Lomb Memorial Drive<br/>
+		Rochester, NY 14623<br/>
+		585-475-2411
 	</p>
 	<div id="socials">
 		{% for social in site.data.socials %}
@@ -44,4 +34,3 @@ body-style: |
 		{% endfor %}
 	</div>
 </footer>
-

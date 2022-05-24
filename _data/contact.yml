@@ -1,0 +1,23 @@
+people:
+  - name: Stephen Jacobs
+    position: Director
+    email: sj@magic.rit.edu
+    schedule-link: https://calendly.com/ritsj
+  
+  - name: Michael Nolan
+    position: Assistant Director
+    email: mpnopen@rit.edu
+    schedule-link: https://calendly.com/mpnopen
+
+links:
+  - label: Mailing List
+    link: https://groups.google.com/g/openrit
+  
+  - label: Open@RIT Office Hours
+    link: https://calendly.com/open-rit-org/
+  
+  - label: Join our Slack Workspace
+    link: https://openrit.slack.com/
+  
+  - label: RSS
+    link: https://www.rit.edu/ritnews/news-story-rss.php?additional=24e3193a-7040-4346-aa6e-0fd00143ada0"

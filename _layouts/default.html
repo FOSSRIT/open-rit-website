@@ -24,7 +24,7 @@ TODO: don't duplicate this in default.html and base.html
 	{% endfor %}
 </head>
 
-<body {% if layout.body-style %} style="{{ layout.body-style | flatify}}" {% endif %}>
+<body {% if layout.body-style %} style="{{layout.body-style | flatify}}" {% endif %}>
 	{{ content }}
 	{% include footer.html %}
 </body>

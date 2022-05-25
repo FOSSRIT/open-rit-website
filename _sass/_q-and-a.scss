@@ -1,0 +1,24 @@
+/* Q & A styles (q-and-a.html) */
+
+.q-and-a {
+	details summary {
+		cursor: pointer;
+		list-style-image: $svg-url-expando;
+		color: #C75300;
+		font-size: 1.25em;
+		text-indent: -32px;
+		margin-top: 5px;
+	}
+	details[open] summary {
+		list-style-image: $svg-url-focused-expando;
+	}
+	details p {
+		margin-top: 0px;
+	}
+	img {
+		float: right;
+		max-width: 170px;
+		width: 20vw;
+		margin: auto 20px;
+	}
+}

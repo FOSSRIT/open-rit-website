@@ -1,0 +1,32 @@
+/* Splash Blurb styles (splash-blurb.html) */
+
+.splash-blurb {
+	display: grid;
+	grid-template-columns: calc(max(30%, 200px)) 1fr;
+	gap: 14px;
+	margin-bottom: 43px;
+
+	& > img {
+		width: 100%;
+	}
+
+	& > div {
+		& > h4:first-child {
+			font-size: 1.5em;
+			background-color: #f76902;
+			width: fit-content;
+			color: white;
+			padding: 3px 10px;
+			margin: 0;
+			margin-top: 15px;
+			transform: translateX(calc(-20% - 30px));
+		}
+
+		li {
+			list-style-type: circle;
+		}
+		ul {
+			padding-left: 14px;
+		}
+	}
+}

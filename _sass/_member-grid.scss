@@ -1,0 +1,84 @@
+/* Member Grid styles (member-grid.html, mini-member-grid.html) */
+
+.member-grid, .mini-member-grid {
+	& > div.member {
+		& > img {
+			width: 100%;
+			object-fit: cover;
+		}
+
+		& > b.name {
+			font-size: 1.1875em;
+			font-weight: 500;
+			color: #C75300;
+			line-height: 23px;
+		}
+
+		& > .role {
+			font-size: 0.75em;
+		}
+	}
+}
+
+/* Member Grid */
+.member-grid {
+	display: grid;
+	grid-template-columns: repeat(var(--n-columns), var(--col-width));
+	line-height: 19px;
+	gap: 32px 19px;
+	--col-width: 200px;
+	--n-columns: 2;
+
+	& > div.member > img {
+		height: 300px;
+	}
+
+	@media (max-width: 670px) {
+		--col-width: 50%;
+		& > div.member > img {
+			height: 200px;
+		}
+	}
+
+	@media (min-width: 990px) {
+		--n-columns: 3;
+	}
+
+	@media (min-width: 1350px) {
+		--n-columns: 4;
+	}
+
+	img[alt*="i Sim"]:hover {
+		animation: ee 5s;
+		background-color: red;
+	}
+}
+@keyframes ee { 90% { transform: rotate(0deg) } 100% { transform: rotate(360deg) } }
+
+/* Mini Member Grid */
+.mini-member-grid {
+	display: flex;
+	gap: 23px 26px;
+	flex-wrap: wrap;
+	margin-right: -15vw;
+
+	& > div.member {
+		display: block;
+		width: 145px;
+		& > img {
+			height: 145px;
+		}
+	}
+
+	@media (max-width: 670px) {
+		--col-width: 50%;
+	}
+
+	@media (min-width: 990px) {
+		--n-columns: 3;
+	}
+
+	@media (min-width: 1350px) {
+		--n-columns: 5;
+	}
+}

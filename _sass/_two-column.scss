@@ -1,0 +1,13 @@
+/* Two Column styles (two-column.html) */
+
+.two-column {
+	h2:first-child {
+		margin-top: 0;
+	}
+
+	@media (min-width: 800px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 30px;
+	}
+}

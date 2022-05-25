@@ -1,0 +1,13 @@
+---
+---
+
+/*
+  Workaround: declare things that need templating here, since Jekyll can't
+  pre-process SCSS for imports and will just leave the template verbatim.
+  */
+$svg-url-chevron: url({{ "/assets/images/ui/chevron.svg" | relative_url }});
+$svg-url-expando: url({{ "/assets/images/ui/expando.svg" | relative_url }});
+$svg-url-focused-expando: url({{ "/assets/images/ui/focused-expando.svg" | relative_url }});
+$svg-url-event-vector: url({{ "/assets/images/ui/event-vector.svg" | relative_url }});
+
+@import "main";

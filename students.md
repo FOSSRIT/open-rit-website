@@ -68,7 +68,7 @@ LibreCorps is an initiative of Open@RIT that connects RIT students with opportun
 {% endcapture %}
 
 {% capture librecorp %}
-{% include link_grid.html links=page.links big=true %}
+{% include link-grid.html links=page.links big=true %}
 {% endcapture %}
 
 {% include spacer.html %}

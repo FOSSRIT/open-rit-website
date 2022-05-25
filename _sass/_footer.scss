@@ -1,0 +1,148 @@
+/* Footer styles (footer.html) */
+
+/* Contact Footer */
+#footer-contact {
+	background-color: black;
+	color: white;
+	padding: 23px 0;
+	margin-top: 80px;
+	margin-bottom: -58px; /* compensate for real footer's margin */
+	padding-left: var(--padding-body-right);
+
+	p {
+		margin: 5px 0;
+	}
+
+	h2 {
+		margin: 0;
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+
+	.contacts {
+		display: flex;
+		gap: 50px;
+		margin-bottom: 30px;
+
+		b {
+			display:none;
+		}
+
+		a:first-of-type {
+			color: white;
+		}
+
+		.contact {
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (min-width: 1180px) {
+		display: none;
+	}
+}
+
+/* Footer */
+footer:last-of-type {
+	background-color: black;
+	color: white;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	justify-items: center;
+	align-items: center;
+	padding: 50px 10%;
+	margin-top: 80px;
+
+	p {
+		line-height: 1.25rem;
+		font-size: 0.8rem;
+		font-weight: 400px;
+		color: #ced4da;
+	}
+
+	#socials {
+		display: flex;
+		gap: 10px;
+		a {
+			color: black;
+			background-color: white;
+			border-radius: 100px;
+			width: 42px;
+			height: 42px;
+			position: relative;
+			display: grid;
+			justify-items: center;
+			align-items: center;
+			&:hover {
+				background-color: var(--color-rit-orange);
+				color: white;
+			}
+		}
+	}
+
+	button.big {
+		background-color: white;
+		color: black;
+		width: 105px;
+	}
+
+	.links {
+		margin: 50px 0;
+		grid-column: 1/span 5;
+		display: grid;
+		width: 100%;
+		justify-content: space-between;
+		grid-auto-flow: column;
+		gap: 23px;
+
+		a {
+			&:not(:hover) {
+				color: white;
+			}
+
+			font-weight: bold;
+			font-size: 1.1669em;
+		}
+	}
+
+	@media (max-width: 1312px) and (min-width: 690px) {
+		grid-template-columns: 1fr 1fr;
+		gap: 30px;
+
+		.links {
+			grid-column: 1/span 2;
+		}
+
+		& > :nth-child(2) {
+			grid-area: 2/1/3/2;
+		}
+	}
+
+	@media (max-width: 1073px) and (min-width: 690px) {
+		.links {
+			grid-template-rows: 1fr 1fr;
+		}
+	}
+
+	@media (max-width: 690px) {
+		grid-template-columns: 1fr;
+		gap: 30px;
+		justify-items: start;
+
+		button.big {
+			display: none;
+		}
+
+		.links {
+			grid-column: 1/span 1;
+			grid-template-rows: initial;
+			grid-auto-flow: row;
+		}
+
+		& > svg {
+			max-width: 80%;
+		}
+	}
+
+}

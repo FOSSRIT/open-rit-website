@@ -1,0 +1,25 @@
+/* Page banner styles */
+
+#banner {
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 350px;
+
+	display: grid;
+	align-items: end;
+
+	h1 {
+		font-size: 4rem;
+		margin-left: 42px;
+		color: white;
+		background-color: var(--color-rit-orange);
+		width: fit-content;
+		width: -moz-fit-content;
+		padding: 0 21px;
+		padding-top: 11px;
+		padding-bottom: 11px;
+		line-height: 70px;
+	}
+	margin-bottom: 50px;
+}

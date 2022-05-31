@@ -1,3 +1,7 @@
+/* Common */
+@import "variables";
+
+/* Includes */
 @import "includes/aside";
 @import "includes/black-link-bar";
 @import "includes/card-tiles";
@@ -12,19 +16,6 @@
 @import "includes/quote";
 @import "includes/splash-blurb";
 @import "includes/two-column";
-
-/* Variable Definitions */
-html {
-	--color-rit-orange: #f76902;
-	--color-text-orange: #c75300;
-	--padding-body: 30%;
-	--padding-body-right: 20%;
-	@media (max-width: 650px) {
-		--padding-body: 50px;
-		--padding-body-right: 50px;
-	}
-}
-
 
 /* Basic Setup & Constants */
 body {

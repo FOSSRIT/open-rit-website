@@ -1,0 +1,16 @@
+/* Variable Definitions */
+
+/* SCSS Variables */
+// none
+
+/* CSS Variables */
+html {
+	--color-rit-orange: #f76902;
+	--color-text-orange: #c75300;
+	--padding-body: 30%;
+	--padding-body-right: 20%;
+	@media (max-width: 650px) {
+		--padding-body: 50px;
+		--padding-body-right: 50px;
+	}
+}

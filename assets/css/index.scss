@@ -4,6 +4,8 @@
 /*
   Workaround: declare things that need templating here, since Jekyll can't
   pre-process SCSS for imports and will just leave the template verbatim.
+  
+  Hopefully temporary until a better solution is found.
   */
 $svg-url-chevron: url({{ "/assets/images/ui/chevron.svg" | relative_url }});
 $svg-url-expando: url({{ "/assets/images/ui/expando.svg" | relative_url }});

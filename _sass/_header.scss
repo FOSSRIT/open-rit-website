@@ -1,20 +1,11 @@
 /* Page header styles */
 
-/*
-TODO: maybe replace with:
-html {
-	border-top: 10px solid var(--color-rit-orange);
-}
-*/
-#orange-bar {
-	border-bottom: 10px solid var(--color-rit-orange);
-}
-
 header {
 	position: sticky;
 	top: 0;
 	background-color: white;
 	z-index: 10;
+	border-top: 10px solid var(--color-rit-orange);
 }
 
 #logos {

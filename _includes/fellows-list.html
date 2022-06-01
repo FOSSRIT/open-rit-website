@@ -38,12 +38,7 @@ Loads the information to display from `_data/fellows.yml`.
 				{% endfor %}
 			</td>
 			<td>
-				{% for person in people %}
-					{{ person.college }}
-					{% unless forloop.last %}
-						&
-					{% endunless %}
-				{% endfor %}
+				{{ people | map: "college" | uniq | join: " & " }}
 			</td>
 			<td>
 				<b>{{ fellow.project -}}

@@ -1,10 +1,7 @@
 <!Doctype HTML>
 <html lang="en">
 
-{% comment %}
-TODO: don't duplicate this in default.html and base.html
-{% endcomment %}
-{% assign title = page.title | default: page.breadcrumbs[0].name %}
+{% include dynamic-title.liquid %}
 
 <head>
 	<meta charset="utf-8">

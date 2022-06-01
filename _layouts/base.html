@@ -1,10 +1,8 @@
 ---
 layout: default
 ---
-{% comment %}
-TODO: don't duplicate this in default.html and base.html
-{% endcomment %}
-{% assign title = page.title | default: page.breadcrumbs[0].name %}
+
+{% include dynamic-title.liquid %}
 
 <header>
 

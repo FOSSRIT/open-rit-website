@@ -1,0 +1,12 @@
+/* Left Image styles (left-image.html) */
+
+.left-image {
+	display: grid;
+	grid-template-columns: 40% 60%;
+	align-items: center;
+	gap: 40px;
+
+	img {
+		width: 100%;
+	}
+}

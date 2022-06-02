@@ -1,0 +1,21 @@
+/* Horizontal Row styles (horizontal-row.html) */
+
+.horizontal-row {
+	--gap: 50px;
+	display: grid;
+	grid-auto-flow: column;
+	align-items: center;
+	grid-template-columns: repeat(
+		var(--element-count),
+		calc(
+			1 / var(--element-count) * (
+				100% - var(--gap) * (var(--element-count) - 1)
+			)
+		)
+	);
+	gap: var(--gap);
+
+	img {
+		width: 100%;
+	}
+}

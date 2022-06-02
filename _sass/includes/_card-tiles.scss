@@ -1,0 +1,95 @@
+/* Card Tiles styles (card-tiles.html) */
+
+.card-tiles {
+	display: grid;
+	grid-auto-flow: row;
+	--n-columns: 3;
+	--gap: 0%;
+	&.alt-style {
+		--gap: 20px;
+		--n-columns: 1;
+	}
+	grid-template-columns: repeat(var(--n-columns), calc(
+		(100% - var(--gap) * (var(--n-columns) - 1)) / var(--n-columns)
+	));
+	gap: var(--gap);
+
+	--hover-bg: rgba(199, 83, 0, 0.8);
+	&.no-link {
+		--hover-bg: rgba(0, 0, 0, 0.8);
+		--button-color: #C75300;
+		--button-text-color: white;
+	}
+
+	& > div {
+		overflow: hidden;
+		& > a, & > span {
+			display: block;
+			height: 500px;
+			background-size: cover;
+			color: white;
+			--shadow-overlay-size: 10%;
+			--bg-overlay: linear-gradient(to top, rgba(0,0,0,80%) var(--shadow-overlay-size), transparent calc(var(--shadow-overlay-size) + 30%));
+
+			.contents {
+				background-color: var(--hover-bg);
+				padding: 10px 20px;
+				height: 100%;
+				font-weight: bold;
+				.card-title {
+					&:not(h2) {
+						font-size: 2em;
+						margin-top: 10px;
+					}
+					&:not(h3) {
+						margin-top: 17px;
+					}
+					display: grid;
+					align-content: end;
+					position: relative;
+					top: 0;
+					color: white;
+					transition: top 200ms, transform 200ms;
+					line-height: 1em;
+				}
+				position: relative;
+				transition: top 200ms;
+				top: 0;
+
+				ul {
+					list-style: none;
+					padding-left: 20px;
+				}
+			}
+			&:not(:hover) > .contents{
+				top: 100%;
+				h2, h3 {
+					top: 0;
+					transform: translateY(calc(-100% - 35px));
+				}
+			}
+		}
+	}
+	&.big > div > a {
+		--shadow-overlay-size: 17%;
+		& > span {
+			font-weight: 900;
+			font-size: 2.5rem;
+			padding-bottom: 7px;
+			box-sizing: border-box;
+		}
+	}
+}
+
+.profile {
+	display: grid;
+	grid-template-columns: calc(min(55%, 200px)) 1fr;
+	column-gap: 10px;
+	& > :first-child {
+		grid-area: 1/1/2/3;
+	}
+	& > img {
+		grid-area: 2/1/5/2;
+		width: 100%;
+	}
+}

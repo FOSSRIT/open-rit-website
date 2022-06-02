@@ -1,0 +1,20 @@
+{% comment %}
+A container for contact information to be placed on the page.
+It loads the information to display from `_data/contact.yml`.
+{% endcomment %}
+
+<div id="contact">
+	<h2>Contact Us</h2>
+	<div class="contacts">
+		{% for person in site.data.contact.people %}
+			<p class="contact">
+				<span><b>{{person.position}}: </b>{{person.name}}</span> <br/>
+				<a href="mailto:{{person.email}}">{{person.email}}</a>
+				<a href="{{person.schedule-link}}">Book a Meeting</a>
+			</p>
+		{% endfor %}
+	</div>
+	{% for entry in site.data.contact.links %}
+		<p><a href="{{entry.link}}">{{entry.label}}</a></p>
+	{% endfor %}
+</div>

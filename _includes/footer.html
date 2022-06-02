@@ -1,0 +1,36 @@
+{% comment %}
+The footer present at the bottom of each page. Contains contact information and navigation
+links.
+{% endcomment %}
+
+<footer id="footer-contact">
+	{% include contact.html %}
+</footer>
+<footer>
+	{% include rit-logo.html logo_color="white" text_color="white" %}
+	<p>
+		One Lomb Memorial Drive<br/>
+		Rochester, NY 14623<br/>
+		585-475-2411
+	</p>
+	<div id="socials">
+		{% for social in site.data.socials %}
+			<a href="{{social.url}}">
+				{% assign icon_name=social.name | downcase %}
+				{% assign icon_alt="Open@RIT's " | append: social.name %}
+				{% include icon.html name=icon_name size=24 alt=icon_alt %}
+			</a>
+		{% endfor %}
+	</div>
+	<a href="mailto:sj@magic.rit.edu">
+		<button class="big">Contact</button>
+	</a>
+	<div class="links">
+		{% for section in site.data.navigation %}
+			<a
+				href="{{ section.path | relative_url }}" >
+				{{ section.name }}
+			</a>
+		{% endfor %}
+	</div>
+</footer>

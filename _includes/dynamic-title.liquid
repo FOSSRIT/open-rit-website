@@ -1,0 +1,20 @@
+{% comment %}
+Dynamically assign the page title, using the following order of preference:
+  1. Explicitly defined page title
+  2. Currently active subnav section
+  3. First breadcrumb
+  4. Loud debug screaming to fix the title
+{% endcomment %}
+
+{% assign title = page.title %}
+{% unless title %}
+	{% for section in page.subnav %}
+		{% if section.active == true %}
+			{% assign title = section.name %}
+			{% break %}
+		{% endif %}
+	{% endfor %}
+{% endunless %}
+{% assign title = title
+	| default: page.breadcrumbs[0].name
+	| default: "MISSING TITLE, FIX ME" %}

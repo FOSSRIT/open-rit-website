@@ -10,7 +10,7 @@ event_link: https://calendar.google.com/event?action=TEMPLATE&tmeid=MzMwNHByamY4
 ---
 ## Why Now?
 
-The time is ripe to look at [Open Work](https://fossrit.github.io/open-work-definition/)across communities to compare, contrast, \nand cross-pollinate best practices.
+The time is ripe to look at [Open Work](https://fossrit.github.io/open-work-definition/) across communities to compare, contrast, \nand cross-pollinate best practices.
 
 - **The National Science Foundation** is soliciting proposals for funding to support “Open Source Ecosystems” to improve sustainability, impact, and translation of “open source research products.”
 

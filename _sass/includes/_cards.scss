@@ -1,0 +1,120 @@
+/* Cards styles (cards.html) */
+
+.cards {
+	display: grid;
+	grid-auto-flow: column;
+	gap: 4vw;
+	overflow-x: scroll;
+
+	/* Both are needed for browser interop */
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	.card {
+		width: 14vw;
+		display: block;
+
+		line-height: 1.4rem;
+		font-size: 0.875rem;
+
+		.image-header {
+			display: block;
+			background-color: var(--color-rit-orange);
+			line-height: 0;
+			margin-bottom: 8px;
+			overflow: hidden;
+
+			img {
+				transition: transform 0.05s, opacity 0.05s;
+				&:hover {
+					transform: scale(1.1);
+					opacity: 70%;
+				}
+			}
+		}
+
+		.primary {
+			font-weight: bold;
+			font-size: 1.188em;
+		}
+
+		.secondary {
+			font-weight: bold;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	--card-animation-speed: 10s;
+	--card-width: 18vw;
+}
+
+.cards.size-2 .card {
+	animation: card-slider-2 calc(var(--card-animation-speed) * 2) infinite;
+}
+@keyframes card-slider-2 {
+	47% {
+		transform: translate(0);
+	}
+	50%, 97% {
+		transform: translate(calc(var(--card-width) * -3 * 1), 0);
+	}
+}
+
+.cards.size-3 .card {
+	animation: card-slider-3 calc(var(--card-animation-speed) * 3) infinite;
+}
+@keyframes card-slider-3 {
+	30% {
+		transform: translate(0);
+	}
+	33%, 63% {
+		transform: translate(calc(var(--card-width) * -3 * 1), 0);
+	}
+	66%, 97% {
+		transform: translate(calc(var(--card-width) * -3 * 2), 0);
+	}
+}
+
+.cards.size-4 .card {
+	animation: card-slider-4 calc(var(--card-animation-speed) * 4) infinite;
+}
+@keyframes card-slider-4 {
+	22% {
+		transform: translate(0);
+	}
+	25%, 47% {
+		transform: translate(calc(var(--card-width) * -3 * 1), 0);
+	}
+	50%, 72% {
+		transform: translate(calc(var(--card-width) * -3 * 2), 0);
+	}
+	75%, 97% {
+		transform: translate(calc(var(--card-width) * -3 * 3), 0);
+	}
+}
+
+.cards.size-5 .card {
+	animation: card-slider-5 calc(var(--card-animation-speed) * 5) infinite;
+}
+@keyframes card-slider-5 {
+	17% {
+		transform: translate(0);
+	}
+	20%, 37% {
+		transform: translate(calc(var(--card-width) * -3 * 1), 0);
+	}
+	40%, 57% {
+		transform: translate(calc(var(--card-width) * -3 * 2), 0);
+	}
+	60%, 77% {
+		transform: translate(calc(var(--card-width) * -3 * 3), 0);
+	}
+	80%, 97% {
+		transform: translate(calc(var(--card-width) * -3 * 4), 0);
+	}
+}

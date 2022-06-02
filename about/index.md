@@ -27,7 +27,7 @@ subnav:
   sections:
   - Our Playbook
 
-link_grid:
+link-grid:
 - name: Contributing to open projects
   href: /best-practices/
   image: /assets/images/pages/about/open.webp
@@ -47,7 +47,7 @@ As the Open Programs Office for RIT, our mission is to support RIT projects, sch
 
 ## We offer support in:
 
-{% include link_grid.html links=page.link_grid columns=1 big=true row_height="141px" %}
+{% include link-grid.html links=page.link-grid columns=1 big=true row_height="141px" %}
 
 ## History
 

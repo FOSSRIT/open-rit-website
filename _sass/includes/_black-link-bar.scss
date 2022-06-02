@@ -1,0 +1,21 @@
+/* Black Link Bar styles (black-link-bar.html) */
+
+a.black-link-bar {
+	display: block;
+	background-color: black;
+	color: white;
+	width: 100%;
+	padding: 9px 15px;
+	box-sizing: border-box;
+	margin: 25px 0;
+
+	&:before {
+		content: "> ";
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+
+	&:hover {
+		color: var(--color-rit-orange);
+	}
+}

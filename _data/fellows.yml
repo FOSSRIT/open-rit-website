@@ -1,0 +1,122 @@
+- name: Dr. J A Stephen Viggiano
+  link: https://www.rit.edu/directory/jasvppr-j-a-stephen-viggiano
+  college: College of Art and Design
+  project: NeugebauerScaler
+  project-desc: Tools for Digital Color Imaging
+
+- name: Dr. Kaitlin Stack Whitney
+  link: https://www.rit.edu/directory/kxwsbi-kaitlin-stack-whitney
+  college: College of Liberal Arts
+  project: Accessibility and Flexible Learning Projects
+
+- name: Professor Jessica Liberman
+  link: https://www.rit.edu/directory/jclgsl-jessica-lieberman
+  college: College of Liberal Arts
+  project: Mapping RIT History
+  project-desc: Its impact on Rochester
+
+- name: Dr. Whitney Sperrazza
+  link: https://www.rit.edu/directory/wssgla-whitney-sperrazza
+  college: College of Liberal Arts
+  project: Resistance Mapping
+  project-desc: Redlining & Related Issues in Rochester History
+
+- name: Dr. Manuella Campanella
+  link: https://www.rit.edu/science/directory/mxcsma-manuela-campanelli
+  college: College of Science
+  project: Compact Binaries
+  project-desc: Computational Astrophysics
+
+- name: Dr. Bob Teese
+  link: https://www.rit.edu/directory/rbtsps-robert-teese
+  college: College of Science
+  project: The Mint Project
+  project-desc: Interactive Video-Enhanced Tutorials
+
+- name: Dr. Paul Shipman
+  link: https://www.rit.edu/directory/passbi-paul-shipman
+  college: College of Science
+  project: Summer Science Education for Tribal Communities
+
+- name: Dr. Michael Osier
+  link: https://www.rit.edu/directory/mvoscl-michael-osier
+  college: College of Science
+  project: Vitis Pathways Genomics Software
+
+- name: Dr. Shanchieh Yang
+  link: https://www.rit.edu/directory/sjyeec-shanchieh-yang
+  college: Kate Gleason College of Engineering
+  project: ASSERT
+  project-desc: Attack Strategy Synthesis for Enhanced Threat Recognition
+
+- collaborators:
+    - name: Dr. Michael McQuaid
+      link: https://www.rit.edu/directory/mjmics-michael-mcquaid
+      college: GCCIS
+    
+    - name: Dr. Sean Grass
+      link: https://www.rit.edu/directory/scggsl-sean-grass
+      college: COLA
+  project: Victorian Autobiography Information Network
+
+- name: Dr. Andy Meneely
+  link: https://www.rit.edu/directory/axmvse-andy-meneely
+  college: GCCIS
+  project: The Vulnerability History Project
+
+- name: Dr. David I. Schwartz
+  link: https://www.rit.edu/directory/disvks-david-schwartz
+  college: GCCIS
+  project: ATLAS
+  project-desc: An Open-Source Repository for Game Development Education
+
+- name: Dr. Mohamed Wiem Mkaouer
+  link: https://www.rit.edu/directory/mwmvse-mohamed-wiem-mkaouer
+  college: GCCIS
+  project: Test Smells
+  project-desc: Improving the usability of detecting bad testing practices
+
+- name: Professor Michelle Harris
+  link: https://www.rit.edu/directory/wmhics-w-michelle-harris
+  college: GCCIS
+  project: Contributions of Tutorials and Exercises to P5.js
+
+- name: Dr. Scott Hawker
+  link: https://www.rit.edu/directory/jshvse-j-scott-hawker
+  college: GCCIS
+  project: Conservation 360
+  project-desc: An Open Data Project with the Seneca Park Zoo
+
+- name: Dr. Xumin Liu
+  link: https://www.rit.edu/directory/xmlics-xumin-liu
+  college: GCCIS
+  project: OpenDS4All
+  project-desc: An Open Data Science Curriculum
+
+- name: Dr. Nidhi Rastogi
+  link: https://www.rit.edu/directory/nxrvse-nidhi-rastogi
+  college: GCCIS
+  project: Explainable Security
+  project-desc: Generating open dataset in autonomous systems for explainable security
+
+- name: Professor Stephen Yi
+  college: GCCIS
+  project: Csound
+  project-desc: A Sound and Music Computing System
+
+- name: Dr. Todd Pagano
+  link: https://www.rit.edu/directory/tepnts-todd-pagano
+  college: NTID
+  project: The Journal of Science Education for Students With Disabilities
+
+- name: Dr. Chris Kurz
+  link: https://www.rit.edu/directory/caknsp-christopher-kurz
+  college: NTID
+  project: World Around You
+  project-desc: A Deaf Education Literacy Platform
+
+- name: Professor Kierstin Muroski
+  link: https://www.rit.edu/directory/ksmnss-kierstin-muroski
+  college: NTID
+  project: ASL Interpereting History
+  project-desc: Cataloging the history of ASL interpereting

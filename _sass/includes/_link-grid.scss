@@ -1,0 +1,50 @@
+/* Link Grid styles (link-grid.html) */
+
+.link-grid {
+	display: grid;
+	grid-auto-flow: row;
+	--gap: 30px;
+	grid-template-columns: repeat(var(--n-columns), calc(
+		(100% - var(--gap) * (var(--n-columns) - 1)) / var(--n-columns)
+	));
+	gap: var(--gap);
+	& > div {
+		overflow: hidden;
+		a {
+			display: block;
+			height: 250px;
+			background-size: cover;
+			padding: 10px 20px;
+			color: white;
+			font-size: 1.15rem;
+			--shadow-overlay-size: 10%;
+			--bg-overlay: linear-gradient(to top, rgba(0,0,0,80%) var(--shadow-overlay-size), transparent calc(var(--shadow-overlay-size) + 30%));
+
+			span {
+				display: grid;
+				align-content: end;
+				height: 100%;
+				line-height: 1.172em;
+			}
+
+			&:hover {
+				--bg-overlay: linear-gradient(rgba(247, 105, 2, 0.3), rgba(247, 105, 2, 0.3)), linear-gradient(to top, rgba(0,0,0,80%) 10%, transparent 40%);
+
+				transform: scale(1.1);
+
+				span {
+					transform: scale(calc(1 / 1.1));
+				}
+			}
+		}
+	}
+	&.big > div > a {
+		--shadow-overlay-size: 17%;
+		& > span {
+			font-weight: 900;
+			font-size: 2.5rem;
+			padding-bottom: 7px;
+			box-sizing: border-box;
+		}
+	}
+}

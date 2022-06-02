@@ -1,0 +1,40 @@
+/* Page header styles */
+
+header {
+	position: sticky;
+	top: 0;
+	background-color: white;
+	z-index: 10;
+	border-top: 10px solid var(--color-rit-orange);
+}
+
+#logos {
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	margin-top: 15px;
+	gap: 20px;
+	@media (min-width: 850px) {
+		grid-template-columns: 33% 33% 33%;
+	}
+
+	#rit-logo {
+		width: 283px;
+	}
+
+	#open-at-rit-logo {
+		text-align: center;
+		display: block;
+		color: black;
+		text-decoration: none;
+		:nth-child(1) {
+			margin-bottom: 4px;
+			margin-top: 0;
+			font-size: 2em;
+			font-weight: 500;
+		}
+		:nth-child(2) {
+			font-size: 1.17em;
+		}
+	}
+}

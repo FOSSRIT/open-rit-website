@@ -24,6 +24,6 @@ Open@RIT received a grant from the Alfred P. Sloan Foundation to [support the Op
 
 [1]: https://www.rit.edu/news/openrit-receives-sloan-foundation-grant-support-open-work-across-university
 
-### Current Open@RIT Fellows
+### Open@RIT Fellows
 
 {% include fellows-list.html %}

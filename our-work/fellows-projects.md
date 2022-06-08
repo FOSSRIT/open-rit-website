@@ -30,4 +30,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Browse Projects
 
-<!-- TODO -->
+{% include projects-grid.html %}

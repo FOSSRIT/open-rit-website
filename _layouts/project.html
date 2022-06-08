@@ -1,0 +1,31 @@
+---
+layout: default
+load_scripts:
+- /assets/js/project.js
+---
+
+<main>
+	<div id="project-content" style="display: none;">
+		{% comment %}
+		Divs to be filled in by the project.js script
+		{% endcomment %}
+		<div id="project-about"></div>
+		<div id="project-owner"></div> <!-- TODO: include for this? -->
+		
+		<div id="project-services">
+			{{ content }}
+		</div>
+		
+		{% comment %}
+		More divs to be filled in by project.js
+		{% endcomment %}
+		<div id="project-metrics"></div>
+		<div id="project-members"></div> <!-- TODO: include for this? -->
+	</div>
+	<noscript>
+		<p class="error">
+			Sorry, project information requires JavaScript enabled in order to
+			be loaded. Please enable JavaScript to see project information.
+		</p>
+	</noscript>
+</main>

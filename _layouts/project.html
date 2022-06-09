@@ -9,6 +9,7 @@ load_scripts:
 		{% comment %}
 		Divs to be filled in by the project.js script
 		{% endcomment %}
+		<h2>About</h2>
 		<div id="project-about"></div>
 		<div id="project-owner"></div> <!-- TODO: include for this? -->
 		
@@ -19,8 +20,12 @@ load_scripts:
 		{% comment %}
 		More divs to be filled in by project.js
 		{% endcomment %}
+		<h2>Metrics</h2>
 		<div id="project-metrics"></div>
-		<div id="project-members"></div> <!-- TODO: include for this? -->
+		<!-- TODO: include for this?
+		<h2>Team Members</h2>
+		<div id="project-members"></div>
+		-->
 	</div>
 	<noscript>
 		<p class="error">
@@ -28,4 +33,16 @@ load_scripts:
 			be loaded. Please enable JavaScript to see project information.
 		</p>
 	</noscript>
+	<div id="loading-error" style="display: none;">
+		<p class="error">
+			Sorry, there was a problem loading the information for this project.
+			Please try again later. <br/>
+			If this problem persists, please contact Michael Nolan using the
+			contact information below.
+		</p>
+	</div>
 </main>
+<script>
+	const MYSTIC_PID = "{{ page.mystic-pid }}";
+	fetch_data();
+</script>

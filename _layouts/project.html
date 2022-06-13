@@ -1,47 +1,48 @@
 ---
-layout: default
+layout: base
+banner: /assets/images/banners/our-work.webp
 load_scripts:
 - /assets/js/project.js
 ---
 
-<main>
-	<div id="project-content" style="display: none;">
-		{% comment %}
-		Divs to be filled in by the project.js script
-		{% endcomment %}
-		<h2>About</h2>
-		<div id="project-about"></div>
-		<div id="project-owner"></div> <!-- TODO: include for this? -->
-		
-		<div id="project-services">
-			{{ content }}
-		</div>
-		
-		{% comment %}
-		More divs to be filled in by project.js
-		{% endcomment %}
-		<h2>Metrics</h2>
-		<div id="project-metrics"></div>
-		<!-- TODO: include for this?
-		<h2>Team Members</h2>
-		<div id="project-members"></div>
-		-->
+<div id="project-content" style="display: none;">
+	{% comment %}
+	Divs to be filled in by the project.js script
+	{% endcomment %}
+	<h2>About</h2>
+	<div id="project-about"></div>
+	<div id="project-owner"></div> <!-- TODO: include for this? -->
+	
+	<div id="project-services">
+		{{ content }}
 	</div>
-	<noscript>
-		<p class="error">
-			Sorry, project information requires JavaScript enabled in order to
-			be loaded. Please enable JavaScript to see project information.
-		</p>
-	</noscript>
-	<div id="loading-error" style="display: none;">
-		<p class="error">
-			Sorry, there was a problem loading the information for this project.
-			Please try again later. <br/>
-			If this problem persists, please contact Michael Nolan using the
-			contact information below.
-		</p>
-	</div>
-</main>
+	
+	{% comment %}
+	More divs to be filled in by project.js
+	{% endcomment %}
+	<h2>Metrics</h2>
+	<div id="project-metrics"></div>
+	<!-- TODO: include for this?
+	<h2>Team Members</h2>
+	<div id="project-members"></div>
+	-->
+</div>
+<!-- <Errors> -->
+<noscript>
+	<p class="error">
+		Sorry, project information requires JavaScript enabled in order to
+		be loaded. Please enable JavaScript to see project information.
+	</p>
+</noscript>
+<div id="loading-error" style="display: none;">
+	<p class="error">
+		Sorry, there was a problem loading the information for this project.
+		Please try again later. <br/>
+		If this problem persists, please contact Michael Nolan using the
+		contact information below.
+	</p>
+</div>
+<!-- </Errors> -->
 <script>
 	const MYSTIC_PID = "{{ page.mystic-pid }}";
 	fetch_data();

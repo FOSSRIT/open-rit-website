@@ -28,7 +28,8 @@ function fetch_data() {
 				});
 			}
 		})
-		.catch(() => {
+		.catch(error => {
+			console.log(error);
 			unhide_div("loading-error");
 		});
 }
@@ -46,12 +47,27 @@ function populate(data) {
 	
 	const project_metrics_div = document.getElementById("project-metrics");
 	data["embeds"].forEach(embed_data => {
-		const embed = document.createElement("iframe");
-		embed.setAttribute("src", new URL(embed_data["url"], MYSTIC_URL));
-		embed.setAttribute("title", embed_data["title"]);
+		const embed = create_embed(embed_data);
 		project_metrics_div.appendChild(embed);
 	});
 	
 	/* Content ready to show */
 	unhide_div("project-content");
+}
+
+function create_embed(embed_data) {
+	/* Create the container */
+	const embed_container = document.createElement("div");
+	embed_container.classList.add("embed-container");
+	/* Create the embed */
+	const embed = document.createElement("iframe");
+	embed.setAttribute("src", new URL(embed_data["url"], MYSTIC_URL));
+	embed.setAttribute("title", embed_data["title"]);
+	embed.setAttribute("scrolling", "no");
+	if (embed_data["tall"]) {
+		embed.classList.add("tall");
+	}
+	/* Put the embed in the container and return it */
+	embed_container.appendChild(embed);
+	return embed_container;
 }

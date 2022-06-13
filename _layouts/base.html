@@ -69,9 +69,10 @@ layout: default
 			{% endfor %}
 		</div>
 	{% endif %}
-	{% if page.subnav %}
+	{% assign subnav = page.subnav | default: layout.subnav %}
+	{% if subnav %}
 		<div id="toc">
-			{% for header in page.subnav %}
+			{% for header in subnav %}
 				{% assign header_link = header.link | default: "#" | relative_url %}
 				<a
 						href="{{ header_link }}"

@@ -36,7 +36,7 @@ function fetch_data() {
 
 function unhide_div(div_id) {
 	const div = document.getElementById(div_id);
-	div.removeAttribute("style"); // remove display: none
+	div.classList.remove("hidden"); // remove hidden
 }
 
 function populate(data) {

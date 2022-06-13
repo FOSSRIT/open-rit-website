@@ -1,12 +1,12 @@
 {% comment %}
 Dynamically assign the page title, using the following order of preference:
-  1. Explicitly defined page title
+  1. Explicitly defined layout or page title
   2. Currently active subnav section
   3. First breadcrumb
   4. Loud debug screaming to fix the title
 {% endcomment %}
 
-{% assign title = page.title %}
+{% assign title = layout.title | default: page.title | flatify %}
 {% unless title %}
 	{% for section in page.subnav %}
 		{% if section.active == true %}

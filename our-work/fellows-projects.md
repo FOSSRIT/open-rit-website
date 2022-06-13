@@ -3,11 +3,13 @@ layout: base
 banner: /assets/images/banners/our-work.webp
 
 breadcrumbs:
-- name: PLACEHOLDER-RENAME
+- name: Our Open Work
   path: /our-work/
+- name: Our Fellows' Projects
+  path: /our-work/fellows-projects
 
 subnav:
-- name: PLACEHOLDER-RENAME
+- name: Our Work and Projects
   link: /our-work
   sections:
   - LibreCorps Team

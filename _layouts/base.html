@@ -57,11 +57,15 @@ layout: default
 
 <!-- Sidenav -->
 <div id="sidenav">
-	{% if page.breadcrumbs %}
+	{% assign breadcrumbs = page.breadcrumbs | default: layout.breadcrumbs %}
+	{% if breadcrumbs %}
 		<div id="breadcrumbs">
 			<a href="{{ '/' | relative_url }}"> <b>Open@RIT</b> </a>
-			{% for crumb in page.breadcrumbs %}
-				/ <a href="{{ crumb.path | relative_url }}"> {{crumb.name}} </a>
+			{% for crumb in breadcrumbs %}
+				/
+				<a href="{{ crumb.path | flatify | relative_url }}">
+					{{ crumb.name | flatify }}
+				</a>
 			{% endfor %}
 		</div>
 	{% endif %}

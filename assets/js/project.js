@@ -45,6 +45,12 @@ function populate(data) {
 	const project_about_div = document.getElementById("project-about");
 	project_about_div.innerText = data["desc"];
 	
+	const sources_ul = document.getElementById("project-sources");
+	data["sources"].forEach(source_data => {
+		const source_li = create_source(source_data);
+		sources_ul.appendChild(source_li);
+	});
+	
 	const project_metrics_div = document.getElementById("project-metrics");
 	data["embeds"].forEach(embed_data => {
 		const embed = create_embed(embed_data);
@@ -53,6 +59,18 @@ function populate(data) {
 	
 	/* Content ready to show */
 	unhide_div("project-content");
+}
+
+function create_source(source_data) {
+	/* Create the list item */
+	const source_li = document.createElement("li");
+	/* Create the link */
+	const source_a = document.createElement("a");
+	source_a.setAttribute("href", source_data["url"]);
+	source_a.innerText = source_data["type"];
+	/* Put the link in the list item and return it */
+	source_li.appendChild(source_a);
+	return source_li;
 }
 
 function create_embed(embed_data) {

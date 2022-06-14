@@ -19,6 +19,12 @@
 		box-shadow: 0px 5px 10px #666;
 		border-radius: 0.5em;
 		
+		h4 {
+			font-size: 1.1em;
+			margin: 0.3em;
+			margin-bottom: 0;
+			color: lighten(#000, 40%);
+		}
 		iframe {
 			width: 100%;
 			aspect-ratio: 1 / 1;

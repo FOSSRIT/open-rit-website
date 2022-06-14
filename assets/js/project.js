@@ -59,6 +59,9 @@ function create_embed(embed_data) {
 	/* Create the container */
 	const embed_container = document.createElement("div");
 	embed_container.classList.add("embed-container");
+	/* Create the embed label */
+	const embed_title = document.createElement("h4");
+	embed_title.innerText = embed_data["title"];
 	/* Create the embed */
 	const embed = document.createElement("iframe");
 	embed.setAttribute("src", new URL(embed_data["url"], MYSTIC_URL));
@@ -67,7 +70,8 @@ function create_embed(embed_data) {
 	if (embed_data["tall"]) {
 		embed.classList.add("tall");
 	}
-	/* Put the embed in the container and return it */
+	/* Put the content in the container and return it */
+	embed_container.appendChild(embed_title);
 	embed_container.appendChild(embed);
 	return embed_container;
 }

@@ -12,6 +12,9 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	
+	#no-metrics:not(:only-child) {
+		display: none;
+	}
 	.embed-container {
 		width: 45%;
 		margin: 0.5em;

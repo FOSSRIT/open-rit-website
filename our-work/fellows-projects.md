@@ -1,6 +1,8 @@
 ---
 layout: base
 banner: /assets/images/banners/our-work.webp
+load_scripts:
+- /assets/js/projects_search.js
 
 breadcrumbs:
 - name: Our Open Work

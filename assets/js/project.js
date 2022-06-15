@@ -1,3 +1,5 @@
+/* Script to get project information from Mystic for the project.html layout */
+
 /* TODO: replace with live Mystic URL */
 const MYSTIC_URL = new URL("http://localhost:5000/");
 const API_PREFIX = "/";
@@ -36,27 +38,25 @@ function fetch_data() {
 
 function unhide_div(div_id) {
 	const div = document.getElementById(div_id);
-	div.classList.remove("hidden"); // remove hidden
+	div.classList.remove("hidden");
 }
 
 function populate(data) {
-	console.log(data);
-	
+	/* Populate about section */
 	const project_about_div = document.getElementById("project-about");
 	project_about_div.innerText = data["desc"];
-	
+	/* Populate sources list */
 	const sources_ul = document.getElementById("project-sources");
 	data["sources"].forEach(source_data => {
 		const source_li = create_source(source_data);
 		sources_ul.appendChild(source_li);
 	});
-	
+	/* Populate project metrics */
 	const project_metrics_div = document.getElementById("project-metrics");
 	data["embeds"].forEach(embed_data => {
 		const embed = create_embed(embed_data);
 		project_metrics_div.appendChild(embed);
 	});
-	
 	/* Content ready to show */
 	unhide_div("project-content");
 }

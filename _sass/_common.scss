@@ -106,6 +106,7 @@ main {
 	}
 }
 
+/* JS-related classes */
 .error {
 	font-weight: bold;
 	color: desaturate($color: #f00, $amount: 30%);
@@ -115,4 +116,7 @@ main {
 	&::after {
 		content: " >";
 	}
+}
+.hidden {
+	display: none;
 }

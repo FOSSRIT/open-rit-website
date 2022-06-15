@@ -2,11 +2,23 @@
 TODO: documentation
 {% endcomment %}
 
-<div class="projects-grid">
-	<!--<div class="projects-search"></div>-->
-	<div class="projects-container">
+<noscript>
+	<p class="error">
+		Sorry, projects searching requires JavaScript to be enabled in order to
+		function. Please enable JavaScript to search projects.
+	</p>
+</noscript>
+<div id="projects-grid">
+	<div id="projects-search" class="hidden">
+		<input
+			id="projects-search-bar"
+			type="text"
+			placeholder="Search Projects"
+		/>
+	</div>
+	<div id="projects-container">
 		{% for project in site.projects %}
-			<div class="project">
+			<div id="{{ project.mystic-pid }}" class="project">
 				<h2>{{ project.name }}</h2>
 				<p>{{ project.tldr }}</p>
 				<p>{{ project.owner }}</p>
@@ -15,3 +27,15 @@ TODO: documentation
 		{% endfor %}
 	</div>
 </div>
+<script>
+	const PROJECTS_DATA = {
+		{% for project in site.projects %}
+			"{{ project.mystic-pid }}": {
+				"name":  "{{ project.name  }}",
+				"tldr":  "{{ project.tldr  }}",
+				"owner": "{{ project.owner }}",
+			},
+		{% endfor %}
+	}
+	init_search();
+</script>

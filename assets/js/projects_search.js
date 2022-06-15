@@ -38,35 +38,45 @@ function handle_search(event) {
 	/* Don't waste effort if the search is the same */
 	if (search_text === prev_search) return;
 	prev_search = search_text;
-	/* Apply search */
-	const searched_projects = PROJECTS_LIST.filter(project => {
-		project.search_valid = Object.entries(project)
-			.some(([field, value]) => {
-				if (Object.keys(SEARCHABLE_FIELDS).includes(field)) {
-					return value
-						.toLowerCase()
-						.indexOf(search_text.toLowerCase()) !== -1;
-				}
-				return false;
-			});
-		return project.search_valid;
-	});
-	console.log(searched_projects);
-	/* Apply sorting */
-	Object.entries(SEARCHABLE_FIELDS)
-		.forEach(([search_field, weight]) => {
-			searched_projects.forEach(project => {
-				const dist = levenshtein(project[search_field], search_text);
-				project.search_score = dist * weight;
-			});
+	/* Only search if the query isn't empty */
+	if (search_text.length > 0) {
+		/* Apply search */
+		const searched_projects = PROJECTS_LIST.filter(project => {
+			project.search_valid = Object.entries(project)
+				.some(([field, value]) => {
+					if (Object.keys(SEARCHABLE_FIELDS).includes(field)) {
+						return value
+							.toLowerCase()
+							.indexOf(search_text.toLowerCase()) !== -1;
+					}
+					return false;
+				});
+			return project.search_valid;
 		});
-	searched_projects.sort((a, b) => {
-		a.search_score - b.search_score;
-	});
-	let i = 1;
-	searched_projects.forEach(project => {
-		project.search_order = i++;
-	});
+		searched_projects.forEach(project => {
+			const scores = [];
+			Object.entries(SEARCHABLE_FIELDS)
+				.forEach(([search_field, weight]) => {
+					const dist = levenshtein(project[search_field], search_text);
+					const score = dist * weight
+					scores.push(score);
+				});
+			project.search_score = Math.min(...scores);
+		});
+		searched_projects.sort((a, b) => {
+			return b.search_score - a.search_score;
+		});
+		let i = 1;
+		searched_projects.forEach(project => {
+			project.search_order = i++;
+		});
+	} else {
+		/* Reset to default */
+		PROJECTS_LIST.forEach(project => {
+			project.search_valid = true;
+			project.search_order = 0;
+		})
+	}
 	/* Update projects grid */
 	update_content();
 }
@@ -110,7 +120,7 @@ function levenshtein(a, b) {
 	}
 	/* Inscrutable algorithmic absurdity */
 	for (let j = 1; j <= b.length; j++) {
-		for (let i = 1; i <= b.length; i++) {
+		for (let i = 1; i <= a.length; i++) {
 			const s = a[i - 1] === b[j - 1] ? 0 : 1;
 			matrix[j][i] = Math.min(
 				matrix[j][i - 1] + 1,

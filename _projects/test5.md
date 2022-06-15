@@ -1,9 +1,9 @@
 ---
 layout: project
 
-name: Foo5
-tldr: A Foo5 for your Bar5
-owner: Asdf
+name: jubeat
+tldr: A 16-button musical whack-a-mole game on life support
+owner: S-C-U
 mystic-pid: e
 ---
 

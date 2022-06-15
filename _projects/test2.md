@@ -1,9 +1,9 @@
 ---
 layout: project
 
-name: Foo2
-tldr: A Foo2 for your Bar2
-owner: Asdf2
+name: beatmania IIDX
+tldr: The genre-defining 7-key + turntable game
+owner: L.E.D.
 mystic-pid: b
 ---
 

@@ -1,9 +1,9 @@
 ---
 layout: project
 
-name: Foo6
-tldr: A Foo6 for your Bar6
-owner: Asdf
+name: GuitarFreaks & DrumMania
+tldr: The games that Guitar Hero ripped off
+owner: Yoshihiko Koezuka
 mystic-pid: h
 ---
 

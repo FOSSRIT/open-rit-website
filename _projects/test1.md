@@ -1,9 +1,9 @@
 ---
 layout: project
 
-name: Foo
-tldr: A Foo for your Bar
-owner: Asdf
+name: Sound Voltex
+tldr: A 6-key + 2-knob game about applying effects to music
+owner: dj TAKA
 mystic-pid: a
 ---
 

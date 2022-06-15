@@ -1,9 +1,9 @@
 ---
 layout: project
 
-name: Foo3
-tldr: A Foo3 for your Bar3
-owner: Asdf3
+name: pop'n music
+tldr: The deceptively difficult 9-button color burger-smashing game
+owner: wac
 mystic-pid: c
 ---
 

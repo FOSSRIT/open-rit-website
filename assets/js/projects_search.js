@@ -1,6 +1,12 @@
 /* Script to do searching and filtering for the projects-grid.html partial */
 
-const SEARCHABLE_FIELDS = ["name", "tldr", "owner"]; // config
+/* Config - Field and its search weight (scalar) */
+// TODO: refine values
+const SEARCHABLE_FIELDS = {
+	"name":  2.5,
+	"owner": 1.75,
+	"tldr":  1,
+};
 
 const PROJECTS_LIST = [];
 let prev_search = "";
@@ -13,9 +19,11 @@ function init_search() {
 			const project_div = document.getElementById(project_id);
 			project.div = project_div;
 			project.search_valid = true;
-			project.search_order = 0;
 			project.filter_valid = true;
-			project.hidden = false; // performance: avoid DOM checks
+			project.search_score = 0;
+			project.search_order = 0;
+			project.cur_search_order = 0; // performance: avoid DOM checks
+			project.hidden = false;       // performance: avoid DOM checks
 			PROJECTS_LIST.push(project);
 		});
 	/* Enable searching */
@@ -26,32 +34,46 @@ function init_search() {
 
 function handle_search(event) {
 	/* Get the search text */
-	const search_text = event.target.value;
+	const search_text = event.target.value.trim();
 	/* Don't waste effort if the search is the same */
-	if (search_text === prev_search) {
-		return;
-	}
+	if (search_text === prev_search) return;
 	prev_search = search_text;
 	/* Apply search */
-	const searched_projects = PROJECTS_LIST.map(project => {
+	const searched_projects = PROJECTS_LIST.filter(project => {
 		project.search_valid = Object.entries(project)
 			.some(([field, value]) => {
-				if (SEARCHABLE_FIELDS.includes(field)) {
+				if (Object.keys(SEARCHABLE_FIELDS).includes(field)) {
 					return value
 						.toLowerCase()
 						.indexOf(search_text.toLowerCase()) !== -1;
 				}
-				return false
+				return false;
 			});
+		return project.search_valid;
 	});
+	console.log(searched_projects);
 	/* Apply sorting */
-	// TODO
+	Object.entries(SEARCHABLE_FIELDS)
+		.forEach(([search_field, weight]) => {
+			searched_projects.forEach(project => {
+				const dist = levenshtein(project[search_field], search_text);
+				project.search_score = dist * weight;
+			});
+		});
+	searched_projects.sort((a, b) => {
+		a.search_score - b.search_score;
+	});
+	let i = 1;
+	searched_projects.forEach(project => {
+		project.search_order = i++;
+	});
 	/* Update projects grid */
 	update_content();
 }
 
 function update_content() {
 	PROJECTS_LIST.forEach(project => {
+		/* Apply visibility */
 		if (project.search_valid && project.filter_valid) {
 			if (project.hidden) {
 				project.div.classList.remove("hidden");
@@ -63,12 +85,43 @@ function update_content() {
 				project.hidden = true;
 			}
 		}
+		/* Apply order */
+		if (project.search_order !== project.cur_search_order) {
+			project.div.style.order = project.search_order;
+			project.cur_search_order = project.search_order;
+		}
 	});
 }
 
-// function projects_compare(project_a, project_b) {
-//	
-// }
+function levenshtein(a, b) {
+	/* Check if either string is empty/nonexistent */
+	if (!a || a.length === 0) return b.length;
+	if (!b || b.length === 0) return a.length;
+	/* Construct matrix */
+	const matrix = Array(b.length + 1).fill().map(() => (
+		Array(a.length + 1).fill(0)
+	));
+	/* Set initial matrix values */
+	for (let i = 0; i <= a.length; i++) {
+		matrix[0][i] = i;
+	}
+	for (let j = 0; j <= b.length; j++) {
+		matrix[j][0] = j;
+	}
+	/* Inscrutable algorithmic absurdity */
+	for (let j = 1; j <= b.length; j++) {
+		for (let i = 1; i <= b.length; i++) {
+			const s = a[i - 1] === b[j - 1] ? 0 : 1;
+			matrix[j][i] = Math.min(
+				matrix[j][i - 1] + 1,
+				matrix[j - 1][i] + 1,
+				matrix[j - 1][i - 1] + s,
+			);
+		}
+	}
+	/* Return the final calculated value */
+	return matrix[b.length][a.length];
+}
 
 function unhide_div(div_id) {
 	const div = document.getElementById(div_id);

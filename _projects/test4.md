@@ -1,9 +1,9 @@
 ---
 layout: project
 
-name: Foo4
-tldr: A Foo4 for your Bar4
-owner: Asdf4
+name: Dance Dance Revolution
+tldr: The ubiquitous 4-panel dance game that swept the world
+owner: NAOKI
 mystic-pid: d
 ---
 

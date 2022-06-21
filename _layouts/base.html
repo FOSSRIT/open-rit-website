@@ -50,7 +50,13 @@ layout: default
 <!-- Banner & Title -->
 <div
 	id="banner"
-	style="background-image: url({{ page.banner | default: layout.banner | relative_url }})" >
+	{% assign banner = page.banner | default: layout.banner %}
+	{% if banner %}
+		style="background-image: url({{ banner }});"
+	{% else %}
+		class="no-image"
+	{% endif %}
+>
 	{% assign newline = "%0A" | url_decode %}
 	<h1> {{ title | replace: newline, "<br/>" }} </h1>
 </div>

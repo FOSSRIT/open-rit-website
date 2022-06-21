@@ -24,3 +24,15 @@
 	}
 	margin-bottom: 50px;
 }
+
+#banner.no-image {
+	height: inherit;
+	min-height: inherit;
+	margin-bottom: inherit;
+	
+	h1 {
+		color: black;
+		background-color: inherit;
+		margin-bottom: inherit;
+	}
+}

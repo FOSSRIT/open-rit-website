@@ -18,7 +18,7 @@ TODO: documentation
 	</div>
 	<div id="projects-container">
 		{% for project in site.projects %}
-			<div id="{{ project.mystic-pid }}" class="project">
+			<div id="{{ project.slug }}" class="project">
 				<h2>{{ project.name }}</h2>
 				<p>{{ project.tldr }}</p>
 				<p>{{ project.owner }}</p>
@@ -30,7 +30,7 @@ TODO: documentation
 <script>
 	const PROJECTS_DATA = {
 		{% for project in site.projects %}
-			"{{ project.mystic-pid }}": {
+			"{{ project.slug }}": {
 				"name":  "{{ project.name  }}",
 				"tldr":  "{{ project.tldr  }}",
 				"owner": "{{ project.owner }}",

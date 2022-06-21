@@ -40,7 +40,7 @@ function handle_search(event) {
 	prev_search = search_text;
 	/* Only search if the query isn't empty */
 	if (search_text.length > 0) {
-		/* Apply search */
+		/* Search */
 		const searched_projects = PROJECTS_LIST.filter(project => {
 			project.search_valid = Object.entries(project)
 				.some(([field, value]) => {
@@ -53,6 +53,7 @@ function handle_search(event) {
 				});
 			return project.search_valid;
 		});
+		/* Sort */
 		searched_projects.forEach(project => {
 			const scores = [];
 			Object.entries(SEARCHABLE_FIELDS)

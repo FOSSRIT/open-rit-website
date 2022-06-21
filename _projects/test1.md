@@ -4,7 +4,7 @@ layout: project
 name: Sound Voltex
 tldr: A 6-key + 2-knob game about applying effects to music
 owner: dj TAKA
-mystic-pid: a
+slug: test1
 ---
 
 ## List of Services

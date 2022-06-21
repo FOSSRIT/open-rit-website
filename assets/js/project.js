@@ -4,10 +4,10 @@
 const MYSTIC_URL = new URL("http://localhost:5000/");
 const API_PREFIX = "/";
 
-/* MYSTIC_PID set by project.html layout */
+/* PROJECT_SLUG set by project.html layout */
 function get_endpoint_url() {
 	const api_url      = new URL(API_PREFIX, MYSTIC_URL);
-	const endpoint_url = new URL(`${MYSTIC_PID}.json`, api_url);
+	const endpoint_url = new URL(`${PROJECT_SLUG}.json`, api_url);
 	return endpoint_url;
 }
 

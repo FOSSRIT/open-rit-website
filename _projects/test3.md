@@ -4,7 +4,7 @@ layout: project
 name: pop'n music
 tldr: The deceptively difficult 9-button color burger-smashing game
 owner: wac
-mystic-pid: c
+slug: test3
 ---
 
 ## List of Services

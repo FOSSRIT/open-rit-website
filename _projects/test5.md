@@ -4,7 +4,7 @@ layout: project
 name: jubeat
 tldr: A 16-button musical whack-a-mole game on life support
 owner: S-C-U
-mystic-pid: e
+slug: test5
 ---
 
 ## List of Services

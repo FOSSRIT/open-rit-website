@@ -4,7 +4,7 @@ layout: project
 name: beatmania IIDX
 tldr: The genre-defining 7-key + turntable game
 owner: L.E.D.
-mystic-pid: b
+slug: test2
 ---
 
 ## List of Services

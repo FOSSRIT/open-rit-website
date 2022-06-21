@@ -30,6 +30,7 @@ url: https://openr.it/ # the base hostname & protocol for your site, e.g. http:/
 collections:
   projects:
     label: Fellows' Projects
+    permalink: /our-work/fellows-projects/:title
     output: true
 
 # Build settings

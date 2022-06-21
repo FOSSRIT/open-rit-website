@@ -30,6 +30,7 @@ url: https://rit.ieee-saopen.org/ # the base hostname & protocol for your site, 
 collections:
   projects:
     label: Fellows' Projects
+    permalink: /our-work/fellows-projects/:title
     output: true
 
 # Build settings

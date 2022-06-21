@@ -15,8 +15,8 @@ let prev_search = "";
 function init_search() {
 	/* Get all of the divs and put them in the projects list */
 	Object.entries(PROJECTS_DATA)
-		.forEach(([project_id, project]) => {
-			const project_div = document.getElementById(project_id);
+		.forEach(([project_slug, project]) => {
+			const project_div = document.getElementById(project_slug);
 			project.div = project_div;
 			project.search_valid = true;
 			project.filter_valid = true;

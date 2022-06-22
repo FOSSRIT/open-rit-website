@@ -68,9 +68,18 @@ layout: default
 		<div id="breadcrumbs">
 			<a href="{{ '/' | relative_url }}"> <b>Open@RIT</b> </a>
 			{% for crumb in breadcrumbs %}
+				{% comment %}
+				TODO: navigation rework, better allow dynamic breadcrumbs
+				{% endcomment %}
+				{% if crumb.name == "TEMP_REWORK_TODO_NAME" %}
+					{% assign crumb_name = title %}
+				{% endif %}
+				{% if crumb.path == "TEMP_REWORK_TODO_URL" %}
+					{% assign crumb_path = page.url %}
+				{% endif %}
 				/
-				<a href="{{ crumb.path | flatify | relative_url }}">
-					{{ crumb.name | flatify }}
+				<a href="{{ crumb_path | default: crumb.path | relative_url }}">
+					{{ crumb_name | default: crumb.name }}
 				</a>
 			{% endfor %}
 		</div>

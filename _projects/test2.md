@@ -1,7 +1,7 @@
 ---
 layout: project
 
-name: beatmania IIDX
+project: beatmania IIDX
 tldr: The genre-defining 7-key + turntable game
 owner: L.E.D.
 slug: test2

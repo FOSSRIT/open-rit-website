@@ -1,7 +1,7 @@
 ---
 layout: project
 
-name: Sound Voltex
+project: Sound Voltex
 tldr: A 6-key + 2-knob game about applying effects to music
 owner: dj TAKA
 slug: test1

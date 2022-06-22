@@ -1,10 +1,10 @@
 ---
 layout: project
 
-name: GuitarFreaks & DrumMania
+project: GuitarFreaks & DrumMania
 tldr: The games that Guitar Hero ripped off
 owner: Yoshihiko Koezuka
-slug: test5
+slug: test6
 ---
 
 ## List of Services

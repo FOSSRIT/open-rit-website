@@ -1,7 +1,7 @@
 ---
 layout: project
 
-name: jubeat
+project: jubeat
 tldr: A 16-button musical whack-a-mole game on life support
 owner: S-C-U
 slug: test5

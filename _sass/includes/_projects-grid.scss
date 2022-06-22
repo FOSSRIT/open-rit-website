@@ -1,5 +1,26 @@
 /* Styles for the projects grid (projects-grid.html) */
 
+#projects-search {
+	display: flex;
+	flex-direction: column;
+	padding: 0 15%;
+	margin-bottom: 2em;
+	
+	input {
+		display: block;
+		box-sizing: content-box;
+		font-size: 0.9em;
+		padding: 1em;
+		outline: none;
+		border: 1px solid #727578;
+		border-radius: 2px;
+		
+		&:focus {
+			outline: 1px solid darken(#727578, 10%);
+		}
+	}
+}
+
 #projects-container {
 	display: flex;
 	flex-direction: row;
@@ -7,8 +28,10 @@
 }
 
 .project {
-	max-width: 10em; // TODO: do better
-	margin: 1em;
+	flex: 1 0 33%;
+	min-width: 200px;
+	box-sizing: border-box;
+	padding: 1em;
 	
 	h2 {
 		font-size: 1.3em;

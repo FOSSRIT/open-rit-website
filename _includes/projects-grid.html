@@ -18,10 +18,10 @@ TODO: documentation
 	</div>
 	<div id="projects-container">
 		{% for project-page in site.projects %}
-			<div id="{{ project-page.slug }}" class="project">
+			<div id="{{ project-page.mystic-slug }}" class="project">
 				<h2>{{ project-page.project }}</h2>
 				<p>{{ project-page.tldr }}</p>
-				<p>{{ project-page.owner }}</p>
+				<p>{{ project-page.owner | join: " & " }}</p>
 				<a href="{{ project-page.url | relative_url }}">View more</a>
 			</div>
 		{% endfor %}
@@ -30,10 +30,10 @@ TODO: documentation
 <script>
 	const PROJECTS_DATA = {
 		{% for project-page in site.projects %}
-			"{{ project-page.slug }}": {
-				"name":  "{{ project-page.project  }}",
-				"tldr":  "{{ project-page.tldr  }}",
-				"owner": "{{ project-page.owner }}",
+			"{{ project-page.mystic-slug }}": {
+				"name":  "{{ project-page.project             }}",
+				"tldr":  "{{ project-page.tldr                }}",
+				"owner": "{{ project-page.owner | join: ' & ' }}",
 			},
 		{% endfor %}
 	}

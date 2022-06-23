@@ -25,10 +25,11 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .project {
-	flex: 1 0 33%;
+	flex-basis: 33%;
 	min-width: 200px;
 	box-sizing: border-box;
 	padding: 1em;

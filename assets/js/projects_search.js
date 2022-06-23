@@ -3,7 +3,7 @@
 /* Config - Field and its search weight (scalar) */
 // TODO: refine values
 const SEARCHABLE_FIELDS = {
-	"name":  2.5,
+	"name":  3.5,
 	"owner": 1.75,
 	"tldr":  1,
 };
@@ -40,37 +40,8 @@ function handle_search(event) {
 	prev_search = search_text;
 	/* Only search if the query isn't empty */
 	if (search_text.length > 0) {
-		/* Search */
-		const searched_projects = PROJECTS_LIST.filter(project => {
-			project.search_valid = Object.entries(project)
-				.some(([field, value]) => {
-					if (Object.keys(SEARCHABLE_FIELDS).includes(field)) {
-						return value
-							.toLowerCase()
-							.indexOf(search_text.toLowerCase()) !== -1;
-					}
-					return false;
-				});
-			return project.search_valid;
-		});
-		/* Sort */
-		searched_projects.forEach(project => {
-			const scores = [];
-			Object.entries(SEARCHABLE_FIELDS)
-				.forEach(([search_field, weight]) => {
-					const dist = levenshtein(project[search_field], search_text);
-					const score = dist * weight
-					scores.push(score);
-				});
-			project.search_score = Math.min(...scores);
-		});
-		searched_projects.sort((a, b) => {
-			return b.search_score - a.search_score;
-		});
-		let i = 1;
-		searched_projects.forEach(project => {
-			project.search_order = i++;
-		});
+		const searched_projects = search_projects(search_text);
+		sort_projects(search_text, searched_projects);
 	} else {
 		/* Reset to default */
 		PROJECTS_LIST.forEach(project => {
@@ -80,6 +51,47 @@ function handle_search(event) {
 	}
 	/* Update projects grid */
 	update_content();
+}
+
+function search_projects(search_text) {
+	return PROJECTS_LIST.filter(project => {
+		project.search_valid = Object.entries(project)
+			.some(([field, value]) => {
+				if (Object.keys(SEARCHABLE_FIELDS).includes(field)) {
+					return value
+						.trim()
+						.toLowerCase()
+						.indexOf(
+							search_text
+								.trim()
+								.toLowerCase()
+						) !== -1;
+				}
+				return false;
+			});
+		return project.search_valid;
+	});
+}
+
+function sort_projects(search_text, projects) {
+	projects.forEach(project => {
+		const scores = [];
+		Object.entries(SEARCHABLE_FIELDS)
+			.forEach(([search_field, weight]) => {
+				const value = project[search_field];
+				const dist = levenshtein(value, search_text);
+				const score = (dist * weight) / value.length;
+				scores.push(score);
+			});
+		project.search_score = Math.min(...scores);
+	});
+	projects
+		.sort((a, b) => (
+			b.search_score - a.search_score
+		))
+		.forEach((project, i) => {
+			project.search_order = i;
+		});
 }
 
 function update_content() {

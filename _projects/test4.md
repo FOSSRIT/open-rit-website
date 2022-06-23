@@ -4,7 +4,7 @@ layout: project
 project: Dance Dance Revolution
 tldr: The ubiquitous 4-panel dance game that swept the world
 owner: NAOKI
-slug: test4
+mystic-slug: test4
 ---
 
 ## List of Services

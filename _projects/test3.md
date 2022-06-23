@@ -4,7 +4,7 @@ layout: project
 project: pop'n music
 tldr: The deceptively difficult 9-button color burger-smashing game
 owner: wac
-slug: test3
+mystic-slug: test3
 ---
 
 ## List of Services

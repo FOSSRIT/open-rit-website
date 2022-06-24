@@ -2,7 +2,7 @@
 
 /* Config - Field and its search weight (scalar) */
 // TODO: refine values
-const SEARCHABLE_FIELDS = {
+const SEARCH_FIELDS = {
 	"name":  3.5,
 	"owner": 1.75,
 	"tldr":  1,
@@ -57,7 +57,7 @@ function search_projects(search_text) {
 	return PROJECTS_LIST.filter(project => {
 		project.search_valid = Object.entries(project)
 			.some(([field, value]) => {
-				if (Object.keys(SEARCHABLE_FIELDS).includes(field)) {
+				if (Object.keys(SEARCH_FIELDS).includes(field)) {
 					return value
 						.trim()
 						.toLowerCase()
@@ -76,7 +76,7 @@ function search_projects(search_text) {
 function sort_projects(search_text, projects) {
 	projects.forEach(project => {
 		const scores = [];
-		Object.entries(SEARCHABLE_FIELDS)
+		Object.entries(SEARCH_FIELDS)
 			.forEach(([search_field, weight]) => {
 				const value = project[search_field];
 				const dist = levenshtein(value, search_text);
@@ -84,6 +84,7 @@ function sort_projects(search_text, projects) {
 				scores.push(score);
 			});
 		project.search_score = Math.min(...scores);
+		project.div.setAttribute("score", project.search_score); /* TODO: REMOVE!!!!! */
 	});
 	projects
 		.sort((a, b) => (

@@ -1,10 +1,14 @@
 ---
 layout: project
 
-project: Dance Dance Revolution
+project-name: Dance Dance Revolution
 tldr: The ubiquitous 4-panel dance game that swept the world
 owner: NAOKI
 mystic-slug: test4
+
+college: DDR
+type: Dynamic VSRG
+semester: Fall 1998
 ---
 
 ## List of Services

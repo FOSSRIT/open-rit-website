@@ -1,10 +1,14 @@
 ---
 layout: project
 
-project: jubeat
+project-name: jubeat
 tldr: A 16-button musical whack-a-mole game on life support
 owner: S-C-U
 mystic-slug: test5
+
+college: none
+type: Whack-a-mole
+semester: Summer 2008
 ---
 
 ## List of Services

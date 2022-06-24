@@ -1,12 +1,18 @@
 ---
 layout: project
 
-project: Sound Voltex
+project-name: Sound Voltex
 tldr: A 6-key + 2-knob game about applying effects to music
 owner:
 - dj TAKA
 - PHQAUSE
 mystic-slug: test1
+
+college:
+- SDVX
+- Museca
+type: Dynamic VSRG
+semester: Spring 2012
 ---
 
 ## List of Services

@@ -1,0 +1,22 @@
+{% comment %}
+TODO: documentation
+{% endcomment %}
+
+<div class="checkbox-dropdown">
+	<span class="checkbox-dropdown-label">
+		{{ include.label }}
+	</span>
+	<ul class="checkbox-dropdown-list">
+		{% for option in include.options %}
+			<li>
+				<input
+					type="checkbox"
+					id="{{ option }}"
+					name="{{ include.name }}"
+					value="{{ option }}"
+				/>
+				<label for="{{ option }}">{{ option }}</label>
+			</li>
+		{% endfor %}
+	</ul>
+</div>

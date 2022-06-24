@@ -1,0 +1,31 @@
+/* Styles for checkbox dropdowns (checkbox-dropdown.html) */
+
+/*
+Some styling aspects such as sizing, positioning, and margins are deliberately
+omitted, since these will vary by usage and be styled accordingly elsewhere.
+*/
+
+.checkbox-dropdown {
+	border: 1px solid #727578;
+	border-radius: 3px;
+	padding: 0.5em;
+	
+	.checkbox-dropdown-label {
+		font-size: 1em;
+	}
+	.checkbox-dropdown-list {
+		//position: absolute;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		
+		li {
+			display: flex;
+			flex-direction: row;
+			
+			input {
+				margin-right: 1em;
+			}
+		}
+	}
+}

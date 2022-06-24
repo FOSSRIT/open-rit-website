@@ -3,20 +3,32 @@
 #projects-search {
 	display: flex;
 	flex-direction: column;
-	padding: 0 15%;
 	margin-bottom: 2em;
 	
-	input {
+	#projects-search-bar {
 		display: block;
 		box-sizing: content-box;
 		font-size: 0.9em;
+		margin: 0 15%;
 		padding: 1em;
 		outline: none;
 		border: 1px solid #727578;
-		border-radius: 2px;
+		border-radius: 3px;
 		
 		&:focus {
 			outline: 1px solid darken(#727578, 10%);
+		}
+	}
+	#filters-row {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-top: 1em;
+		
+		.checkbox-dropdown {
+			width: 12em;
+			margin: 0 auto;
+			margin-bottom: 1em;
 		}
 	}
 }

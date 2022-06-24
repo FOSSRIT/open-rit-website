@@ -1,10 +1,14 @@
 ---
 layout: project
 
-project: pop'n music
+project-name: pop'n music
 tldr: The deceptively difficult 9-button color burger-smashing game
 owner: wac
 mystic-slug: test3
+
+college: none
+type: Dynamic VSRG
+semester: Fall 1998
 ---
 
 ## List of Services

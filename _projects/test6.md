@@ -1,10 +1,14 @@
 ---
 layout: project
 
-project: GuitarFreaks & DrumMania
+project-name: GuitarFreaks & DrumMania
 tldr: The games that Guitar Hero ripped off
 owner: Yoshihiko Koezuka
 mystic-slug: test6
+
+college: GFDM
+type: Static VSRG
+semester: Spring 1999
 ---
 
 ## List of Services

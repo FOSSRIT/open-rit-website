@@ -2,6 +2,8 @@
 TODO: documentation
 {% endcomment %}
 
+{% assign filters = "college|type|semester" | split: "|" %}
+
 <noscript>
 	<p class="error">
 		Sorry, projects searching requires JavaScript to be enabled in order to
@@ -15,25 +17,51 @@ TODO: documentation
 			type="text"
 			placeholder="Search Projects"
 		/>
+		<div id="filters-row">
+			{% for filter in filters %}
+				{% assign capitalized = filter | capitalize %}
+				{% assign label = "Select " | append: capitalized %}
+				{% assign name = "filter-" | append: filter %}
+				{% comment %}
+				Workaround for the fact that you can't do:
+					site.projects | map: filter | uniq
+				{% endcomment %}
+				{% assign options = ("" | split: ",") %}
+				{% for project in site.projects %}
+					{% assign options = options | push: project[filter] %}
+				{% endfor %}
+				{% assign options = options | uniq %}
+				{%
+				include checkbox-dropdown.html
+					label=label
+					name=name
+					options=options
+				%}
+			{% endfor %}
+		</div>
 	</div>
 	<div id="projects-container">
-		{% for project-page in site.projects %}
-			<div id="{{ project-page.mystic-slug }}" class="project">
-				<h2>{{ project-page.project }}</h2>
-				<p>{{ project-page.tldr }}</p>
-				<p>{{ project-page.owner | join: " & " }}</p>
-				<a href="{{ project-page.url | relative_url }}">View more</a>
+		{% for project in site.projects %}
+			<div id="{{ project.mystic-slug }}" class="project">
+				<h2>{{ project.project-name }}</h2>
+				<p>{{ project.tldr }}</p>
+				<p>{{ project.owner | join: " & " }}</p>
+				<a href="{{ project.url | relative_url }}">View more</a>
 			</div>
 		{% endfor %}
 	</div>
 </div>
 <script>
 	const PROJECTS_DATA = {
-		{% for project-page in site.projects %}
-			"{{ project-page.mystic-slug }}": {
-				"name":  "{{ project-page.project             }}",
-				"tldr":  "{{ project-page.tldr                }}",
-				"owner": "{{ project-page.owner | join: ' & ' }}",
+		{% for project in site.projects %}
+			"{{ project.mystic-slug }}": {
+				"name":  "{{ project.project-name        }}",
+				"tldr":  "{{ project.tldr                }}",
+				"owner": "{{ project.owner | join: ' & ' }}",
+				
+				"college":  "{{ project.college  }}",
+				"type":     "{{ project.type     }}",
+				"semester": "{{ project.semester }}",
 			},
 		{% endfor %}
 	}

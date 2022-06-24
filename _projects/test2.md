@@ -1,10 +1,14 @@
 ---
 layout: project
 
-project: beatmania IIDX
+project-name: beatmania IIDX
 tldr: The genre-defining 7-key + turntable game
 owner: L.E.D.
 mystic-slug: test2
+
+college: IIDX
+type: Static VSRG
+semester: Spring 1999
 ---
 
 ## List of Services

@@ -24,7 +24,32 @@ omitted, since these will vary by usage and be styled accordingly elsewhere.
 			flex-direction: row;
 			
 			input {
+				appearance: none;
+				outline: none;
+				box-sizing: border-box;
+				width: 1.5em;
+				height: 1.5em;
 				margin-right: 1em;
+				border: 1px solid #727578;
+				border-radius: 3px;
+				
+				&:checked {
+					border: none;
+					background-color: var(--color-rit-orange);
+					
+					&::after {
+						content: "";
+						display: block;
+						position: absolute;
+						box-sizing: border-box;
+						width: 0.6em;
+						height: 1.0em;
+						transform: translate(0.45em, 0.15em) rotateZ(40deg);
+						border: 0.25em solid white;
+						border-left: none;
+						border-top: none;
+					}
+				}
 			}
 		}
 	}

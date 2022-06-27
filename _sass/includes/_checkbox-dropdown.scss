@@ -6,6 +6,13 @@ $checkbox-size: 1.5em;
 
 .checkbox-dropdown-container {
 	height: $checkbox-dropdown-height;
+	
+	/* HACK: manually set reverse stacking order to properly stack dropdowns */
+	@for $i from 1 through 10 {
+		&:nth-child(#{$i}) {
+			z-index: #{10 - $i};
+		}
+	}
 }
 
 .checkbox-dropdown {

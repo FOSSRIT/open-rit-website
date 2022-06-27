@@ -7,7 +7,7 @@ owner: NAOKI
 mystic-slug: test4
 
 college: DDR
-type: Dynamic VSRG
+type: Dancing with your feet, yeah, dancing with your feet!
 semester: Fall 1998
 ---
 

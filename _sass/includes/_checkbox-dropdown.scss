@@ -1,35 +1,81 @@
 /* Styles for checkbox dropdowns (checkbox-dropdown.html) */
 
-/*
-Some styling aspects such as sizing, positioning, and margins are deliberately
-omitted, since these will vary by usage and be styled accordingly elsewhere.
-*/
+$checkbox-dropdown-height: 2.5rem;
+$checkbox-dropdown-padding: 1em;
+$checkbox-size: 1.5em;
+
+.checkbox-dropdown-wrapper {
+	height: 0;
+	margin-bottom: $checkbox-dropdown-height;
+}
 
 .checkbox-dropdown {
+	position: relative;
+	min-height: $checkbox-dropdown-height;
 	border: 1px solid #727578;
 	border-radius: 3px;
-	padding: 0.5em;
+	background-color: white;
+	overflow: hidden;
 	
-	.checkbox-dropdown-label {
-		font-size: 1em;
+	* {
+		cursor: pointer;
+	}
+	input {
+		display: block;
+		appearance: none;
+		outline: none;
+		box-sizing: border-box;
+		margin: 0;
+	}
+	label {
+		display: inline-block;
+		user-select: none;
+		vertical-align: bottom;
+	}
+	
+	.checkbox-header {
+		width: 100%;
+		height: $checkbox-dropdown-height;
+		
+		&::after {
+			content: $svg-url-chevron;
+			position: absolute;
+			display: inline-block;
+			line-height: $checkbox-dropdown-height;
+			top: 0;
+			right: $checkbox-dropdown-padding;
+			transition: ease-in-out transform 0.1s;
+			vertical-align: middle;
+		}
+		&:checked::after {
+			transform: rotateZ(-180deg);
+		}
+		& + label {
+			position: absolute;
+			line-height: $checkbox-dropdown-height;
+			top: 0;
+			left: $checkbox-dropdown-padding;
+		}
 	}
 	.checkbox-dropdown-list {
-		//position: absolute;
 		list-style-type: none;
+		height: 0;
 		margin: 0;
 		padding: 0;
 		
 		li {
+			position: relative;
 			display: flex;
 			flex-direction: row;
+			flex-wrap: nowrap;
+			align-items: center;
 			
 			input {
-				appearance: none;
-				outline: none;
-				box-sizing: border-box;
-				width: 1.5em;
-				height: 1.5em;
-				margin-right: 1em;
+				position: absolute;
+				display: inline-block;
+				width: $checkbox-size;
+				height: $checkbox-size;
+				margin-left: $checkbox-dropdown-padding;
 				border: 1px solid #727578;
 				border-radius: 3px;
 				
@@ -51,6 +97,15 @@ omitted, since these will vary by usage and be styled accordingly elsewhere.
 					}
 				}
 			}
+			label {
+				flex: 1;
+				padding: 0.5em $checkbox-dropdown-padding;
+				padding-left:
+					$checkbox-dropdown-padding + $checkbox-size + 0.25em;
+			}
 		}
+	}
+	.checkbox-header:checked ~ .checkbox-dropdown-list {
+		height: auto;
 	}
 }

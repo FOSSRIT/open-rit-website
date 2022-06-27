@@ -4,9 +4,8 @@ $checkbox-dropdown-height: 2.5rem;
 $checkbox-dropdown-padding: 1em;
 $checkbox-size: 1.5em;
 
-.checkbox-dropdown-wrapper {
-	height: 0;
-	margin-bottom: $checkbox-dropdown-height;
+.checkbox-dropdown-container {
+	height: $checkbox-dropdown-height;
 }
 
 .checkbox-dropdown {

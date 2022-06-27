@@ -1,30 +1,27 @@
 {% comment %}
 TODO: documentation
-Multiple wrappers necessary for CSS absolute positioning tricks.
 {% endcomment %}
 
-<div class="checkbox-dropdown-wrapper-wrapper">
-	<div class="checkbox-dropdown-wrapper">
-		<div class="checkbox-dropdown">
-			<input
-				type="checkbox"
-				id="header-{{ include.name }}"
-				class="checkbox-header"
-			/>
-			<label for="header-{{ include.name }}">{{ include.label }}</label>
-			<ul class="checkbox-dropdown-list">
-				{% for option in include.options %}
-					<li>
-						<input
-							type="checkbox"
-							id="{{ option }}"
-							name="{{ include.name }}"
-							value="{{ option }}"
-						/>
-						<label for="{{ option }}">{{ option }}</label>
-					</li>
-				{% endfor %}
-			</ul>
-		</div>
+<div class="checkbox-dropdown-container">
+	<div class="checkbox-dropdown">
+		<input
+			type="checkbox"
+			id="header-{{ include.name }}"
+			class="checkbox-header"
+		/>
+		<label for="header-{{ include.name }}">{{ include.label }}</label>
+		<ul class="checkbox-dropdown-list">
+			{% for option in include.options %}
+				<li>
+					<input
+						type="checkbox"
+						id="{{ option }}"
+						name="{{ include.name }}"
+						value="{{ option }}"
+					/>
+					<label for="{{ option }}">{{ option }}</label>
+				</li>
+			{% endfor %}
+		</ul>
 	</div>
 </div>

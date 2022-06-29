@@ -21,10 +21,9 @@ TODO: documentation
 			{% for filter in filters %}
 				{% assign capitalized = filter | capitalize %}
 				{% assign label = "Select " | append: capitalized %}
-				{% assign name = "filter-" | append: filter %}
 				{% comment %}
 				Workaround for the fact that you can't do:
-					site.projects | map: filter | uniq
+					site.projects | map: filter | flatten | uniq
 				{% endcomment %}
 				{% assign options = ("" | split: ",") %}
 				{% for project in site.projects %}
@@ -34,7 +33,7 @@ TODO: documentation
 				{%
 				include checkbox-dropdown.html
 					label=label
-					name=name
+					name=filter
 					options=options
 				%}
 			{% endfor %}
@@ -59,9 +58,13 @@ TODO: documentation
 				"tldr":  "{{ project.tldr                }}",
 				"owner": "{{ project.owner | join: ' & ' }}",
 				
-				"college":  "{{ project.college  }}",
-				"type":     "{{ project.type     }}",
-				"semester": "{{ project.semester }}",
+				{% for filter in filters %}
+					"{{ filter }}": [
+						{% for value in project[filter] %}
+							"{{ value }}",
+						{% endfor %}
+					],
+				{% endfor %}
 			},
 		{% endfor %}
 	}

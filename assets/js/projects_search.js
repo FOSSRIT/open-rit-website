@@ -7,8 +7,14 @@ const SEARCH_FIELDS = {
 	"owner": 1.75,
 	"tldr":  1,
 };
+const FILTERS = ["college", "type", "semester"];
 
 const PROJECTS_LIST = [];
+const CURRENT_FILTERS = new Map(
+	FILTERS.map(filter => (
+		[filter, new Set()]
+	))
+);
 let prev_search = "";
 
 /* PROJECTS_DATA set by projects-grid.html partial */
@@ -26,6 +32,13 @@ function init_search() {
 			project.hidden = false;       // performance: avoid DOM checks
 			PROJECTS_LIST.push(project);
 		});
+	/* Get all of the filter checkboxes and watch them for changes */
+	const filter_checkboxes = document.querySelectorAll(
+		"#filters-row .checkbox-dropdown-list input"
+	);
+	filter_checkboxes.forEach(input => {
+		input.addEventListener("change", handle_filter);
+	});
 	/* Enable searching */
 	const search_bar = document.getElementById("projects-search-bar");
 	search_bar.addEventListener("input", handle_search);
@@ -47,7 +60,7 @@ function handle_search(event) {
 		PROJECTS_LIST.forEach(project => {
 			project.search_valid = true;
 			project.search_order = 0;
-		})
+		});
 	}
 	/* Update projects grid */
 	update_content();
@@ -84,7 +97,6 @@ function sort_projects(search_text, projects) {
 				scores.push(score);
 			});
 		project.search_score = Math.min(...scores);
-		project.div.setAttribute("score", project.search_score); /* TODO: REMOVE!!!!! */
 	});
 	projects
 		.sort((a, b) => (
@@ -93,6 +105,35 @@ function sort_projects(search_text, projects) {
 		.forEach((project, i) => {
 			project.search_order = i;
 		});
+}
+
+function handle_filter(event) {
+	/* Get the filter and its value */
+	const filter_name    = event.target.name;
+	const filter_value   = event.target.value;
+	const filter_checked = event.target.checked;
+	/* Update the list of current active filters */
+	const active_set = CURRENT_FILTERS.get(filter_name);
+	if (filter_checked) {
+		active_set.add(filter_value);
+	} else {
+		active_set.delete(filter_value);
+	}
+	/* Update filter validity for projects */
+	update_filters();
+	/* Update projects grid */
+	update_content();
+}
+
+function update_filters() {
+	PROJECTS_LIST.forEach(project => {
+		project.filter_valid = Array.from(CURRENT_FILTERS.entries())
+			.every(([filter, active_set]) => (
+				active_set.size === 0 || project[filter].some(value => (
+					active_set.has(value)
+				))
+			));
+	});
 }
 
 function update_content() {

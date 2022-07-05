@@ -1,0 +1,22 @@
+{% comment %}
+A grid of even tinier headshots of people along with their name and position.
+Uses names to cross-reference _data/members.yml for remaining info.
+
+Arguments:
+  names: A list of names of the members to be shown
+{% endcomment %}
+
+{%
+assign all_members = site.data.members.present_members
+	| concat: site.data.members.past_members
+	| concat: site.data.members.advisory_board
+%}
+
+<!-- TODO!!!: combine all 3 member grids into 1 partial -->
+
+<div class="micro-member-grid">
+	{% for name in include.names %}
+		{% assign member = all_members | where: "name", name | first %}
+		{% include member-grid-entry.html member=member %}
+	{% endfor %}
+</div>

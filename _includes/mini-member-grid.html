@@ -4,22 +4,14 @@ A grid of very tiny headshots of people along with their name and position.
 Arguments:
   members: A list of members, each with the properties
     name: The member's name
-	role: The member's position, used as a subtitle
-	org: The member's organization, displayed as a bold subtitle
-	degree: The member's degree, displayed as an italic subtitle
-	headshot: The path to the member's headshot photo (alt-text: <name>'s headshot)
+    role: The member's position, used as a subtitle
+    org: The member's organization, displayed as a bold subtitle
+    degree: The member's degree, displayed as an italic subtitle
+    headshot: The path to the member's headshot photo (alt-text: <name>'s headshot)
 {% endcomment %}
 
 <div class="mini-member-grid">
 	{% for member in include.members %}
-		<div class="member">
-			<img src="{{member.headshot | relative_url}}" alt="{{member.name}}'s headshot" />
-			<b class="name"> {{member.name}} </b> <br/>
-			<span class="role">
-				{{member.role}} <br/>
-				<b>{{member.org}}</b> <br/>
-				<i>{{member.degree}}</i>
-			</span>
-		</div>
+		{% include member-grid-entry.html member=member %}
 	{% endfor %}
 </div>

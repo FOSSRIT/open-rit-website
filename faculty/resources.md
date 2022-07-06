@@ -14,8 +14,6 @@ subnav:
 - name: Resources
   link: /faculty/resources
   active: true
-- name: Open@RIT Fellows
-  link: /faculty/fellows
 ---
 
 ## [Zotero Collection on Open Work&nbsp;>](https://www.zotero.org/groups/2725709/rit_open_work_resources/library)

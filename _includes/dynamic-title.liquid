@@ -7,7 +7,9 @@ Dynamically assign the page title, using the following order of preference:
   5. Loud debug screaming to fix the title
 {% endcomment %}
 
-{% assign title = page.project-name | default: layout.title | default: page.title %}
+{% assign title = page.project-name
+	| default: layout.title
+	| default: page.title %}
 {% unless title %}
 	{% for section in page.subnav %}
 		{% if section.active == true %}

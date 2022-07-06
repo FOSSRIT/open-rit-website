@@ -1,122 +1,166 @@
 - name: J A Stephen Viggiano
   link: https://www.rit.edu/directory/jasvppr-j-a-stephen-viggiano
   college: College of Art and Design
+  position: Assistant Professor
+  headshot: /assets/images/pages/our-work/fellows/j-a-stephen-viggiano.webp
 #  project: NeugebauerScaler
 #  project-desc: Tools for Digital Color Imaging
 
 - name: Kaitlin Stack Whitney
   link: https://www.rit.edu/directory/kxwsbi-kaitlin-stack-whitney
   college: College of Liberal Arts
+  position: Assistant Professor
+  headshot: /assets/images/pages/our-work/fellows/kaitlin-stack-whitney.webp
 #  project: Accessibility and Flexible Learning Projects
 
 - name: Jessica Lieberman
   link: https://www.rit.edu/directory/jclgsl-jessica-lieberman
   college: College of Liberal Arts
+  position: Associate Professor
+  headshot: /assets/images/pages/our-work/fellows/jessica-lieberman.webp
 #  project: Mapping RIT History
 #  project-desc: Its impact on Rochester
 
 - name: Whitney Sperrazza
   link: https://www.rit.edu/directory/wssgla-whitney-sperrazza
   college: College of Liberal Arts
+  position: Assistant Professor
+  headshot: /assets/images/pages/our-work/fellows/whitney-sperrazza.webp
 #  project: Resistance Mapping
 #  project-desc: Redlining & Related Issues in Rochester History
 
 - name: Manuella Campanelli
   link: https://www.rit.edu/science/directory/mxcsma-manuela-campanelli
   college: College of Science
+  position: Professor
+  headshot: /assets/images/pages/our-work/fellows/maneulla-campanelli.webp
 #  project: Compact Binaries
 #  project-desc: Computational Astrophysics
 
 - name: Bob Teese
   link: https://www.rit.edu/directory/rbtsps-robert-teese
   college: College of Science
+  position: Research Faculty
+  headshot: /assets/images/pages/our-work/fellows/bob-teese.webp
 #  project: The Mint Project
 #  project-desc: Interactive Video-Enhanced Tutorials
 
 - name: Paul Shipman
   link: https://www.rit.edu/directory/passbi-paul-shipman
   college: College of Science
+  position: Associate Professor
+  headshot: /assets/images/pages/our-work/fellows/paul-shipman.webp
 #  project: Summer Science Education for Tribal Communities
 
 - name: Michael Osier
   link: https://www.rit.edu/directory/mvoscl-michael-osier
   college: College of Science
+  position: Associate Professor
+  headshot: /assets/images/pages/our-work/fellows/michael-osier.webp
 #  project: Vitis Pathways Genomics Software
 
 - name: Shanchieh Yang
   link: https://www.rit.edu/directory/sjyeec-shanchieh-yang
   college: Kate Gleason College of Engineering
+  position: Professor
+  headshot: /assets/images/pages/our-work/fellows/shanchieh-yang.webp
 #  project: ASSERT
 #  project-desc: Attack Strategy Synthesis for Enhanced Threat Recognition
 
 - name: Michael McQuaid
   link: https://www.rit.edu/directory/mjmics-michael-mcquaid
   college: GCCIS
+  position: Senior Lecturer
+  headshot: /assets/images/pages/our-work/fellows/michael-mcquaid.webp
 # project: Victorian Autobiography Information Network
 
 - name: Sean Grass
   link: https://www.rit.edu/directory/scggsl-sean-grass
   college: COLA
+  position: Department Chair of the English Department
+  headshot: /assets/images/pages/our-work/fellows/sean-grass.webp
 # project: Victorian Autobiography Information Network
 
 - name: Andy Meneely
   link: https://www.rit.edu/directory/axmvse-andy-meneely
   college: GCCIS
+  position: Associate Professor
+  headshot: /assets/images/pages/our-work/fellows/andy-meneely.webp
 # project: The Vulnerability History Project
 
 - name: David I. Schwartz
   link: https://www.rit.edu/directory/disvks-david-schwartz
   college: GCCIS
+  position: Director of the School of Interactive Games and Media
+  headshot: /assets/images/pages/our-work/fellows/david-schwartz.webp
 # project: ATLAS
 # project-desc: An Open-Source Repository for Game Development Education
 
 - name: Mohamed Wiem Mkaouer
   link: https://www.rit.edu/directory/mwmvse-mohamed-wiem-mkaouer
   college: GCCIS
+  position: Assistant Professor
+  headshot: /assets/images/pages/our-work/fellows/mohamed-wiem-mkaouer.webp
 # project: Test Smells
 # project-desc: Improving the usability of detecting bad testing practices
 
 - name: Michelle Harris
   link: https://www.rit.edu/directory/wmhics-w-michelle-harris
-# college: GCCIS
+  college: GCCIS
+  position: Associate Professor
+  headshot: /assets/images/pages/our-work/fellows/michelle-harris.webp
 # project: Contributions of Tutorials and Exercises to P5.js
 
 - name: Scott Hawker
   link: https://www.rit.edu/directory/jshvse-j-scott-hawker
   college: GCCIS
+  position: Associate Professor
+  headshot: /assets/images/pages/our-work/fellows/scott-hawker.webp
 # project: Conservation 360
 # project-desc: An Open Data Project with the Seneca Park Zoo
 
 - name: Xumin Liu
   link: https://www.rit.edu/directory/xmlics-xumin-liu
   college: GCCIS
+  position: Associate Professor
+  headshot: /assets/images/pages/our-work/fellows/xumin-liu.webp
 # project: OpenDS4All
 # project-desc: An Open Data Science Curriculum
 
 - name: Nidhi Rastogi
   link: https://www.rit.edu/directory/nxrvse-nidhi-rastogi
   college: GCCIS
+  position: Assistant Professor
+  headshot: /assets/images/pages/our-work/fellows/nidhi-rastogi.webp
 # project: Explainable Security
 # project-desc: Generating open dataset in autonomous systems for explainable security
 
 - name: Stephen Yi
   college: GCCIS
+  position: Assistant Professor
+  headshot: /assets/images/pages/our-work/fellows/placeholder.webp
 # project: Csound
 # project-desc: A Sound and Music Computing System
 
 - name: Todd Pagano
   link: https://www.rit.edu/directory/tepnts-todd-pagano
   college: NTID
+  position: Exec Director, NTID Professional and Student Scholar Development
+  headshot: /assets/images/pages/our-work/fellows/todd-pagano.webp
 # project: The Journal of Science Education for Students With Disabilities
 
 - name: Christopher Kurz
   link: https://www.rit.edu/directory/caknsp-christopher-kurz
   college: NTID
+  position: Professor
+  headshot: /assets/images/pages/our-work/fellows/christopher-kurz.webp
 # project: World Around You
 # project-desc: A Deaf Education Literacy Platform
 
 - name: Kierstin Muroski
   link: https://www.rit.edu/directory/ksmnss-kierstin-muroski
   college: NTID
+  position: Assistant Professor
+  headshot: /assets/images/pages/our-work/fellows/placeholder.webp
 # project: ASL Interpereting History
 # project-desc: Cataloging the history of ASL interpereting

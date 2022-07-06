@@ -33,12 +33,12 @@
 #  project: Resistance Mapping
 #  project-desc: Redlining & Related Issues in Rochester History
 
-- name: Manuella Campanelli
+- name: Manuela Campanelli
   email: manuela@astro.rit.edu
   link: https://www.rit.edu/science/directory/mxcsma-manuela-campanelli
   college: College of Science
   position: Professor
-  headshot: /assets/images/pages/our-work/fellows/maneulla-campanelli.webp
+  headshot: /assets/images/pages/our-work/fellows/manuela-campanelli.webp
 #  project: Compact Binaries
 #  project-desc: Computational Astrophysics
 
@@ -79,7 +79,7 @@
 - name: Michael McQuaid
   email: jay.yang@rit.edu
   link: https://www.rit.edu/directory/mjmics-michael-mcquaid
-  college: GCCIS
+  college: Golisano College of Computing and Information Sciences
   position: Senior Lecturer
   headshot: /assets/images/pages/our-work/fellows/michael-mcquaid.webp
 # project: Victorian Autobiography Information Network
@@ -87,7 +87,7 @@
 - name: Sean Grass
   email: sean.grass@mail.rit.edu
   link: https://www.rit.edu/directory/scggsl-sean-grass
-  college: COLA
+  college: College of Liberal Arts
   position: Department Chair of the English Department
   headshot: /assets/images/pages/our-work/fellows/sean-grass.webp
 # project: Victorian Autobiography Information Network
@@ -95,7 +95,7 @@
 - name: Andy Meneely
   email: andy.meneely@rit.edu
   link: https://www.rit.edu/directory/axmvse-andy-meneely
-  college: GCCIS
+  college: Golisano College of Computing and Information Sciences
   position: Associate Professor
   headshot: /assets/images/pages/our-work/fellows/andy-meneely.webp
 # project: The Vulnerability History Project
@@ -103,7 +103,7 @@
 - name: David I. Schwartz
   email: david.i.schwartz@rit.edu
   link: https://www.rit.edu/directory/disvks-david-schwartz
-  college: GCCIS
+  college: Golisano College of Computing and Information Sciences
   position: Director of the School of Interactive Games and Media
   headshot: /assets/images/pages/our-work/fellows/david-schwartz.webp
 # project: ATLAS
@@ -112,7 +112,7 @@
 - name: Mohamed Wiem Mkaouer
   email: mwmvse@rit.edu
   link: https://www.rit.edu/directory/mwmvse-mohamed-wiem-mkaouer
-  college: GCCIS
+  college: Golisano College of Computing and Information Sciences
   position: Assistant Professor
   headshot: /assets/images/pages/our-work/fellows/mohamed-wiem-mkaouer.webp
 # project: Test Smells
@@ -121,7 +121,7 @@
 - name: Michelle Harris
   email: wmhics@rit.edu
   link: https://www.rit.edu/directory/wmhics-w-michelle-harris
-  college: GCCIS
+  college: Golisano College of Computing and Information Sciences
   position: Associate Professor
   headshot: /assets/images/pages/our-work/fellows/michelle-harris.webp
 # project: Contributions of Tutorials and Exercises to P5.js
@@ -129,7 +129,7 @@
 - name: Scott Hawker
   email: jshvse@rit.edu
   link: https://www.rit.edu/directory/jshvse-j-scott-hawker
-  college: GCCIS
+  college: Golisano College of Computing and Information Sciences
   position: Associate Professor
   headshot: /assets/images/pages/our-work/fellows/scott-hawker.webp
 # project: Conservation 360
@@ -138,7 +138,7 @@
 - name: Xumin Liu
   email: xmlics@rit.edu
   link: https://www.rit.edu/directory/xmlics-xumin-liu
-  college: GCCIS
+  college: Golisano College of Computing and Information Sciences
   position: Associate Professor
   headshot: /assets/images/pages/our-work/fellows/xumin-liu.webp
 # project: OpenDS4All
@@ -147,15 +147,15 @@
 - name: Nidhi Rastogi
   email: nidhi.rastogi@rit.edu
   link: https://www.rit.edu/directory/nxrvse-nidhi-rastogi
-  college: GCCIS
+  college: Golisano College of Computing and Information Sciences
   position: Assistant Professor
   headshot: /assets/images/pages/our-work/fellows/nidhi-rastogi.webp
 # project: Explainable Security
 # project-desc: Generating open dataset in autonomous systems for explainable security
 
-- name: Stephen Yi
+- name: Steven Yi
   email: stevenyi@gmail.com
-  college: GCCIS
+  college: Golisano College of Computing and Information Sciences
   position: Assistant Professor
   headshot: /assets/images/pages/our-work/fellows/placeholder.webp
 # project: Csound
@@ -164,7 +164,7 @@
 - name: Todd Pagano
   email: tepnts@rit.edu
   link: https://www.rit.edu/directory/tepnts-todd-pagano
-  college: NTID
+  college: National Technical Institute for the Deaf
   position: Exec Director, NTID Professional and Student Scholar Development
   headshot: /assets/images/pages/our-work/fellows/todd-pagano.webp
 # project: The Journal of Science Education for Students With Disabilities
@@ -172,7 +172,7 @@
 - name: Christopher Kurz
   email: caknsp@rit.edu
   link: https://www.rit.edu/directory/caknsp-christopher-kurz
-  college: NTID
+  college: National Technical Institute for the Deaf
   position: Professor
   headshot: /assets/images/pages/our-work/fellows/christopher-kurz.webp
 # project: World Around You
@@ -181,7 +181,7 @@
 - name: Kierstin Muroski
   email: ksmnss@rit.edu
   link: https://www.rit.edu/directory/ksmnss-kierstin-muroski
-  college: NTID
+  college: National Technical Institute for the Deaf
   position: Assistant Professor
   headshot: /assets/images/pages/our-work/fellows/placeholder.webp
 # project: ASL Interpereting History

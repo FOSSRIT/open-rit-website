@@ -3,7 +3,7 @@ layout: project
 
 project-name: Csound
 tldr: A Sound and Music Computing System
-owner: Stephen Yi
+owner: Steven Yi
 mystic-slug: NOLSKI-PLACEHOLDER
 
 college: Golisano College of Computing and Information Sciences

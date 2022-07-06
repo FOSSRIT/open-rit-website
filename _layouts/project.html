@@ -23,24 +23,28 @@ subnav:
   link: /our-work/fellows-projects
 ---
 
+{% comment %}
+Empty divs intended to be filled in by the project.js script
+{% endcomment %}
+
 <div id="project-content" class="hidden">
-	{% comment %}
-	Divs to be filled in by the project.js script
-	{% endcomment %}
 	<h2>About</h2>
 	<div id="project-about"></div>
+	<h3>Project By</h3>
+	{% comment %}
+	Get project owners by cross-referencing names with _data/fellows.yml
+	{% endcomment %}
+	{% for name in page.owner %}
+		{% assign fellow = site.data.fellows | where: "name", name | first %}
+		{% include faculty-info.html faculty=fellow %}
+	{% endfor %}
 	<h3>Resources</h3>
 	<ul id="project-sources"></ul>
-	
-	<div id="project-owner"></div> <!-- TODO: include for this? -->
 	
 	<div id="project-services">
 		{{ content }}
 	</div>
 	
-	{% comment %}
-	More divs to be filled in by project.js
-	{% endcomment %}
 	<h2>Metrics</h2>
 	<div id="project-metrics">
 		<p id="no-metrics">

@@ -3,7 +3,7 @@ layout: project
 
 project-name: Compact Binaries
 tldr: Computational Astrophysics
-owner: Manuella Campanelli
+owner: Manuela Campanelli
 mystic-slug: NOLSKI-PLACEHOLDER
 
 college: College of Science

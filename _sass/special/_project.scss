@@ -1,6 +1,13 @@
 /* Styles for project information pages */
 
-/* TODO */
+#project-content {
+	h2 {
+		margin-top: 60px;
+	}
+	h3 {
+		color: lighten(black, 10%);
+	}
+}
 
 #project-metrics {
 	display: flex;

@@ -1,0 +1,27 @@
+{% comment %}
+A block for display faculty info in RIT style.
+
+Arguments:
+  faculty: The faculty information, with the following properties
+    name: The faculty's name
+    email: The faculty's email address
+    link: The link to the faculty's directory page on the RIT website
+    college: The college that the faculty belongs to
+    position: The position that the faculty holds
+    headshot: The headshot photo of the faculty
+{% endcomment %}
+
+{% assign faculty = include.faculty %}
+
+<div class="faculty-info">
+	<img
+		src="{{ faculty.headshot | relative_url }}"
+		alt="{{ faculty.name }}'s headshot"
+	/>
+	<div class="info">
+		<a href="{{ faculty.link }}" class="name">{{ faculty.name }}</a>
+		<b class="position">{{ faculty.position }}</b>
+		<span class="college">{{ faculty.college }}</span>
+		<a href="mailto:{{ faculty.email }}" class="email">{{ faculty.email }}</a>
+	</div>
+</div>

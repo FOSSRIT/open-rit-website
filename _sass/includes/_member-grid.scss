@@ -1,27 +1,37 @@
-/* Member Grid styles (member-grid.html, mini-member-grid.html) */
+/* Member Grid styles (member-grid.html) */
 
-.member-grid, .mini-member-grid {
-	& > div.member {
-		& > img {
+.full-member-grid, .mini-member-grid, .micro-member-grid {
+	.member {
+		img {
 			width: 100%;
 			object-fit: cover;
 		}
 
-		& > b.name {
-			font-size: 1.1875em;
-			font-weight: 500;
-			color: #C75300;
-			line-height: 23px;
-		}
+		.info {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			
+			* {
+				display: inline-block;
+				line-height: 23px;
+				vertical-align: middle;
+			}
+			.name {
+				font-size: 1.1875em;
+				font-weight: 500;
+				color: #C75300;
+			}
 
-		& > .role {
-			font-size: 0.75em;
+			.role {
+				font-size: 0.75em;
+			}
 		}
 	}
 }
 
 /* Member Grid */
-.member-grid {
+.full-member-grid {
 	display: grid;
 	grid-template-columns: repeat(var(--n-columns), var(--col-width));
 	line-height: 19px;
@@ -29,13 +39,13 @@
 	--col-width: 200px;
 	--n-columns: 2;
 
-	& > div.member > img {
+	.member img {
 		height: 300px;
 	}
 
 	@media (max-width: 670px) {
 		--col-width: 50%;
-		& > div.member > img {
+		.member img {
 			height: 200px;
 		}
 	}
@@ -62,11 +72,20 @@
 	flex-wrap: wrap;
 	margin-right: -15vw;
 
-	& > div.member {
-		display: block;
+	.member {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
 		width: 145px;
-		& > img {
+		
+		img {
 			height: 145px;
+			margin-bottom: 5px;
+		}
+		.info {
+			* {
+				margin: 0.3em 0;
+			}
 		}
 	}
 
@@ -80,5 +99,36 @@
 
 	@media (min-width: 1350px) {
 		--n-columns: 5;
+	}
+}
+
+/* Micro Member Grid */
+.micro-member-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em 20%;
+	padding-top: 0.25em;
+	
+	.member {
+		display: flex;
+		flex-direction: row;
+		box-sizing: border-box;
+		height: 60px;
+		
+		img {
+			width: 60px;
+			border-radius: 60px;
+			margin-right: 1em;
+		}
+		.info {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			
+			.name {
+				margin-bottom: 0.2em;
+			}
+		}
 	}
 }

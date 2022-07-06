@@ -5,11 +5,31 @@ Arguments:
   members: A list of members, each with the properties
     name: The member's name
     role: The member's position, used as a subtitle
+    org: The member's organization, displayed as a bold subtitle (OPTIONAL)
+    degree: The member's degree, displayed as an italic subtitle (OPTIONAL)
     headshot: The path to the member's headshot photo (alt-text: <name>'s headshot)
+  style: The style of member grid, either "full", "mini", or "micro"
 {% endcomment %}
 
-<div class="member-grid">
+<div class="{{ include.style }}-member-grid">
 	{% for member in include.members %}
-		{% include member-grid-entry.html member=member %}
+		<div class="member">
+			<img
+				src="{{member.headshot | relative_url}}"
+				alt="{{member.name}}'s headshot"
+			/>
+			<div class="info">
+				<b class="name">{{member.name}}</b>
+				<div class="role">
+					{{member.role}}
+					{% if member.org %}
+					<b>{{ member.org }}</b>
+					{% endif %}
+					{% if member.degree %}
+					<i>{{ member.degree}}</i>
+					{% endif %}
+				</div>
+			</div>
+		</div>
 	{% endfor %}
 </div>

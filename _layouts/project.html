@@ -48,7 +48,20 @@ subnav:
 		</p>
 	</div>
 	<h2>Team Members</h2>
-	{% include micro-member-grid.html names=page.librecorps-members %}
+	{% comment %}
+	Get the list of members by cross-referencing names with _data/members.yml
+	{% endcomment %}
+	{%
+	assign all_members = site.data.members.present_members
+		| concat: site.data.members.past_members
+		| concat: site.data.members.advisory_board
+	%}
+	{% assign members = "" | split: "," %}
+	{% for name in page.librecorps-members %}
+		{% assign member = all_members | where: "name", name | first %}
+		{% assign members = members | push: member %}
+	{% endfor %}
+	{% include member-grid.html style="micro" members=members %}
 </div>
 <!-- <Errors> -->
 <noscript>

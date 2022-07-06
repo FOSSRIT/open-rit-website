@@ -1,4 +1,5 @@
 - name: J A Stephen Viggiano
+  email: jasvppr@rit.edu
   link: https://www.rit.edu/directory/jasvppr-j-a-stephen-viggiano
   college: College of Art and Design
   position: Assistant Professor
@@ -7,6 +8,7 @@
 #  project-desc: Tools for Digital Color Imaging
 
 - name: Kaitlin Stack Whitney
+  email: kxwsbi@rit.edu
   link: https://www.rit.edu/directory/kxwsbi-kaitlin-stack-whitney
   college: College of Liberal Arts
   position: Assistant Professor
@@ -14,6 +16,7 @@
 #  project: Accessibility and Flexible Learning Projects
 
 - name: Jessica Lieberman
+  email: jclgsl@rit.edu
   link: https://www.rit.edu/directory/jclgsl-jessica-lieberman
   college: College of Liberal Arts
   position: Associate Professor
@@ -22,6 +25,7 @@
 #  project-desc: Its impact on Rochester
 
 - name: Whitney Sperrazza
+  email: wssgla@rit.edu
   link: https://www.rit.edu/directory/wssgla-whitney-sperrazza
   college: College of Liberal Arts
   position: Assistant Professor
@@ -30,6 +34,7 @@
 #  project-desc: Redlining & Related Issues in Rochester History
 
 - name: Manuella Campanelli
+  email: manuela@astro.rit.edu
   link: https://www.rit.edu/science/directory/mxcsma-manuela-campanelli
   college: College of Science
   position: Professor
@@ -38,6 +43,7 @@
 #  project-desc: Computational Astrophysics
 
 - name: Bob Teese
+  email: rbtsps@rit.edu
   link: https://www.rit.edu/directory/rbtsps-robert-teese
   college: College of Science
   position: Research Faculty
@@ -46,6 +52,7 @@
 #  project-desc: Interactive Video-Enhanced Tutorials
 
 - name: Paul Shipman
+  email: passbi@rit.edu
   link: https://www.rit.edu/directory/passbi-paul-shipman
   college: College of Science
   position: Associate Professor
@@ -53,6 +60,7 @@
 #  project: Summer Science Education for Tribal Communities
 
 - name: Michael Osier
+  email: mvoscl@rit.edu
   link: https://www.rit.edu/directory/mvoscl-michael-osier
   college: College of Science
   position: Associate Professor
@@ -60,6 +68,7 @@
 #  project: Vitis Pathways Genomics Software
 
 - name: Shanchieh Yang
+  email: jay.yang@rit.edu
   link: https://www.rit.edu/directory/sjyeec-shanchieh-yang
   college: Kate Gleason College of Engineering
   position: Professor
@@ -68,6 +77,7 @@
 #  project-desc: Attack Strategy Synthesis for Enhanced Threat Recognition
 
 - name: Michael McQuaid
+  email: jay.yang@rit.edu
   link: https://www.rit.edu/directory/mjmics-michael-mcquaid
   college: GCCIS
   position: Senior Lecturer
@@ -75,6 +85,7 @@
 # project: Victorian Autobiography Information Network
 
 - name: Sean Grass
+  email: sean.grass@mail.rit.edu
   link: https://www.rit.edu/directory/scggsl-sean-grass
   college: COLA
   position: Department Chair of the English Department
@@ -82,6 +93,7 @@
 # project: Victorian Autobiography Information Network
 
 - name: Andy Meneely
+  email: andy.meneely@rit.edu
   link: https://www.rit.edu/directory/axmvse-andy-meneely
   college: GCCIS
   position: Associate Professor
@@ -89,6 +101,7 @@
 # project: The Vulnerability History Project
 
 - name: David I. Schwartz
+  email: david.i.schwartz@rit.edu
   link: https://www.rit.edu/directory/disvks-david-schwartz
   college: GCCIS
   position: Director of the School of Interactive Games and Media
@@ -97,6 +110,7 @@
 # project-desc: An Open-Source Repository for Game Development Education
 
 - name: Mohamed Wiem Mkaouer
+  email: mwmvse@rit.edu
   link: https://www.rit.edu/directory/mwmvse-mohamed-wiem-mkaouer
   college: GCCIS
   position: Assistant Professor
@@ -105,6 +119,7 @@
 # project-desc: Improving the usability of detecting bad testing practices
 
 - name: Michelle Harris
+  email: wmhics@rit.edu
   link: https://www.rit.edu/directory/wmhics-w-michelle-harris
   college: GCCIS
   position: Associate Professor
@@ -112,6 +127,7 @@
 # project: Contributions of Tutorials and Exercises to P5.js
 
 - name: Scott Hawker
+  email: jshvse@rit.edu
   link: https://www.rit.edu/directory/jshvse-j-scott-hawker
   college: GCCIS
   position: Associate Professor
@@ -120,6 +136,7 @@
 # project-desc: An Open Data Project with the Seneca Park Zoo
 
 - name: Xumin Liu
+  email: xmlics@rit.edu
   link: https://www.rit.edu/directory/xmlics-xumin-liu
   college: GCCIS
   position: Associate Professor
@@ -128,6 +145,7 @@
 # project-desc: An Open Data Science Curriculum
 
 - name: Nidhi Rastogi
+  email: nidhi.rastogi@rit.edu
   link: https://www.rit.edu/directory/nxrvse-nidhi-rastogi
   college: GCCIS
   position: Assistant Professor
@@ -136,6 +154,7 @@
 # project-desc: Generating open dataset in autonomous systems for explainable security
 
 - name: Stephen Yi
+  email: stevenyi@gmail.com
   college: GCCIS
   position: Assistant Professor
   headshot: /assets/images/pages/our-work/fellows/placeholder.webp
@@ -143,6 +162,7 @@
 # project-desc: A Sound and Music Computing System
 
 - name: Todd Pagano
+  email: tepnts@rit.edu
   link: https://www.rit.edu/directory/tepnts-todd-pagano
   college: NTID
   position: Exec Director, NTID Professional and Student Scholar Development
@@ -150,6 +170,7 @@
 # project: The Journal of Science Education for Students With Disabilities
 
 - name: Christopher Kurz
+  email: caknsp@rit.edu
   link: https://www.rit.edu/directory/caknsp-christopher-kurz
   college: NTID
   position: Professor
@@ -158,6 +179,7 @@
 # project-desc: A Deaf Education Literacy Platform
 
 - name: Kierstin Muroski
+  email: ksmnss@rit.edu
   link: https://www.rit.edu/directory/ksmnss-kierstin-muroski
   college: NTID
   position: Assistant Professor

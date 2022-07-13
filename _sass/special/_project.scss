@@ -33,10 +33,22 @@
 			margin-bottom: 0;
 			color: lighten(#000, 40%);
 		}
-		iframe {
+		.iframe-wrapper {
+			position: relative;
 			width: 100%;
-			aspect-ratio: 1 / 1;
-			border: none;
+			height: 0;
+			padding-top: 100%;
+			
+			iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				border: none;
+			}
 		}
 	}
 }

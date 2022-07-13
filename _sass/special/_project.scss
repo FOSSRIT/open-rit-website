@@ -7,6 +7,9 @@
 	h3 {
 		color: lighten(black, 10%);
 	}
+	#project-sources:not(:empty) ~ #no-sources {
+		display: none;
+	}
 }
 
 #project-metrics {

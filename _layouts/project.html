@@ -39,7 +39,12 @@ Empty divs intended to be filled in by the project.js script
 		{% include faculty-info.html faculty=fellow %}
 	{% endfor %}
 	<h3>Resources</h3>
-	<ul id="project-sources"></ul>
+	<div>
+		<ul id="project-sources"></ul>
+		<p id="no-sources">
+			This project has no sources.
+		</p>
+	</div>
 	
 	<div id="project-services">
 		{{ content }}

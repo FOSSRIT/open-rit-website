@@ -9,10 +9,10 @@ This is used on the home page to display a list of fellows.
 Arguments:
   cards:  A list of cards to be displayed.  Each card has the following properties:
     url:  A link that the user should be sent to upon interacting with the card
-	image:  An image URL to be used with the card
-	primary:  The main title of the card, probably a person's name
-	secondary:  A list of subtitles to apply to the card
-	description:  A short description for the card (~1 sentance)
+    image:  An image URL to be used with the card
+    primary:  The main title of the card, probably a person's name
+    secondary:  A list of subtitles to apply to the card
+    description:  A short description for the card (~1 sentance)
 {% endcomment %}
 
 <div class="cards size-{{include.cards | size | divided_by: 3.0 | ceil}}">

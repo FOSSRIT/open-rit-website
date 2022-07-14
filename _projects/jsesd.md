@@ -4,11 +4,11 @@ layout: project
 project-name: JSESD
 tldr: The Journal of Science Education for Students With Disabilities
 owner: Todd Pagano
-mystic-slug: NOLSKI-PLACEHOLDER
+mystic-slug: jsesd
 
 college: National Technical Institute for the Deaf
 type: Assisted Faculty Projects
-semester: NOLSKI-PLACEHOLDER
+semester: Summer 2021
 
 librecorps-members:
 - Rahul Jaiswal

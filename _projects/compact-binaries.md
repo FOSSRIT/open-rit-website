@@ -4,11 +4,11 @@ layout: project
 project-name: Compact Binaries
 tldr: Computational Astrophysics
 owner: Manuela Campanelli
-mystic-slug: NOLSKI-PLACEHOLDER
+mystic-slug: compact-binaries
 
 college: College of Science
 type: Assisted Faculty Projects
-semester: NOLSKI-PLACEHOLDER
+semester: Fall 2021
 
 librecorps-members:
 - Urvashi Kokate

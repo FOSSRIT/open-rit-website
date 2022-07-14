@@ -4,11 +4,11 @@ layout: project
 project-name: My Conservation Life
 tldr: An Open Data Project with the Seneca Park Zoo
 owner: Scott Hawker
-mystic-slug: NOLSKI-PLACEHOLDER
+mystic-slug: my-conservation-life
 
 college: Golisano College of Computing and Information Sciences
 type: Assisted Faculty Projects
-semester: NOLSKI-PLACEHOLDER
+semester: Summer 2021
 
 librecorps-members:
 - Urvashi Kokate

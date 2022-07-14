@@ -4,11 +4,11 @@ layout: project
 project-name: NeugebauerScalar
 tldr: Tools for Digital Color Imaging
 owner: J A Stephen Viggiano
-mystic-slug: NOLSKI-PLACEHOLDER
+mystic-slug: neugerbauer-scalar
 
 college: College of Art and Design
 type: Assisted Faculty Projects
-semester: NOLSKI-PLACEHOLDER
+semester: Summer 2021
 
 librecorps-members:
 - Urvashi Kokate

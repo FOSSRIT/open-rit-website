@@ -4,11 +4,11 @@ layout: project
 project-name: VAIN
 tldr: Victorian Autobiography Information Network
 owner: Sean Grass
-mystic-slug: NOLSKI-PLACEHOLDER
+mystic-slug: vain
 
 college: College of Liberal Arts
 type: Assisted Faculty Projects
-semester: NOLSKI-PLACEHOLDER
+semester: Fall 2021
 
 librecorps-members:
 - Urvashi Kokate

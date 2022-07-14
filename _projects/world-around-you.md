@@ -4,11 +4,11 @@ layout: project
 project-name: World Around You
 tldr: A Deaf Education Literacy Platform
 owner: Christopher Kurz
-mystic-slug: NOLSKI-PLACEHOLDER
+mystic-slug: world-around-you
 
 college: National Technical Institute for the Deaf
 type: Assisted Faculty Projects
-semester: NOLSKI-PLACEHOLDER
+semester: Spring 2021
 
 librecorps-members:
 - Julia Hawley

@@ -4,11 +4,11 @@ layout: project
 project-name: P5.js
 tldr: Contributions of Tutorials and Exercises to P5.js
 owner: Michelle Harris
-mystic-slug: NOLSKI-PLACEHOLDER
+mystic-slug: p5-js
 
 college: Golisano College of Computing and Information Sciences
 type: Assisted Faculty Projects
-semester: NOLSKI-PLACEHOLDER
+semester: Spring 2021
 
 librecorps-members:
 - Suhas CV

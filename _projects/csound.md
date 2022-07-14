@@ -4,11 +4,11 @@ layout: project
 project-name: Csound
 tldr: A Sound and Music Computing System
 owner: Steven Yi
-mystic-slug: NOLSKI-PLACEHOLDER
+mystic-slug: csound
 
 college: Golisano College of Computing and Information Sciences
 type: Assisted Faculty Projects
-semester: NOLSKI-PLACEHOLDER
+semester: Spring 2021
 
 librecorps-members:
 - Shanée Gordon

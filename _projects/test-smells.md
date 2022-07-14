@@ -4,11 +4,11 @@ layout: project
 project-name: Test Smells
 tldr: Improving the usability of detecting bad testing practices
 owner: Mohamed Wiem Mkaouer
-mystic-slug: NOLSKI-PLACEHOLDER
+mystic-slug: test-smells
 
 college: Golisano College of Computing and Information Sciences
 type: Assisted Faculty Projects
-semester: NOLSKI-PLACEHOLDER
+semester: Fall 2021
 
 librecorps-members:
 - Urvashi Kokate

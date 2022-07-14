@@ -12,9 +12,12 @@
 	}
 }
 
+$metric-base-height: 200px;
+$metric-min-width: 360px;
+
 #project-metrics {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax($metric-min-width, 1fr));
 	gap: 1em;
 	
 	#no-metrics:not(:only-child) {
@@ -31,8 +34,8 @@
 		&.tall {
 			grid-row: span 2;
 			
-			.iframe-wrapper {
-				padding-top: 100%;
+			iframe {
+				height: $metric-base-height * 1.5;
 			}
 		}
 		h4 {
@@ -41,22 +44,10 @@
 			margin-bottom: 0;
 			color: lighten(#000, 40%);
 		}
-		.iframe-wrapper {
-			position: relative;
-			height: 0;
+		iframe {
 			flex-grow: 1;
-			padding-top: 50%;
-			
-			iframe {
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				width: 100%;
-				height: 100%;
-				border: none;
-			}
+			height: $metric-base-height;
+			border: none;
 		}
 	}
 }

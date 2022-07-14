@@ -81,8 +81,6 @@ function create_embed(embed_data) {
 	const embed_title = document.createElement("h4");
 	embed_title.innerText = embed_data["title"];
 	/* Create the embed */
-	const wrapper = document.createElement("div") // needed for aspect ratio
-	wrapper.classList.add("iframe-wrapper")
 	const embed = document.createElement("iframe");
 	embed.setAttribute("src", new URL(embed_data["url"], MYSTIC_URL));
 	embed.setAttribute("title", embed_data["title"]);
@@ -91,8 +89,7 @@ function create_embed(embed_data) {
 		embed_container.classList.add("tall");
 	}
 	/* Put the content in the container and return it */
-	wrapper.appendChild(embed)
 	embed_container.appendChild(embed_title);
-	embed_container.appendChild(wrapper);
+	embed_container.appendChild(embed)
 	return embed_container;
 }

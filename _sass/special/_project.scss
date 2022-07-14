@@ -13,20 +13,28 @@
 }
 
 #project-metrics {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
+	gap: 1em;
 	
 	#no-metrics:not(:only-child) {
 		display: none;
 	}
 	.embed-container {
-		width: 45%;
-		margin: 0.5em;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
 		padding: 0.5em;
 		box-shadow: 0px 5px 10px #666;
 		border-radius: 0.5em;
 		
+		&.tall {
+			grid-row: span 2;
+			
+			.iframe-wrapper {
+				padding-top: 100%;
+			}
+		}
 		h4 {
 			font-size: 1.1em;
 			margin: 0.3em;
@@ -35,9 +43,9 @@
 		}
 		.iframe-wrapper {
 			position: relative;
-			width: 100%;
 			height: 0;
-			padding-top: 100%;
+			flex-grow: 1;
+			padding-top: 50%;
 			
 			iframe {
 				position: absolute;

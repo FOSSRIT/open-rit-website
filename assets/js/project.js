@@ -1,7 +1,7 @@
 /* Script to get project information from Mystic for the project.html layout */
 
 /* TODO: replace with live Mystic URL */
-const MYSTIC_URL = new URL("http://localhost:5000/");
+const MYSTIC_URL = new URL("https://foss-dashboard.rit.edu/");
 const API_PREFIX = "/";
 
 /* PROJECT_SLUG set by project.html layout */
@@ -88,7 +88,7 @@ function create_embed(embed_data) {
 	embed.setAttribute("title", embed_data["title"]);
 	embed.setAttribute("scrolling", "no");
 	if (embed_data["tall"]) {
-		embed.classList.add("tall");
+		embed_container.classList.add("tall");
 	}
 	/* Put the content in the container and return it */
 	wrapper.appendChild(embed)

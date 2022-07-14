@@ -1,7 +1,6 @@
 /* Script to do searching and filtering for the projects-grid.html partial */
 
 /* Config - Field and its search weight (scalar) */
-// TODO: refine values
 const SEARCH_FIELDS = {
 	"name":  3.5,
 	"owner": 1.75,

@@ -35,18 +35,12 @@
 }
 
 #projects-container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 1em;
 }
 
 .project {
-	flex-basis: 33%;
-	min-width: 200px;
-	box-sizing: border-box;
-	padding: 1em;
-	
 	h2 {
 		font-size: 1.3em;
 		margin: 0;

@@ -11,6 +11,7 @@ const FILTERS = ["college", "type", "semester"];
 
 const PROJECTS_LIST = [];
 const CURRENT_FILTERS = new Map(
+	/* Construct map of filter type to selected filter values */
 	FILTERS.map(filter => (
 		[filter, new Set()]
 	))
@@ -67,10 +68,14 @@ function handle_search(event) {
 }
 
 function search_projects(search_text) {
+	/* Choose projects which meet the criteria that... */
 	return PROJECTS_LIST.filter(project => {
+		/* At least one of their fields... */
 		project.search_valid = Object.entries(project)
 			.some(([field, value]) => {
+				/* Is included in the searchable fields... */
 				if (Object.keys(SEARCH_FIELDS).includes(field)) {
+					/* and contains the search text in it */
 					return value
 						.trim()
 						.toLowerCase()
@@ -87,8 +92,10 @@ function search_projects(search_text) {
 }
 
 function sort_projects(search_text, projects) {
+	/* Assign search scores */
 	projects.forEach(project => {
 		const scores = [];
+		/* For each field, calculate the search score */
 		Object.entries(SEARCH_FIELDS)
 			.forEach(([search_field, weight]) => {
 				const value = project[search_field];
@@ -96,8 +103,10 @@ function sort_projects(search_text, projects) {
 				const score = (dist * weight) / value.length;
 				scores.push(score);
 			});
+		/* Take the min score for the searchable fields */
 		project.search_score = Math.min(...scores);
 	});
+	/* Assign order */
 	projects
 		.sort((a, b) => (
 			b.search_score - a.search_score
@@ -127,8 +136,10 @@ function handle_filter(event) {
 
 function update_filters() {
 	PROJECTS_LIST.forEach(project => {
+		/* Project meets criteria for all selected filters */
 		project.filter_valid = Array.from(CURRENT_FILTERS.entries())
 			.every(([filter, active_set]) => (
+				/* No filter selected, or project meets a selected filter */
 				active_set.size === 0 || project[filter].some(value => (
 					active_set.has(value)
 				))

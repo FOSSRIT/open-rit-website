@@ -43,8 +43,8 @@ TODO: documentation
 		{% for project in site.projects %}
 			<div id="{{ project.mystic-slug }}" class="project">
 				<h2>{{ project.project-name }}</h2>
+				<span class="owner">{{ project.owner | join: " & " }}</span>
 				<p>{{ project.tldr }}</p>
-				<p>{{ project.owner | join: " & " }}</p>
 				<a href="{{ project.url | relative_url }}">View more</a>
 			</div>
 		{% endfor %}

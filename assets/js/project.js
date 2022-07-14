@@ -65,7 +65,10 @@ function create_source(source_data) {
 	/* Create the link */
 	const source_a = document.createElement("a");
 	source_a.setAttribute("href", source_data["url"]);
-	source_a.innerText = source_data["type"];
+	const slug = source_data["url"].substring(
+		source_data["url"].lastIndexOf("/") + 1
+	);
+	source_a.innerText = `${slug} (${source_data["type"]})`;
 	/* Put the link in the list item and return it */
 	source_li.appendChild(source_a);
 	return source_li;

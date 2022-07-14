@@ -23,6 +23,12 @@ subnav:
   link: /our-work/fellows-projects
 ---
 
+{%- if jekyll.environment == "local_mystic" -%}
+	{% assign mystic_url = "http://localhost:5000" %}
+{%- else -%}
+	{% assign mystic_url = "https://foss-dashboard.rit.edu" %}
+{%- endif -%}
+
 {% comment %}
 Empty divs intended to be filled in by the project.js script
 {% endcomment %}
@@ -39,12 +45,13 @@ Empty divs intended to be filled in by the project.js script
 		{% include faculty-info.html faculty=fellow %}
 	{% endfor %}
 	<h3>Resources</h3>
-	<div>
-		<ul id="project-sources"></ul>
-		<p id="no-sources">
-			This project has no sources.
-		</p>
-	</div>
+	<ul id="project-sources">
+		<li>
+			<a href="{{ mystic_url }}/{{ page.mystic-slug }}">
+				View this project on Mystic
+			</a>
+		</li>
+	</ul>
 	
 	<div id="project-services">
 		{{ content }}
@@ -89,6 +96,7 @@ Empty divs intended to be filled in by the project.js script
 </div>
 <!-- </Errors> -->
 <script>
+	const MYSTIC_URL = new URL("{{ mystic_url }}");
 	const PROJECT_SLUG = "{{ page.mystic-slug }}";
 	fetch_data();
 </script>

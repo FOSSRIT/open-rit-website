@@ -7,9 +7,6 @@
 	h3 {
 		color: lighten(black, 10%);
 	}
-	#project-sources:not(:empty) ~ #no-sources {
-		display: none;
-	}
 }
 
 $metric-base-height: 200px;

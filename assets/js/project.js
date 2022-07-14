@@ -1,10 +1,8 @@
 /* Script to get project information from Mystic for the project.html layout */
 
-/* TODO: replace with live Mystic URL */
-const MYSTIC_URL = new URL("https://foss-dashboard.rit.edu/");
 const API_PREFIX = "/";
 
-/* PROJECT_SLUG set by project.html layout */
+/* MYSTIC_URL and PROJECT_SLUG set by project.html layout */
 function get_endpoint_url() {
 	const api_url      = new URL(API_PREFIX, MYSTIC_URL);
 	const endpoint_url = new URL(`${PROJECT_SLUG}.json`, api_url);

@@ -17,8 +17,12 @@ $metric-min-width: 360px;
 	grid-template-columns: repeat(auto-fit, minmax($metric-min-width, 1fr));
 	gap: 1em;
 	
-	#no-metrics:not(:only-child) {
-		display: none;
+	#no-metrics {
+		margin-top: 0;
+		
+		&:not(:only-child) {
+			display: none;
+		}
 	}
 	.embed-container {
 		display: flex;

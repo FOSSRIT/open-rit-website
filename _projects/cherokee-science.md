@@ -21,5 +21,5 @@ librecorps-members:
 - Developed homepage to showcase sub-grant funded projects
 
 ## Results
-
+Dr. Shipman has gone on to utilize this website as a way of understanding the larger community of work around Public Interest Technology for Tribal communities. He has also begun to pursue organizing an open access journal through the RIT Library with our consultation.
 

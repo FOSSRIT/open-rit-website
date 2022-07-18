@@ -11,7 +11,7 @@ type: Assisted Faculty Projects
 semester: Spring 2021
 
 librecorps-members:
-- Shanee Gordon
+- Shanée Gordon
 ---
 
 ## List of Services

@@ -68,6 +68,12 @@ Must be loaded with the projects_search.js script in order to function.
 				{% endfor %}
 			},
 		{% endfor %}
-	}
+	};
+	const FILTERS = [
+		{% for filter in filters %}
+			"{{ filter }}",
+		{% endfor %}
+	];
+	init_filters();
 	init_search();
 </script>

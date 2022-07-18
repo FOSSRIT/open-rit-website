@@ -6,16 +6,17 @@ const SEARCH_FIELDS = {
 	"owner": 1.75,
 	"tldr":  1,
 };
-const FILTERS = ["college", "type", "semester"];
 
 const PROJECTS_LIST = [];
-const CURRENT_FILTERS = new Map(
-	/* Construct map of filter type to selected filter values */
-	FILTERS.map(filter => (
-		[filter, new Set()]
-	))
-);
+const CURRENT_FILTERS = new Map();
 let prev_search = "";
+
+/* FILTERS set by projects-grid.html partial */
+function init_filters() {
+	FILTERS.forEach(filter => {
+		CURRENT_FILTERS.set(filter, new Set());
+	});
+}
 
 /* PROJECTS_DATA set by projects-grid.html partial */
 function init_search() {

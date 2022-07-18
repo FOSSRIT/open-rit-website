@@ -30,7 +30,7 @@ links:
 
 ## Projects By Our Fellows
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Since January 2021, our team has been working with faculty who have applied to our Open@RIT fellowship program for assistance developing communities around their Open Work. Our interdisciplinary LibreCorps team of designers, technical writers, developers, and social media managers assisted in designing more effective pipelines for contribution. Our work often resulted in sustainability plans that our fellows utilized in further grant funding applications to grow and sustain their research.
 
 ### Browse Projects
 

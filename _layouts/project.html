@@ -1,0 +1,102 @@
+---
+layout: base
+load_scripts:
+- /assets/js/project.js
+
+breadcrumbs:
+- name: Our Open Work
+  path: /our-work/
+- name: Our Fellows' Projects
+  path: /our-work/fellows-projects
+- name: TEMP_REWORK_TODO_NAME
+  path: TEMP_REWORK_TODO_URL
+
+subnav:
+- name: Our Work and Projects
+  link: /our-work
+  sections:
+  - LibreCorps Team
+  - Mystic
+  - World Around You
+  - Conceptual Mismatches
+- name: Our Fellows' Projects
+  link: /our-work/fellows-projects
+---
+
+{%- if jekyll.environment == "local_mystic" -%}
+	{% assign mystic_url = "http://localhost:5000" %}
+{%- else -%}
+	{% assign mystic_url = "https://foss-dashboard.rit.edu" %}
+{%- endif -%}
+
+{% comment %}
+Empty divs intended to be filled in by the project.js script
+{% endcomment %}
+
+<div id="project-content" class="hidden">
+	<h2>About</h2>
+	<div id="project-about"></div>
+	<h3>Project By</h3>
+	{% comment %}
+	Get project owners by cross-referencing names with _data/fellows.yml
+	{% endcomment %}
+	{% for name in page.owner %}
+		{% assign fellow = site.data.fellows | where: "name", name | first %}
+		{% include faculty-info.html faculty=fellow %}
+	{% endfor %}
+	<h3>Resources</h3>
+	<ul id="project-sources">
+		<li>
+			<a href="{{ mystic_url }}/{{ page.mystic-slug }}">
+				View this project on Mystic
+			</a>
+		</li>
+	</ul>
+	
+	<div id="project-services">
+		{{ content }}
+	</div>
+	
+	<h2>Metrics</h2>
+	<div id="project-metrics">
+		<p id="no-metrics">
+			This project has no metrics to display.
+		</p>
+	</div>
+	<h2>Team Members</h2>
+	{% comment %}
+	Get the list of members by cross-referencing names with _data/members.yml
+	{% endcomment %}
+	{%
+	assign all_members = site.data.members.present_members
+		| concat: site.data.members.past_members
+		| concat: site.data.members.advisory_board
+	%}
+	{% assign members = "" | split: "," %}
+	{% for name in page.librecorps-members %}
+		{% assign member = all_members | where: "name", name | first %}
+		{% assign members = members | push: member %}
+	{% endfor %}
+	{% include member-grid.html style="micro" members=members %}
+</div>
+<!-- <Errors> -->
+<noscript>
+	<p class="error">
+		Sorry, project information requires JavaScript enabled in order to
+		be loaded. Please enable JavaScript to see project information.
+	</p>
+</noscript>
+<div id="loading-error" class="hidden">
+	<p class="error">
+		Sorry, there was a problem loading the information for this project.
+		Please try again later. <br/>
+		If this problem persists, please contact Michael Nolan using the
+		contact information below.
+	</p>
+</div>
+<!-- </Errors> -->
+<script>
+	const MYSTIC_URL = new URL("{{ mystic_url }}");
+	const PROJECT_SLUG = "{{ page.mystic-slug }}";
+	fetch_data();
+</script>

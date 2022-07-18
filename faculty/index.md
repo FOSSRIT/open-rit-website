@@ -14,8 +14,6 @@ subnav:
   active: true
 - name: Resources
   link: /faculty/resources
-- name: Open@RIT Fellows
-  link: /faculty/fellows
 ---
 
 ## Open Work in Academia

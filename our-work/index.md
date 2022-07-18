@@ -5,9 +5,11 @@ banner: /assets/images/banners/our-work.webp
 breadcrumbs:
 - name: Our Open Work
   path: /our-work/
+- name: Our Work and Projects
+  path: /our-work/
 
 subnav:
-- name: Our Open Work
+- name: Our Work and Projects
   link: /our-work
   active: true
   sections:
@@ -15,6 +17,8 @@ subnav:
   - Mystic
   - World Around You
   - Conceptual Mismatches
+- name: Our Fellows' Projects
+  link: /our-work/fellows-projects
 
 links:
 - name: LibreCorps >

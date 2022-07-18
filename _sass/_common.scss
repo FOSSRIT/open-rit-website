@@ -6,6 +6,10 @@ body {
 	font-family: "Roboto", "Arial", sans‑serif;
 }
 
+main {
+	min-height: 100vh;
+}
+
 /* Headers */
 main h1 {
 	color: white;
@@ -100,4 +104,19 @@ main {
 	.big-text {
 		font-size: 1.5em;
 	}
+}
+
+/* JS-related classes */
+.error {
+	font-weight: bold;
+	color: desaturate($color: #f00, $amount: 30%);
+	&::before {
+		content: "< ";
+	}
+	&::after {
+		content: " >";
+	}
+}
+.hidden {
+	display: none;
 }

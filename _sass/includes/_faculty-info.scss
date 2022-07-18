@@ -1,0 +1,33 @@
+/* Styles for faculty info inserts (faculty-info.html) */
+
+$block-height: 150px;
+
+.faculty-info {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: 100%;
+	height: $block-height;
+	margin-bottom: 1em;
+	
+	* {
+		display: inline-block;
+	}
+	img {
+		height: $block-height;
+		margin-right: 2em;
+	}
+	.info {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		
+		.name {
+			font-size: 1.2em;
+			font-weight: bold;
+			&, &:visited {
+				color: var(--color-rit-orange);
+			}
+		}
+	}
+}

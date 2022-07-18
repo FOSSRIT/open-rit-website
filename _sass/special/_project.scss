@@ -1,0 +1,54 @@
+/* Styles for project information pages */
+
+#project-content {
+	h2 {
+		margin-top: 60px;
+	}
+	h3 {
+		color: lighten(black, 10%);
+	}
+}
+
+$metric-base-height: 200px;
+$metric-min-width: 360px;
+
+#project-metrics {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax($metric-min-width, 1fr));
+	gap: 1em;
+	
+	#no-metrics {
+		margin-top: 0;
+		
+		&:not(:only-child) {
+			display: none;
+		}
+	}
+	.embed-container {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		padding: 0.5em;
+		box-shadow: 0px 5px 10px #666;
+		border-radius: 0.5em;
+		
+		&.tall {
+			grid-row: span 2;
+			
+			iframe {
+				height: $metric-base-height * 1.5;
+			}
+		}
+		h4 {
+			font-size: 1.1em;
+			margin: 0.3em;
+			margin-bottom: 0;
+			color: lighten(#000, 40%);
+		}
+		iframe {
+			flex-grow: 1;
+			height: $metric-base-height;
+			border: none;
+		}
+	}
+}

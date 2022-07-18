@@ -1,0 +1,79 @@
+{% comment %}
+A searchable and filterable grid to display our fellows' projects.
+Must be loaded with the projects_search.js script in order to function.
+{% endcomment %}
+
+{% assign filters = "college|type|semester" | split: "|" %}
+
+<noscript>
+	<p class="error">
+		Sorry, projects searching requires JavaScript to be enabled in order to
+		function. Please enable JavaScript to search projects.
+	</p>
+</noscript>
+<div id="projects-grid">
+	<div id="projects-search" class="hidden">
+		<input
+			id="projects-search-bar"
+			type="text"
+			placeholder="Search Projects"
+		/>
+		<div id="filters-row">
+			{% for filter in filters %}
+				{% assign capitalized = filter | capitalize %}
+				{% assign label = "Select " | append: capitalized %}
+				{% comment %}
+				Workaround for the fact that you can't do:
+					site.projects | map: filter | flatten | uniq
+				{% endcomment %}
+				{% assign options = ("" | split: ",") %}
+				{% for project in site.projects %}
+					{% assign options = options | push: project[filter] %}
+				{% endfor %}
+				{% assign options = options | uniq %}
+				{%
+				include checkbox-dropdown.html
+					label=label
+					name=filter
+					options=options
+				%}
+			{% endfor %}
+		</div>
+	</div>
+	<div id="projects-container">
+		{% for project in site.projects %}
+			<div id="{{ project.mystic-slug }}" class="project">
+				<h2>{{ project.project-name }}</h2>
+				<span class="owner">{{ project.owner | join: " & " }}</span>
+				<p>{{ project.tldr }}</p>
+				<a href="{{ project.url | relative_url }}">View more</a>
+			</div>
+		{% endfor %}
+	</div>
+</div>
+<script>
+	const PROJECTS_DATA = {
+		{% for project in site.projects %}
+			"{{ project.mystic-slug }}": {
+				"name":  "{{ project.project-name        }}",
+				"tldr":  "{{ project.tldr                }}",
+				"owner": "{{ project.owner | join: ' & ' }}",
+				
+				{% for filter in filters %}
+					"{{ filter }}": [
+						{% for value in project[filter] %}
+							"{{ value }}",
+						{% endfor %}
+					],
+				{% endfor %}
+			},
+		{% endfor %}
+	};
+	const FILTERS = [
+		{% for filter in filters %}
+			"{{ filter }}",
+		{% endfor %}
+	];
+	init_filters();
+	init_search();
+</script>

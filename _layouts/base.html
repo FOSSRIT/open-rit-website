@@ -50,24 +50,44 @@ layout: default
 <!-- Banner & Title -->
 <div
 	id="banner"
-	style="background-image: url({{ page.banner | relative_url }})" >
+	{% assign banner = page.banner | default: layout.banner %}
+	{% if banner %}
+		style="background-image: url({{ banner }});"
+	{% else %}
+		class="no-image"
+	{% endif %}
+>
 	{% assign newline = "%0A" | url_decode %}
 	<h1> {{ title | replace: newline, "<br/>" }} </h1>
 </div>
 
 <!-- Sidenav -->
 <div id="sidenav">
-	{% if page.breadcrumbs %}
+	{% assign breadcrumbs = page.breadcrumbs | default: layout.breadcrumbs %}
+	{% if breadcrumbs %}
 		<div id="breadcrumbs">
 			<a href="{{ '/' | relative_url }}"> <b>Open@RIT</b> </a>
-			{% for crumb in page.breadcrumbs %}
-				/ <a href="{{ crumb.path | relative_url }}"> {{crumb.name}} </a>
+			{% for crumb in breadcrumbs %}
+				{% comment %}
+				TODO: navigation rework, better allow dynamic breadcrumbs
+				{% endcomment %}
+				{% if crumb.name == "TEMP_REWORK_TODO_NAME" %}
+					{% assign crumb_name = title %}
+				{% endif %}
+				{% if crumb.path == "TEMP_REWORK_TODO_URL" %}
+					{% assign crumb_path = page.url %}
+				{% endif %}
+				/
+				<a href="{{ crumb_path | default: crumb.path | relative_url }}">
+					{{ crumb_name | default: crumb.name }}
+				</a>
 			{% endfor %}
 		</div>
 	{% endif %}
-	{% if page.subnav %}
+	{% assign subnav = page.subnav | default: layout.subnav %}
+	{% if subnav %}
 		<div id="toc">
-			{% for header in page.subnav %}
+			{% for header in subnav %}
 				{% assign header_link = header.link | default: "#" | relative_url %}
 				<a
 						href="{{ header_link }}"

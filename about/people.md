@@ -61,12 +61,12 @@ Mike Nolan serves as the Assistant Director of Open@RIT. A former RIT alum, he w
 
 ### Present LibreCorps Members
 
-{% include member-grid.html members=site.data.members.present_members %}
+{% include member-grid.html style="full" members=site.data.members.present_members %}
 
 ### Past LibreCorps Members
 
-{% include member-grid.html members=site.data.members.past_members %}
+{% include member-grid.html style="full" members=site.data.members.past_members %}
 
 ### Advisory Board
 
-{% include mini-member-grid.html members=site.data.members.advisory_board %}
+{% include member-grid.html style="mini" members=site.data.members.advisory_board %}

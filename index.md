@@ -3,7 +3,7 @@ layout: base
 title: Open@RIT
 banner: /assets/images/banners/landing.webp
 load_scripts:
-- /events.js
+- /assets/js/events.js
 links:
 - name: LibreCorps
   href: /librecorp

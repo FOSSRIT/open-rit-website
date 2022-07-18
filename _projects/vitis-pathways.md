@@ -2,7 +2,7 @@
 layout: project
 
 project-name: Vitis Pathways
-tldr: VitisPathways provides the analytical methods in a single, freely available tool with easily utilized interface to guide understanding of experimental results and new hypothesis generation in Vitis genetics.
+tldr: VitisPathways provides the analytical methods in a tool to guide understanding of experimental results in Vitis genetics.
 owner: Michael Osier
 mystic-slug: vitis-pathways
 

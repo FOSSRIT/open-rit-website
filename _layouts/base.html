@@ -52,7 +52,7 @@ layout: default
 	id="banner"
 	{% assign banner = page.banner | default: layout.banner %}
 	{% if banner %}
-		style="background-image: url({{ banner }});"
+		style="background-image: url({{ banner | relative_url }});"
 	{% else %}
 		class="no-image"
 	{% endif %}

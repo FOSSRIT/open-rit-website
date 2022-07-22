@@ -7,7 +7,7 @@ owner: Shanchieh Yang
 mystic-slug: assert
 
 college: Kate Gleason College of Engineering
-type: Assisted Faculty Projects
+type: Open Source Software
 semester: Summer 2021
 
 librecorps-members:

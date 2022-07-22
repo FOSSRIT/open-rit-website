@@ -7,7 +7,10 @@ owner: Michelle Harris
 mystic-slug: p5-js
 
 college: Golisano College of Computing and Information Sciences
-type: Assisted Faculty Projects
+type:
+- Open Source Software
+- Open Educational Resources
+
 semester: Spring 2021
 
 librecorps-members:

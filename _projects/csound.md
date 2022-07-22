@@ -7,7 +7,7 @@ owner: Steven Yi
 mystic-slug: csound
 
 college: Golisano College of Computing and Information Sciences
-type: Assisted Faculty Projects
+type: Open Source Software
 semester: Spring 2021
 
 librecorps-members:

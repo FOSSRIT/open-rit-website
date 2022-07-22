@@ -7,7 +7,10 @@ owner: Robert Teese
 mystic-slug: mint
 
 college: College of Science
-type: Assisted Faculty Projects
+type:
+- Open Source Software
+- Open Educational Resources
+
 semester: Summer 2021
 
 librecorps-members:

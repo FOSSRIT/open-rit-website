@@ -7,7 +7,10 @@ owner: Christopher Kurz
 mystic-slug: world-around-you
 
 college: National Technical Institute for the Deaf
-type: Assisted Faculty Projects
+type:
+- Open Source Software
+- Open Educational Resources
+
 semester: Spring 2021
 
 librecorps-members:

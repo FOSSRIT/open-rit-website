@@ -7,7 +7,10 @@ owner: Todd Pagano
 mystic-slug: jsesd
 
 college: National Technical Institute for the Deaf
-type: Assisted Faculty Projects
+type:
+- Open Access Journal
+- Open Source Software
+
 semester: Summer 2021
 
 librecorps-members:

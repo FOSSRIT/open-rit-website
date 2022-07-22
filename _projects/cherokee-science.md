@@ -7,7 +7,10 @@ owner: Paul Shipman
 mystic-slug: pit-tc
 
 college: College of Science
-type: Assisted Faculty Projects
+type:
+- Open Data
+- Open Source Software
+
 semester: Fall 2021
 
 librecorps-members:

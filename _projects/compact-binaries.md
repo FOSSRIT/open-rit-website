@@ -7,7 +7,7 @@ owner: Manuela Campanelli
 mystic-slug: compact-binaries
 
 college: College of Science
-type: Assisted Faculty Projects
+type: Open Data
 semester: Fall 2021
 
 librecorps-members:

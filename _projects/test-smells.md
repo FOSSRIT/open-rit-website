@@ -7,7 +7,7 @@ owner: Mohamed Wiem Mkaouer
 mystic-slug: test-smells
 
 college: Golisano College of Computing and Information Sciences
-type: Assisted Faculty Projects
+type: Open Source Software
 semester: Fall 2021
 
 librecorps-members:

@@ -7,7 +7,10 @@ owner: Scott Hawker
 mystic-slug: my-conservation-life
 
 college: Golisano College of Computing and Information Sciences
-type: Assisted Faculty Projects
+type:
+- Open Source Software
+- Open Data
+
 semester: Summer 2021
 
 librecorps-members:

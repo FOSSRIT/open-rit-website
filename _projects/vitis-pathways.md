@@ -7,7 +7,10 @@ owner: Michael Osier
 mystic-slug: vitis-pathways
 
 college: College of Science
-type: Assisted Faculty Projects
+type:
+- Open Source Software
+- Open Data
+
 semester: Spring 2021
 
 librecorps-members:

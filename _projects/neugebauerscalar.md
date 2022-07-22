@@ -7,7 +7,7 @@ owner: J A Stephen Viggiano
 mystic-slug: neugerbauer-scalar
 
 college: College of Art and Design
-type: Assisted Faculty Projects
+type: Open Source Software
 semester: Summer 2021
 
 librecorps-members:

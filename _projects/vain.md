@@ -7,7 +7,7 @@ owner: Sean Grass
 mystic-slug: vain
 
 college: College of Liberal Arts
-type: Assisted Faculty Projects
+type: Open Data
 semester: Fall 2021
 
 librecorps-members:

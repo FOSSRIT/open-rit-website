@@ -29,7 +29,8 @@ In the last six months we’ve seen significant support for Open Work from the f
  * 80+ member initiative brings together presidential appointees into working groups on suggestions for evolving Academia to be more Open.
  * Philanthropic funders are following suit.
 
- **[Slides](https://rit0-my.sharepoint.com/:p:/r/personal/mpnopen_rit_edu/Documents/Attachments/Town%20Hall%20Feb.pptx?d=wfc5b312a14ba4d5eb24565db1d8773ff&csf=1&web=1&e=6rmVNU)**
+ **Slides can be found [here](https://rit0-my.sharepoint.com/:p:/r/personal/mpnopen_rit_edu/Documents/Attachments/Town%20Hall%20Feb.pptx?d=wfc5b312a14ba4d5eb24565db1d8773ff&csf=1&web=1&e=6rmVNU)**
+**The recording can be found [here](https://rit.zoom.us/rec/share/u0s4vw52Rh6NWvvIG5UAoRJOTb90unaX1vdAWuK7xg9f4CLn_pyZBczrCziWMkMT.wQQCvqspCRLwTBCc)**
 
 ## [Zotero Collection on Open Work&nbsp;>](https://www.zotero.org/groups/2725709/rit_open_work_resources/library)
 

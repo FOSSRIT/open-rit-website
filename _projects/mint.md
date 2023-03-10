@@ -6,8 +6,11 @@ tldr: Online tools that incorporate evidence-based teaching strategies to addres
 owner: Robert Teese
 mystic-slug: mint
 
-college: College of Science
-type:
+college: COS
+typeShort:
+- Software
+- Educational
+typeLong:
 - Open Source Software
 - Open Educational Resources
 

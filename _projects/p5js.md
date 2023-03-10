@@ -6,8 +6,11 @@ tldr: Contributions of Tutorials and Exercises to P5.js
 owner: Michelle Harris
 mystic-slug: p5-js
 
-college: Golisano College of Computing and Information Sciences
-type:
+college: GCCIS
+typeShort:
+- Software
+- Educational
+typeLong:
 - Open Source Software
 - Open Educational Resources
 

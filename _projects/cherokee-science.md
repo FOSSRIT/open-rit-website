@@ -6,8 +6,11 @@ tldr: Providing funds to connect scientists with projects proposed by native com
 owner: Paul Shipman
 mystic-slug: pit-tc
 
-college: College of Science
-type:
+college: COS
+typeShort:
+- Data
+- Software
+typeLong:
 - Open Data
 - Open Source Software
 

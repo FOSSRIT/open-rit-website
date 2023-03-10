@@ -7,15 +7,8 @@ Arguments:
   options: A list of strings for selectable options in the dropdown list
 {% endcomment %}
 
-<div class="checkbox-dropdown-container">
-	<div class="checkbox-dropdown">
-		<input
-			type="checkbox"
-			id="header-{{ include.name }}"
-			class="checkbox-header"
-		/>
-		<label for="header-{{ include.name }}">{{ include.label }}</label>
 		<ul class="checkbox-dropdown-list">
+			<p>{{ include.label }}</p>
 			{% for option in include.options %}
 				<li>
 					<input
@@ -28,5 +21,3 @@ Arguments:
 				</li>
 			{% endfor %}
 		</ul>
-	</div>
-</div>

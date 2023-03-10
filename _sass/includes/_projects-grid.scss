@@ -1,52 +1,214 @@
 /* Styles for the projects grid (projects-grid.html) */
 
 #projects-search {
+	position: relative;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	align-items: center;
 	margin-bottom: 1em;
+	font-size: 1.4rem;
+	border-bottom: 1px solid #909090;
+	margin-bottom: 60px;
+
 	
 	#projects-search-bar {
 		display: block;
 		box-sizing: content-box;
-		font-size: 0.9em;
-		margin: 0 15%;
-		padding: 1em;
+		font-size: 1.2rem;
+		padding: .8em 1.2em .8em 1.2em;
 		outline: none;
-		border: 1px solid #727578;
-		border-radius: 3px;
+		border: none;
+		width: 100%;
 		
 		&:focus {
+			border-radius: .6%;
 			outline: 1px solid darken(#727578, 10%);
 		}
-	}
-	#filters-row {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
-		margin-top: 1em;
-		
-		& > * {
-			flex-basis: 30%;
-			min-width: 12em;
-			margin-bottom: 1em;
+
+		&::placeholder {
+			font-size: 1.2rem;
+			font-weight: 300;
+			color: #272727;
 		}
 	}
+
+	.filters-toggle {
+		cursor: pointer;
+		margin: 0px 15px;
+	}
+
+	#filters-row {
+		width: 350px;
+		display: flex;
+		justify-content: center;
+		gap: 1.2em;
+		font-size: 1.2rem;
+		top: 55px;
+		right: 0;
+		position: absolute;
+		background-color: white;
+		border-top: none;
+		z-index: 8;
+		height: 0;
+		border: solid 1px #fff;
+		transition: all .3s ease-in-out;
+	}
+
+	// check if filters-toggle is checked, if it is then unhide #filters-dropdown
+	#filters-toggle:checked ~ #filters-row {
+		border: solid 1px #909090;
+		height: 300px;
+	  }
 }
 
 #projects-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-	gap: 2em;
+	gap: 1em;
+}
+
+.project {
+	overflow: hidden;
+	position: relative;
+	height: 350px;
+	box-shadow: inset 0 0 0 1px #909090;
+	padding: 22px;
+	border-radius: .6%;
+	display: flex;
+	flex-direction: column;
+	
 }
 
 .project {
 	h2 {
 		font-size: 1.3em;
 		margin: 0;
-		margin-bottom: 0.25em;
+		margin-bottom: -.7em;
+		line-height: 1.5rem;
 	}
+
 	p {
 		line-height: 1.5em;
+	}
+
+	hr {
+		border: 4px #ee7600 solid;
+		width: 24px;
+		margin-left: 0;
+		margin-top: -14px;
+		margin-bottom: -4px;
+		transition: width .3s ease-in-out;
+	}
+
+	.view-more {
+		font-size: 1.1rem;
+		z-index: 10;
+		margin: 0;
+		padding: 0;
+		background-color: #ee7600;
+		color: white;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 500;
+		height: 48px;
+		transform: translateY(48px);
+		transition: transform .2s ease-out;
+	}
+
+	.college, .type {
+		display: flex;
+		gap: .5em;
+		color: rgba($color: #000000, $alpha: .6);
+		align-items: start;
+	}
+
+	img {
+		height: auto;
+		width: auto;
+		aspect-ratio: 1;
+	}
+
+	li:nth-of-type(1) {
+		list-style-type: none;
+		margin-left: 0;
+	}
+
+	li {
+		line-height: 1.3em;
+		margin-left: 20px;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin: 0;
+		padding: 0;
+	}
+
+	img {
+		min-width: 20px;
+		max-width: 20px;
+	}
+
+	.icon-row {
+		margin-top: auto;
+		margin-bottom: 45px;
+		display: flex;
+		flex-direction: column;
+		gap: .5em;
+	}
+
+	.icon-row p {
+		line-height: 1.2rem;
+		padding: 0;
+		margin: 0;
+	}
+	
+}
+
+// it looks smoother to fade the border width change than to transition normally
+.project::before {
+	z-index: -1;
+	content: '';
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	box-shadow: inset 0 0 0 3px #909090;
+	opacity: 0;
+	transition: opacity .2s ease-in-out;
+}
+
+.project:hover {
+	hr {
+		width: 100%;
+	}
+	.view-more {
+		transform: translateY(0px);
+	}
+
+	&::before {
+		opacity: 1;
+	}
+
+	// cover up bottom section of card to clip outline
+	&::after {
+		z-index: 9;
+		content: '';
+		width: calc(100% - 2px);
+		height: 47px;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		background-color: white;
+		border: 1px solid #909090;
+		border-top: 0px;
 	}
 }

@@ -6,8 +6,11 @@ tldr: VitisPathways provides the analytical methods in a tool to guide understan
 owner: Michael Osier
 mystic-slug: vitis-pathways
 
-college: College of Science
-type:
+college: COS
+typeShort:
+- Software
+- Data
+typeLong:
 - Open Source Software
 - Open Data
 

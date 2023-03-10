@@ -6,8 +6,9 @@ tldr: Improving the usability of detecting bad testing practices
 owner: Mohamed Wiem Mkaouer
 mystic-slug: test-smells
 
-college: Golisano College of Computing and Information Sciences
-type: Open Source Software
+college: GCCIS
+typeShort: Software
+typeLong: Open Source Software
 semester: Fall 2021
 
 librecorps-members:

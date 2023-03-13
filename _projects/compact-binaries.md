@@ -7,8 +7,8 @@ owner: Manuela Campanelli
 mystic-slug: compact-binaries
 
 college: COS
-typeShort: Data
-typeLong: Open Data
+type-short: Data
+type-long: Open Data
 semester: Fall 2021
 
 librecorps-members:

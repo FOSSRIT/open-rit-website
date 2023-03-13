@@ -7,10 +7,10 @@ owner: Christopher Kurz
 mystic-slug: world-around-you
 
 college: NTID
-typeShort:
+type-short:
 - Software
 - Educational
-typeLong:
+type-long:
 - Open Source Software
 - Open Educational Resources
 

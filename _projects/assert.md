@@ -7,8 +7,8 @@ owner: Shanchieh Yang
 mystic-slug: assert
 
 college: KGCOE
-typeShort: Software
-typeLong: Open Source Software
+type-short: Software
+type-long: Open Source Software
 semester: Summer 2021
 
 librecorps-members:

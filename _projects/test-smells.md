@@ -7,8 +7,8 @@ owner: Mohamed Wiem Mkaouer
 mystic-slug: test-smells
 
 college: GCCIS
-typeShort: Software
-typeLong: Open Source Software
+type-short: Software
+type-long: Open Source Software
 semester: Fall 2021
 
 librecorps-members:

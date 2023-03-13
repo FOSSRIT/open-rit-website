@@ -7,8 +7,8 @@ owner: Sean Grass
 mystic-slug: vain
 
 college: COLA
-typeShort: Data
-typeLong: Open Data
+type-short: Data
+type-long: Open Data
 semester: Fall 2021
 
 librecorps-members:

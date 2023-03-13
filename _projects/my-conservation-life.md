@@ -7,10 +7,10 @@ owner: Scott Hawker
 mystic-slug: my-conservation-life
 
 college: GCCIS
-typeShort:
+type-short:
 - Software
 - Data
-typeLong:
+type-long:
 - Open Source Software
 - Open Data
 

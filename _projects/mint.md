@@ -7,10 +7,10 @@ owner: Robert Teese
 mystic-slug: mint
 
 college: COS
-typeShort:
+type-short:
 - Software
 - Educational
-typeLong:
+type-long:
 - Open Source Software
 - Open Educational Resources
 

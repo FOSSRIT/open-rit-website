@@ -3,7 +3,7 @@ A searchable and filterable grid to display our fellows' projects.
 Must be loaded with the projects_search.js script in order to function.
 {% endcomment %}
 
-{% assign filters = "typeLong|college" | split: "|" %}
+{% assign filters = "type-long|college" | split: "|" %}
 
 <noscript>
 	<p class="error">
@@ -18,14 +18,18 @@ Must be loaded with the projects_search.js script in order to function.
 			type="text"
 			placeholder="What are you looking for?"
 		/>
-		<input class="hidden" type="checkbox" id="filters-toggle" />
-		<label class="filters-toggle" for="filters-toggle"><img src="/assets/images/icon/filter.svg" alt=""></label>
+		<input class="hidden" type="checkbox" id="filters-toggle" onclick="toggleFiltersDropdown()"/>
+		<label class="filters-toggle" id="filters-label" for="filters-toggle">
+			<svg id="filters-icon" width="29" height="20" viewBox="0 0 29 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M11.5527 20H17.7971V16.6667H11.5527V20ZM0.625 0V3.33333H28.7249V0H0.625ZM5.30831 11.6667H24.0416V8.33333H5.30831V11.6667Z" fill="#808080"/>
+			</svg>
+		</label>
 	 	<div id="filters-row">
 			{% for filter in filters %}
 				{% assign capitalized = filter | capitalize %}
 				{% assign label = capitalized %}
-				{% if label contains 'Long' %}
-					{% assign label = label | remove: 'Long' %}
+				{% if label contains '-long' %}
+					{% assign label = label | remove: '-long' %}
 				{% endif %}
 				{% comment %}
 				Workaround for the fact that you can't do:
@@ -56,7 +60,7 @@ Must be loaded with the projects_search.js script in order to function.
 					<div class="college"><img src="/assets/images/icon/college.svg" alt=""><p>{{ project.college }}</p></div>
 					<div class="type"><img src="/assets/images/icon/tags.svg" alt="">
 						<ul>
-						{% for short in project.typeShort %}
+						{% for short in project.type-short %}
 							<li>{{ short }}</li>
 						{% endfor %}
 						</ul>
@@ -92,4 +96,31 @@ Must be loaded with the projects_search.js script in order to function.
 	];
 	init_filters();
 	init_search();
+
+
+
+	// toggle filters dropdown
+
+	let filtersRow = document.getElementById('filters-row');
+	let filtersToggle = document.getElementById('filters-toggle');
+	let filtersIcon = document.getElementById('filters-icon');
+	function toggleFiltersDropdown() {
+		el = document.getElementById('filters-toggle');
+		if(el.checked == true) {
+			filtersRow.classList.add('filters-row--active');
+			filtersIcon.classList.add('filters-icon--active');
+		} else {
+			filtersRow.classList.remove('filters-row--active');
+			filtersIcon.classList.remove('filters-icon--active');
+		}
+	}
+	// close filter dropdown when you click outside of it
+  	// https://stackoverflow.com/a/49159229
+	window.addEventListener('click', function (e) {
+		if (!filtersRow.contains(e.target) && !document.getElementById('projects-search').contains(e.target) && filtersToggle.checked == true) {
+			filtersRow.classList.remove('filters-row--active');
+			filtersIcon.classList.remove('filters-icon--active');
+			filtersToggle.checked = false;
+		}
+	})
 </script>

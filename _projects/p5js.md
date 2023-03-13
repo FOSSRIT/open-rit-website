@@ -7,10 +7,10 @@ owner: Michelle Harris
 mystic-slug: p5-js
 
 college: GCCIS
-typeShort:
+type-short:
 - Software
 - Educational
-typeLong:
+type-long:
 - Open Source Software
 - Open Educational Resources
 

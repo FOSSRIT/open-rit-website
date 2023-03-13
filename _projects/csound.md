@@ -7,8 +7,8 @@ owner: Steven Yi
 mystic-slug: csound
 
 college: GCCIS 
-typeShort: Software
-typeLong: Open Source Software
+type-short: Software
+type-long: Open Source Software
 semester: Spring 2021
 
 librecorps-members:

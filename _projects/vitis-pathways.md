@@ -7,10 +7,10 @@ owner: Michael Osier
 mystic-slug: vitis-pathways
 
 college: COS
-typeShort:
+type-short:
 - Software
 - Data
-typeLong:
+type-long:
 - Open Source Software
 - Open Data
 

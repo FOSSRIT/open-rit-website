@@ -7,8 +7,8 @@ owner: J A Stephen Viggiano
 mystic-slug: neugerbauer-scalar
 
 college: CAD
-typeShort: Software
-typeLong: Open Source Software
+type-short: Software
+type-long: Open Source Software
 semester: Summer 2021
 
 librecorps-members:

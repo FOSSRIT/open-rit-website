@@ -7,10 +7,10 @@ owner: Paul Shipman
 mystic-slug: pit-tc
 
 college: COS
-typeShort:
+type-short:
 - Data
 - Software
-typeLong:
+type-long:
 - Open Data
 - Open Source Software
 

@@ -7,10 +7,10 @@ owner: Todd Pagano
 mystic-slug: jsesd
 
 college: NTID
-typeShort:
+type-short:
 - Journal
 - Software
-typeLong:
+type-long:
 - Open Access Journal
 - Open Source Software
 

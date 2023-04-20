@@ -40,7 +40,7 @@ Internally we’ve been focused on our [Open@RIT Fellows][] work supporting over
 [UNICEF Ventures]: https://www.unicef.org/innovation/stories
 [Fedora Badges]: https://badges.fedoraproject.org/about
 [Open APS]: https://openaps.org/
-[Open@RIT Fellows]: {{ "/faculty/fellows" | relative_url }}
+[Open@RIT Fellows]: {{ "/our-work/fellows-projects" | relative_url }}
 
 ## Projects
 

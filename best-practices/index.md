@@ -21,11 +21,13 @@ subnav:
 
 ## Best Practices Around Open Work
 
-The following best practices have been derived from a combination of both industry and academic policies and reviewed by our [advisory board](https://www.rit.edu/research/open#people). Their intent is to help guide you in a manner that allows your efforts to have the most impact while potentially protecting you and the University from any cultural or legal conflicts around your efforts. Should you have any questions about them feel free to contact Open@RIT Director [Stephen Jacobs](https://www.rit.edu/directory/sxjics-stephen-jacobs) or Assistant Director [Michael Nolan](https://www.rit.edu/directory/mpnopen-michael-nolan).
+The following best practices have been derived from a combination of both industry and academic policies and reviewed by our [advisory board][]. Their intent is to help guide you in a manner that allows your efforts to have the most impact while potentially protecting you and the University from any cultural or legal conflicts around your efforts. Should you have any questions about them feel free to contact Open@RIT Director [Stephen Jacobs](https://www.rit.edu/directory/sxjics-stephen-jacobs) or Assistant Director [Michael Nolan](https://www.rit.edu/directory/mpnopen-michael-nolan).
 
 While these are our recommendations, they are not official university policy nor do they qualify as official legal advice. In all cases, should you have any questions around policy or legal questions, refer to the appropriate offices of the university for official clarification for RIT projects or a personal lawyer for personal projects.
 
 **Any suggestions on how to improve this document, or strengthen it for any given discipline, are encouraged.**
+
+[advisory board]: {{ "/about/people#advisory-board" | relative_url }}
 
 #### Contributing to Existing Open Projects
 

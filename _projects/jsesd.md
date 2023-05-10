@@ -6,8 +6,11 @@ tldr: The Journal of Science Education for Students With Disabilities
 owner: Todd Pagano
 mystic-slug: jsesd
 
-college: National Technical Institute for the Deaf
-type:
+college: NTID
+type-short:
+- Journal
+- Software
+type-long:
 - Open Access Journal
 - Open Source Software
 

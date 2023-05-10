@@ -6,8 +6,9 @@ tldr: Victorian Autobiography Information Network
 owner: Sean Grass
 mystic-slug: vain
 
-college: College of Liberal Arts
-type: Open Data
+college: COLA
+type-short: Data
+type-long: Open Data
 semester: Fall 2021
 
 librecorps-members:

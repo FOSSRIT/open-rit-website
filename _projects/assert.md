@@ -6,8 +6,9 @@ tldr: Attack Strategy Synthesis for Enhanced Threat Recognition
 owner: Shanchieh Yang
 mystic-slug: assert
 
-college: Kate Gleason College of Engineering
-type: Open Source Software
+college: KGCOE
+type-short: Software
+type-long: Open Source Software
 semester: Summer 2021
 
 librecorps-members:

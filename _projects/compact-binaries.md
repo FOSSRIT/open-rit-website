@@ -6,8 +6,9 @@ tldr: Computational Astrophysics
 owner: Manuela Campanelli
 mystic-slug: compact-binaries
 
-college: College of Science
-type: Open Data
+college: COS
+type-short: Data
+type-long: Open Data
 semester: Fall 2021
 
 librecorps-members:

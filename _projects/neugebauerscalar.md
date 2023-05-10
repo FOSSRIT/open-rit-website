@@ -6,8 +6,9 @@ tldr: Tools for Digital Color Imaging
 owner: J A Stephen Viggiano
 mystic-slug: neugerbauer-scalar
 
-college: College of Art and Design
-type: Open Source Software
+college: CAD
+type-short: Software
+type-long: Open Source Software
 semester: Summer 2021
 
 librecorps-members:

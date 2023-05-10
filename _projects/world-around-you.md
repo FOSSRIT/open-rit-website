@@ -6,8 +6,11 @@ tldr: A Deaf Education Literacy Platform
 owner: Christopher Kurz
 mystic-slug: world-around-you
 
-college: National Technical Institute for the Deaf
-type:
+college: NTID
+type-short:
+- Software
+- Educational
+type-long:
 - Open Source Software
 - Open Educational Resources
 

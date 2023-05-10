@@ -6,8 +6,9 @@ tldr: A Sound and Music Computing System
 owner: Steven Yi
 mystic-slug: csound
 
-college: Golisano College of Computing and Information Sciences
-type: Open Source Software
+college: GCCIS 
+type-short: Software
+type-long: Open Source Software
 semester: Spring 2021
 
 librecorps-members:

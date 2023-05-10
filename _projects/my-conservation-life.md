@@ -6,8 +6,11 @@ tldr: An Open Data Project with the Seneca Park Zoo
 owner: Scott Hawker
 mystic-slug: my-conservation-life
 
-college: Golisano College of Computing and Information Sciences
-type:
+college: GCCIS
+type-short:
+- Software
+- Data
+type-long:
 - Open Source Software
 - Open Data
 

@@ -39,8 +39,8 @@ advisory_board:
   degree: BS New Media Publishing, RIT ‘96
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/matthew-bernius.jpg
 - name: Deb Nicholson
-  role: Interim Director
-  org: The Open Source Initiative
+  role: Executive Director
+  org: Python Software Foundation
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/deb-nicholson.jpg
 - name: Silona Bonewald
   role: Executive Director
@@ -49,50 +49,52 @@ advisory_board:
 - name: Mel Chua
   role: ABD, Purdue, School of Engineering Education
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/mel-chua.jpg
-- name: Ihudiya Finda Ogbonnaya-Ogburu
-  role: HCI Researcher (PhD candidate)
+- name: Dr. Ihudiya Finda Williams
+  role: HCI Educator and Researcher
   org: University of Michigan School of Information
-  degree: BS, Information Technology, RIT  2010
+  degree: BS, Information Technology, RIT  2010 & Ph.D., Information Science, UMSI 2023
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/ihudiya-finda.jpg
 - name: Remy DeCausemaker
-  role: BS & MS, School of Independent Study, RIT '08, '13
+  role: Open Source Lead
+  org: Digital Service at Centers for Medicare & Medicaid Services (CMS)
+  degree: BS & MS, School of Independent Study, RIT '08, '13
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/remy-decausemaker.jpg
 - name: Nithya Ruff
-  role: Board Director & Head of Open Source
-  org: Comcast, Inc
+  role: Head of Open Source Program Office
+  org: Amazon
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/nithya-ruff.jpg
 - name: Justin W. Flory
-  role: FOSS Technical Advisor
-  org: UNICEF Innovation
+  role: Fedora Community Architect
+  org: Red Hat
   degree: B.S. Networking & Systems Administration, Minor, Free & Open Source Software & Free Culture, RIT 202
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/justin-flory.jpg
 - name: Justin Sherrill
-  role: Developer
-  org: DragonFly BSD
+  role: IT Director
+  org: Garden Trends, Inc.
   degree: Information Technology Masters, 2002
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/justin-sherrill.jpg
 - name: Wilfried Hounyo
   role: Software Engineer
-  org: Zendesk, INc
-  degree: BS in Computer Science
+  org: Zendesk, Inc.
+  degree: BS in Computer Science, 2019
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/wilfried-hounyo.jpg
 - name: Kyle Suero
-  role: Application Security Engineer III
-  org: Reddit
+  role: Founder
+  org: Hackathon Mentors
   degree: BS, Computing Security, RIT, 2019
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/kyle-suero.jpg
 - name: Jenn Kotler
-  role: UX Designer
+  role: Senior UX Designer
   org: Space Telescope Science Institute
-  degree: BS Medical Illustration, RIT 2014
+  degree: BS, Medical Illustration, RIT 2014
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/kotler.jpg
 - name: Tom Callaway
   role: Principal Open Source
   org: Evangelist, Amazon Web Services
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/tom.jpg
 - name: Ruth Suehle
-  role: Director, Software Engineering
-  org: Global, RedHat
+  role: Director, Open Source
+  org: SAS
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/ruth.jpeg
 - name: Chris Aniszczyk
   role: Chief Technology Officer, Cloud Native Computing Foundation Vice President, Developer Relations
@@ -103,6 +105,6 @@ advisory_board:
   org: Google Open Source Programs Office
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/erin-mckean-200_0.jpg
 - name: April Kyle Nassi
-  role: Google for Games Open Source Strategist
+  role: Senior Program Manager 
   org: Google
   headshot: https://www.rit.edu/sites/rit.edu/files/images/paragraph/image-card/apriladvisoryboard_0.jpg
